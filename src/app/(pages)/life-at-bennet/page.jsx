@@ -1,43 +1,23 @@
-
+"use client";
 import Events from "@/app/components/life-at-bennet/Events";
 import HeroSection from "@/app/components/HeroSection";
 import ImageGallery from "@/app/components/life-at-bennet/ImageGallery";
+import { motion } from "framer-motion";
 import Testimonial from "@/app/components/life-at-bennet/Testimonial";
 
-
 export default function LifeAtBennet() {
-  
-  
-  const workplaceImages = [
-    {
-      src: "/life-at-bennet.png",
-      alt: "Team collaboration",
-      caption: "Collaborative workspace fostering innovation",
+  const text =
+    "We're committed to fostering an environment where you can thrive, grow, and reach your full potential.".split(
+      " "
+    );
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeInOut" },
     },
-    {
-      src: "/life-at-bennet.png",
-      alt: "Professional development",
-      caption: "Continuous learning and growth opportunities",
-    },
-    {
-      src: "/life-at-bennet.png",
-      alt: "Team building",
-      caption: "Building strong team relationships",
-    },
-    {
-      src: "/life-at-bennet.png",
-      alt: "Work culture",
-      caption: "Promoting a positive work environment",
-    },
-  ];
-
-  const events = [
-    { title: "2023", description: "Annual Day Celebration" },
-    { title: "2024", description: "Team Building Activities" },
-    { title: "2022", description: "Cultural Events" },
-    { title: "2021", description: "Sports Tournament" },
-  ];
-
+  };
   return (
     <div className="min-h-screen flex flex-col mx-auto">
       <HeroSection
@@ -49,8 +29,13 @@ export default function LifeAtBennet() {
         showKnowMoreButton={false}
       />
       {/* Life At Bennet Banner */}
-      <section>
-        <div className="container w-[100%] mx-auto px-4 py-6 flex justify-center align-middle bg-[#d6e48d] lg:rounded-2xl">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={fadeInUp}
+      >
+        <div className="container w-[100%] mx-auto md:my-5 px-4 py-6 flex justify-center align-middle bg-[#d6e48d] lg:rounded-2xl">
           <div className="w-[100%] flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
             <h2 className="text-4xl text-center align-middle lg:text-6xl font-bold mb-4 lg:w-1/3">
               Life At Bennet
@@ -63,13 +48,22 @@ export default function LifeAtBennet() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
       {/* Image Gallery */}
       <section>
         <div className="container w-[100%] mx-auto px-4 py-12 text-3xl font-bold">
-          <h2>
-            We're committed to fostering an environment where you can thrive,
-            grow, and reach your full potential.
+          <h2 className="flex flex-wrap gap-2">
+            {text.map((word, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ delay: index * 0.2, duration: 0.5 }}
+              >
+                {word}
+              </motion.span>
+            ))}
           </h2>
         </div>
         <ImageGallery />

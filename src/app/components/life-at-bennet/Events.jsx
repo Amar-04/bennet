@@ -1,18 +1,33 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Events() {
   return (
     <div className="relative bg-[#DFEAA580]/50 p-8">
       {/* Header Section */}
       <div className="max-w-8xl mb-16 lg:flex gap-20 mx-auto">
-        <h1 className="text-6xl font-bold mb-4">Events</h1>
-        <p className="text-[#525354] text-2xl">
+        <motion.h1
+          className="text-6xl font-bold mb-4"
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.7 }}
+          transition={{ duration: 1 }}
+        >
+          Events
+        </motion.h1>
+        <motion.p
+          className="text-[#525354] text-2xl"
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.7 }}
+          transition={{ duration: 1 }}
+        >
           Join our wonderful teams and be part of a community where your growth
           is our priority! Explore the latest achievements, milestones, and
           breakthroughs at Bennet Pharmaceuticals.
-        </p>
+        </motion.p>
       </div>
 
       {/* Orbital Timeline Container */}
@@ -56,7 +71,13 @@ export default function Events() {
         {/* Timeline Nodes */}
         <div className="absolute inset-0">
           {/* Top Node - Bennet Pharmaceuticals */}
-          <div className="absolute top-[5%] min-[425px]:top-[13%] md:top-[13%] left-[17%] min-[425px]:left-[17%] md:left-[17%] -translate-x-1/2">
+          <motion.div
+            className="absolute top-[5%] min-[425px]:top-[13%] md:top-[13%] left-[2%] min-[425px]:left-[5%] md:left-[8%] -translate-x-1/2"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          >
             <div className="bg-white rounded-full shadow-lg w-[60px] md:w-[140px] h-[60px] md:h-[140px] flex flex-col items-center justify-center text-center p-8 md:p-4 border-4 border-[#AECA1D66]/40">
               <span className="text-[#AECA1D] text-xs md:text-lg font-bold">
                 2019
@@ -65,10 +86,16 @@ export default function Events() {
                 Bennet Pharmaceuticals established
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Node - Blockbuster Drug */}
-          <div className="absolute top-[36%] min-[425px]:top-[40%] md:top-[40%] right-[6%] min-[425px]:right-[13%] md:right-[13%]">
+          <motion.div
+            className="absolute top-[36%] min-[425px]:top-[40%] md:top-[40%] right-[6%] min-[425px]:right-[13%] md:right-[13%]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          >
             <div className="bg-white rounded-full shadow-lg w-[60px] md:w-[120px] h-[60px] md:h-[120px] flex flex-col items-center justify-center text-center p-8 md:p-4 border-4 border-[#AECA1D66]/40">
               <span className="text-black font-semibold text-xs md:text-lg">
                 2019
@@ -77,10 +104,16 @@ export default function Events() {
                 Launch of first blockbuster drug
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Bottom Node - International Partnership */}
-          <div className="absolute bottom-[-3%] min-[425px]:bottom-[2%] md:bottom-[2%] right-[10%] min-[425px]:right-[20%] md:right-[20%]">
+          <motion.div
+            className="absolute bottom-[-3%] min-[425px]:bottom-[2%] md:bottom-[2%] right-[10%] min-[425px]:right-[20%] md:right-[20%]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          >
             <div className="bg-white rounded-full shadow-lg w-[60px] md:w-[120px] h-[60px] md:h-[120px] flex flex-col items-center justify-center text-center p-8 md:p-4 border-4 border-[#AECA1D66]/40">
               <span className="text-black font-semibold text-xs md:text-lg">
                 2019
@@ -89,10 +122,16 @@ export default function Events() {
                 First international partnership
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Left Node - Expansion */}
-          <div className="absolute bottom-[1%] min-[425px]:bottom-[7%] md:bottom-[7%] left-[10%] min-[425px]:left-[15%] md:left-[15%]">
+          <motion.div
+            className="absolute bottom-[1%] min-[425px]:bottom-[7%] md:bottom-[7%] left-[10%] min-[425px]:left-[15%] md:left-[15%]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          >
             <div className="bg-white rounded-full shadow-lg md:w-[120px] w-[90px] md:h-[120px] h-[90px] flex flex-col items-center justify-center text-center p-7 md:p-20 border-4 border-[#AECA1D66]/40">
               <span className="text-[#AECA1D] text-lg md:text-2xl font-bold">
                 2019
@@ -101,35 +140,77 @@ export default function Events() {
                 Expansion into 50+ countries
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Orbit Dots */}
-          <div className="absolute left-[33%] top-[23%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#AECA1D]" />
-          <div className="absolute right-[7.5%] top-[30%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#1a4175]" />
-          <div className="absolute right-[40%] bottom-[19.5%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#AECA1D]" />
-          <div className="absolute left-[5.5%] top-[35%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#1a4175]" />
+          {/* Orbit Dots*/}
+          <motion.div
+            className="absolute left-[33%] top-[23%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#AECA1D]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          />
+          <motion.div
+            className="absolute right-[7.5%] top-[30%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#1a4175]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          />
+          <motion.div
+            className="absolute right-[40%] bottom-[19.5%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#AECA1D]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          />
+          <motion.div
+            className="absolute left-[5.5%] top-[35%] w-3 md:w-6 h-3 md:h-6 rounded-full bg-[#1a4175]"
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            initial={{ scale: 0 }}
+            transition={{ duration: 1 }}
+          />
         </div>
       </div>
 
       {/* Bottom Right Images */}
-      <div className="absolute bottom-[-80px] right-8 flex gap-5">
-        <div className="w-32 h-24 md:w-48 md:h-32 rounded-lg overflow-hidden shadow-lg relative">
+      <motion.div
+        className="absolute bottom-[-50px] right-8 flex gap-5"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.7 }}
+        transition={{ staggerChildren: 0.3, duration: 1 }}
+      >
+        <motion.div
+          className="w-24 h-20 sm:w-48 sm:h-32 rounded-lg overflow-hidden shadow-lg relative"
+          initial={{ opacity: 0 }}
+          viewport={{ once: true, amount: 0.7 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <Image
             src="/events-bottom-img1.png"
             alt="Medical pill strip"
-            className="object-contain"
             layout="fill"
+            className="object-contain"
           />
-        </div>
-        <div className="w-32 h-24 md:w-48 md:h-32 rounded-lg overflow-hidden shadow-lg relative">
+        </motion.div>
+        <motion.div
+          className="w-24 h-20 sm:w-48 sm:h-32 rounded-lg overflow-hidden shadow-lg relative"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.7 }}
+          transition={{ duration: 1 }}
+        >
           <Image
             src="/events-bottom-img2.png"
             alt="Stethoscope on documents"
-            className="object-contain"
             layout="fill"
+            className="object-contain"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
