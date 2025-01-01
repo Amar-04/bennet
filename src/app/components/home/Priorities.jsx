@@ -2,7 +2,7 @@ import React from "react";
 
 const Priorities = () => {
   return (
-    <section className="px-8 md:px-16 py-10">
+    <section className="px-4 md:px-16 py-10">
       <div className="container flex flex-col space-y-4">
         <h2 className="text-2xl md:text-5xl font-bold leading-relaxed">
           Your Health, Our <span className="text-[#2C3D5A]">Priority!</span>

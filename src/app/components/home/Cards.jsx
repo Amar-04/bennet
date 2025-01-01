@@ -20,8 +20,8 @@ const Cards = () => {
     },
   ];
   return (
-    <section className="px-8 md:p-16">
-      <div className="container mx-auto flex flex-col space-y-8 text-center">
+    <section className="px-4 md:p-16">
+      <div className="container mx-auto flex flex-col space-y-8 md:text-center">
         <h2 className="text-2xl md:text-3xl font-bold">Our Commitment to the Nation</h2>
 
         <p className="text-xl">

@@ -3,7 +3,7 @@ import React from "react";
 
 const Innovation = () => {
   return (
-    <section className="px-6 md:px-16 pb-10">
+    <section className="px-4 md:px-16 pb-10">
       <div className="flex flex-col space-y-8 md:space-y-14">
         <div className="p-2 md:p-8 flex flex-col md:flex-row items-center justify-between bg-[#AECA1D] rounded-xl">
           <h2 className="font-bold text-lg md:text-xl md:w-1/2">

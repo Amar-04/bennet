@@ -2,7 +2,7 @@ import React from "react";
 
 const Network = () => {
   return (
-    <section className="px-8 md:px-16 py-8">
+    <section className="px-4 md:px-16 py-8">
       <div className="container mx-auto flex flex-col space-y-8">
         <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-white text-stroke-black">
           Our Manufacturing <br /> Network

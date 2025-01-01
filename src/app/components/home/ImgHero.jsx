@@ -3,7 +3,7 @@ import React from "react";
 const ImgHero = () => {
   return (
     <section className="relative md:py-20">
-      <div className="container w-[80vw] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="container w-[90vw] md:w-[80vw] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <h1 className="text-3xl md:text-8xl font-semibold">
             A Legacy of <br /> <span className="text-[#AECA1D]">Wellness.</span>

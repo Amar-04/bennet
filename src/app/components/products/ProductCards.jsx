@@ -19,15 +19,13 @@ const ProductCards = () => {
     { name: "AZIDEP", dosage: "20 mg" },
   ];
 
-  // Create a ref for each container
   const containerRefs = useRef([]);
 
   const scrollRight = (index) => {
-    // Scroll the specific container
     if (containerRefs.current[index]) {
       containerRefs.current[index].scrollBy({
-        left: 200, // Scroll amount in pixels
-        behavior: "smooth", // Smooth scrolling
+        left: 200,
+        behavior: "smooth",
       });
     }
   };

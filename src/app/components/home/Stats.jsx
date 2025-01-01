@@ -2,7 +2,7 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <section className="px-8 md:px-16 py-16 my-10 flex flex-col">
+    <section className="px-4 md:px-16 py-16 my-10 flex flex-col">
       <div className="relative container mx-auto rounded-3xl md:w-9/12 bg-[#AECA1D66] border border-black flex flex-col md:flex-row items-center justify-between space-y-4 text-center py-8 md:p-16">
         <div className="absolute -top-20 md:right-1/4 z-10  rounded-full bg-black text-white p-6 md:px-9 md:py-8 text-center">
           <h2 className="md:text-xl">100+</h2>
