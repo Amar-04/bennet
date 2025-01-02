@@ -10,12 +10,13 @@ import Priorities from "./components/home/Priorities";
 import Leadership from "./components/home/Leadership";
 import Products from "./components/home/Products";
 import Events from "./components/home/Events";
+import HomeHero from "./components/home/HomeHero";
 
 const Home = () => {
   return (
     <>
       <ImgHero />
-      <HeroSection />
+      <HomeHero />
       <AboutUs />
       <Stats />
       <Cards />

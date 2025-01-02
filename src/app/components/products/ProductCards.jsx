@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import React, { useRef } from "react";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const ProductCards = () => {
   const productCards = [
@@ -46,9 +47,14 @@ const ProductCards = () => {
   return (
     <section className="mt-16 px-4 md:px-16">
       <div className="flex items-center">
-        <h2 className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black">
+        <motion.h2
+          className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           OUR PRODUCTS
-        </h2>
+        </motion.h2>
         <hr className="w-9/12 h-1 -mr-4 md:-mr-16 bg-[#AECA1D] border-0" />
       </div>
       <div className="flex flex-col space-y-4 my-10">
@@ -73,28 +79,34 @@ const ProductCards = () => {
             >
               <div className="flex gap-4 w-full">
                 {productCards.slice(0, 6).map((card, index) => (
-                  <div
+                  <motion.div
                     key={index}
                     className="min-w-[250px] bg-[#AECA1DE5] px-8 py-4 rounded-lg text-center"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, delay: index * 0.15 }}
                   >
                     <p className="font-bold">
                       {card.name}{" "}
                       <span className="text-[#929FAE]">{card.dosage}</span>
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <div className="flex gap-4 w-full">
                 {productCards.slice(6).map((card, index) => (
-                  <div
+                  <motion.div
                     key={index}
                     className="min-w-[250px] bg-[#AECA1DE5] px-8 py-4 rounded-lg text-center"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, delay: index * 0.15 }}
                   >
                     <p className="font-bold">
                       {card.name}{" "}
                       <span className="text-[#929FAE]">{card.dosage}</span>
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
