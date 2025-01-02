@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Stats = () => {
   return (
-    <section className="px-4 md:px-16 py-16 my-10 flex flex-col">
+    <section className="px-4 md:px-8 py-16 my-10 flex flex-col">
       <motion.div
         className="relative container mx-auto rounded-3xl md:w-9/12 bg-[#AECA1D66] border border-black flex flex-col md:flex-row items-center justify-between space-y-4 text-center py-8 md:p-16"
         initial={{ opacity: 0 }}

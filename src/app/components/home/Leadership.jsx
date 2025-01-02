@@ -31,7 +31,7 @@ const Leadership = () => {
   ];
 
   return (
-    <section className="relative px-4 md:px-16 py-10">
+    <section className="relative px-4 md:px-8 py-10">
       <div className="absolute top-10 md:left-16 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[url('/hero.png')] bg-contain bg-no-repeat"></div>
       <div className="absolute top-80 md:right-16 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[url('/hero.png')] bg-contain bg-no-repeat"></div>
 

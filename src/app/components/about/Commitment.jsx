@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const Commitment = () => {
   return (
-    <section className="relative px-4 md:px-16 py-10 bg-[url('/commitment.png')] bg-cover bg-center">
+    <section className="relative px-4 md:px-8 py-10 bg-[url('/commitment.png')] bg-cover bg-center">
       <div className="absolute inset-0 bg-black opacity-60"></div>
 
       <div className="relative flex flex-col space-y-16 text-white">

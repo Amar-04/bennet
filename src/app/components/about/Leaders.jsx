@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 
 const Leaders = () => {
@@ -36,11 +35,10 @@ const Leaders = () => {
   ];
 
   return (
-    <section className="relative px-4 md:px-16 py-10">
+    <section className="relative px-4 md:px-8 py-10">
       <div className="absolute top-10 md:left-16 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[url('/hero.png')] bg-contain bg-no-repeat"></div>
       <div className="absolute top-80 md:right-16 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[url('/hero.png')] bg-contain bg-no-repeat"></div>
 
-      {/* Leadership Heading */}
       <motion.h2
         className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black"
         whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +48,6 @@ const Leaders = () => {
         Leadership
       </motion.h2>
 
-      {/* Subheading */}
       <motion.h2
         className="my-8 md:text-5xl font-bold"
         whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +59,6 @@ const Leaders = () => {
         <span className="text-[#AECA1D]">“Exceptional Teams”</span>
       </motion.h2>
 
-      {/* Cards Section */}
       <motion.div
         className="md:max-w-[55vw] mx-auto grid md:grid-cols-2 gap-8 md:gap-14 relative z-10"
         whileInView={{ opacity: 1 }}
@@ -77,7 +73,7 @@ const Leaders = () => {
             initial={{ opacity: 0, y: 50 }}
             transition={{
               duration: 0.6,
-              delay: index * 0.3, // Stagger animations for each card
+              delay: index * 0.3,
             }}
           >
             <img src={card.img} className="w-full h-full" />

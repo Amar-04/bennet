@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Events = () => {
   return (
-    <section className="relative px-4 md:px-16 py-10">
+    <section className="relative px-4 md:px-8 py-10">
       <motion.div
         className="absolute top-1/4 -left-3.5 md:-top-1/4 md:left-1/4 w-[300px] h-[400px] md:w-[800px] md:h-[800px] bg-[url('/events.png')] bg-contain bg-no-repeat"
         whileInView={{ opacity: 1 }}

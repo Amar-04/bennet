@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Products = () => {
   return (
-    <section className="px-4 md:px-16 py-10">
+    <section className="px-4 md:px-8 py-10">
       <motion.h2
         className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black md:mb-20"
         whileInView={{ opacity: 1, y: 0 }}

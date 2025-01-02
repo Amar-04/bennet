@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const AboutHero = () => {
@@ -41,14 +41,13 @@ const AboutHero = () => {
       viewport={{ once: true }}
     >
       <div className="container w-[90vw] mx-auto grid md:grid-cols-2 gap-4">
-        {/* Left-side content */}
         <motion.div className="space-y-4" variants={leftContentVariants}>
           <motion.h1
             className="text-2xl md:text-7xl font-semibold"
             variants={leftItemVariants}
           >
-            Your <span className="text-[#AECA1D]">Health</span>, <br /> Our Priority!
-            Building Healthier{" "}
+            Your <span className="text-[#AECA1D]">Health</span>, <br /> Our
+            Priority! Building Healthier{" "}
             <span className="text-[#AECA1D]">Communities</span>
           </motion.h1>
           <motion.p
@@ -68,7 +67,6 @@ const AboutHero = () => {
           </div>
         </motion.div>
 
-        {/* Right-side image */}
         <motion.div
           className="md:h-[500px] md:w-[650px] md:-mt-20"
           variants={rightImageVariants}

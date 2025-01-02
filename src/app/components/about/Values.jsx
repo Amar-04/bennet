@@ -32,7 +32,7 @@ const Values = () => {
   ];
 
   return (
-    <section className="px-4 md:px-16 mt-20 bg-[#DFEAA580]">
+    <section className="px-4 md:px-8 mt-20 bg-[#DFEAA580]">
       <div className="flex flex-col space-y-8">
         <motion.div
           className="md:w-9/12 mx-auto bg-black text-white flex flex-col md:flex-row items-center justify-between p-6 md:p-8 rounded-xl md:rounded-3xl -mt-10 md:-mt-20"

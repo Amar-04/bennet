@@ -45,7 +45,7 @@ const ProductCards = () => {
   ];
 
   return (
-    <section className="mt-16 px-4 md:px-16">
+    <section className="mt-16 px-4 md:px-8">
       <div className="flex items-center">
         <motion.h2
           className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black"

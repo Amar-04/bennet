@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Priorities = () => {
   return (
-    <section className="px-4 md:px-16 py-10">
+    <section className="px-4 md:px-8 py-10">
       <div className="container flex flex-col space-y-4">
         <motion.h2
           className="text-2xl md:text-5xl font-bold leading-relaxed"
