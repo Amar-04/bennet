@@ -174,3 +174,55 @@ body {
     background-size: 28vw;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c3d5a;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aeca1d;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c3d5a #f1f1f1;
+}
+
+/* For Edge and IE */
+* {
+  -ms-overflow-style: none;
+}
+
+*::-ms-scrollbar {
+  width: 8px;
+}
+
+*::-ms-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-ms-scrollbar-thumb {
+  background: #2c3d5a;
+  border-radius: 4px;
+}
+
+*::-ms-scrollbar-thumb:hover {
+  background: #aeca1d;
+}
+
+margin-top {
+  padding-top: 76px;
+}

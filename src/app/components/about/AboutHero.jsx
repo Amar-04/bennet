@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 import { motion } from "framer-motion";
 
 const AboutHero = () => {
@@ -34,45 +33,79 @@ const AboutHero = () => {
 
   return (
     <motion.section
-      className="relative md:py-20"
+      className="relative flex items-center overflow-x-hidden mt-[96px] min-h-screen"
       initial="hidden"
       animate="visible"
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="container w-[90vw] mx-auto grid md:grid-cols-2 gap-4">
-        <motion.div className="space-y-4" variants={leftContentVariants}>
-          <motion.h1
-            className="text-2xl md:text-7xl font-semibold"
-            variants={leftItemVariants}
+      <div className="w-full container px-4">
+        <div className="flex flex-col md:flex-row items-start justify-center gap-12 md:gap-16">
+          <motion.div
+            className="w-full md:w-1/2 space-y-8"
+            variants={leftContentVariants}
           >
-            Your <span className="text-[#AECA1D]">Health</span>, <br /> Our
-            Priority! Building Healthier{" "}
-            <span className="text-[#AECA1D]">Communities</span>
-          </motion.h1>
-          <motion.p
-            className="md:text-2xl my-4 md:my-8"
-            variants={leftItemVariants}
-          >
-            Transforming lives since 1996
-          </motion.p>
-          <div>
-            <Link
-              href="#"
-              className="bg-black pl-4 py-3 text-white text-sm md:text-base rounded-full font-bold"
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1]"
+              variants={leftItemVariants}
             >
-              Know More{" "}
-              <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
-            </Link>
-          </div>
-        </motion.div>
+              <div className="leading-tight">
+                Your <span className="text-[#AECA1D]">Health</span>,
+              </div>
+              <div className="leading-tight">Our Priority!</div>
+              <div className="leading-tight">Building Healthier</div>
+              <div className="text-[#AECA1D] leading-tight">Communities</div>
+            </motion.h1>
 
-        <motion.div
-          className="md:h-[500px] md:w-[650px] md:-mt-20"
-          variants={rightImageVariants}
-        >
-          <img src="/aboutHero.png" alt="pills" className="w-full h-full" />
-        </motion.div>
+            <motion.p
+              className="text-xl md:text-2xl text-gray-700"
+              variants={leftItemVariants}
+            >
+              Transforming Lives Since 1996.
+            </motion.p>
+
+            {/* <motion.div
+              variants={leftItemVariants}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Link
+                href="#"
+                className="inline-flex items-center bg-black text-white rounded-full group"
+              >
+                <span className="px-6 py-3 font-bold">Know More</span>
+                <div className="bg-[#AECA1D] rounded-full p-3 ml-1 group-hover:rotate-90 transition-transform duration-300">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                  </svg>
+                </div>
+              </Link>
+            </motion.div> */}
+          </motion.div>
+
+          <motion.div
+            className="w-full md:w-1/2 h-[400px] md:h-[500px]"
+            variants={rightImageVariants}
+          >
+            <div className="relative h-full rounded-[2rem] overflow-hidden">
+              <img
+                src="/aboutHero.png"
+                alt="Medical consultation"
+                className="w-full h-full object-cover rounded-[2rem]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );

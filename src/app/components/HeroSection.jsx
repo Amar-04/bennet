@@ -46,36 +46,47 @@ export default function HeroSection({
     <AnimatePresence mode="wait">
       <motion.section
         key={routeKey}
-        className="relative bg-white"
+        className="relative flex items-center overflow-x-hidden mt-[96px]"
         initial="hidden"
         animate="visible"
         exit="hidden"
         viewport={{ once: true }}
       >
-        <div className="container mx-auto px-4 py-12 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="w-full max-w-[1440px] mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Left-side content */}
-            <motion.div className="space-y-6" variants={leftContentVariants}>
+            <motion.div
+              className="w-full md:w-1/2 space-y-6"
+              variants={leftContentVariants}
+            >
               <motion.h1
-                className="text-4xl lg:text-7xl font-bold leading-tight"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1]"
                 variants={leftItemVariants}
               >
                 {parse(title)}
               </motion.h1>
+
               <motion.p
-                className="text-gray-600 text-lg"
+                className="text-xl md:text-2xl text-gray-700"
                 variants={leftItemVariants}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: "easeInOut" },
+                }}
               >
                 {description}
               </motion.p>
+
               {showKnowMoreButton && (
                 <motion.button
-                  className="bg-black/90 text-white font-bold pl-4 pr-1 py-1 rounded-full flex justify-evenly border border-white items-center gap-2"
+                  className="inline-flex items-center bg-black text-white rounded-full group"
                   variants={leftItemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <p>Know More</p>
-                  <div className="rounded-full bg-[#AECA1DE5]/90 text-black px-4 py-4">
-                    <MoveDown />
+                  <span className="px-6 py-3 font-bold">Know More</span>
+                  <div className="bg-[#AECA1D] rounded-full p-3 ml-1 group-hover:rotate-90 transition-transform duration-300">
+                    <MoveDown className="w-6 h-6" />
                   </div>
                 </motion.button>
               )}
@@ -83,16 +94,19 @@ export default function HeroSection({
 
             {/* Right-side image */}
             <motion.div
-              className="relative h-[300px] lg:h-[400px]"
+              className="w-full md:w-1/2 h-[400px] md:h-[500px]"
               variants={rightImageVariants}
             >
-              <Image
-                src={imageLink}
-                alt="image"
-                fill
-                className="object-contain rounded-lg"
-                priority
-              />
+              <div className="relative h-full rounded-[2rem] overflow-hidden">
+                <Image
+                  src={imageLink}
+                  alt="Hero image"
+                  fill
+                  priority
+                  className="object-cover rounded-[2rem]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+              </div>
             </motion.div>
           </div>
         </div>

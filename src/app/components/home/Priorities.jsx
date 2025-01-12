@@ -3,55 +3,95 @@
 import { motion } from "framer-motion";
 
 const Priorities = () => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const imageVariant = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="px-4 md:px-8 py-10">
-      <div className="container flex flex-col space-y-4">
-        <motion.h2
-          className="text-2xl md:text-5xl font-bold leading-relaxed"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.6 }}
-        >
-          Your Health, Our <span className="text-[#2C3D5A]">Priority!</span>
-          <br />
-          Building <span className="text-[#2C3D5A]">Healthier </span>
-          Communities.
-        </motion.h2>
+    <section className="container mx-auto px-4 py-16">
+      <div className="w-full">
+        {/* Header Section */}
+        <div className="space-y-4 mb-12">
+          <motion.h1
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.3 },
+            }}
+          >
+            Your Health, Our <span className="text-[#2C3D5A]">Priority!</span>
+            <br />
+            Building <span className="text-[#2C3D5A]">Healthier</span>{" "}
+            Communities.
+          </motion.h1>
 
-        <motion.p
-          className="md:text-xl"
-          whileInView={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Transforming Lives since 1996
-        </motion.p>
+          <motion.p
+            className="text-xl md:text-2xl text-gray-700"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            Transforming Lives Since 1996.
+          </motion.p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
-            className="h-[300px]"
-            whileInView={{ x: 0, opacity: 1 }}
-            initial={{ x: -100, opacity: 0 }}
-            transition={{ duration: 0.6 }}
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
           >
             <img
               src="/priorityImg.png"
-              alt=""
-              className="w-full h-full object-cover rounded-3xl"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
             />
           </motion.div>
 
           <motion.div
-            className="md:w-1/2 my-auto"
-            whileInView={{ x: 0, opacity: 1 }}
-            initial={{ x: 100, opacity: 0 }}
-            transition={{ duration: 0.6 }}
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            <p className="text-xl leading-relaxed">
-              At Bennet, we’re more than just a healthcare company—we’re a
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
               community of dedicated professionals committed to creating a
               healthier future for everyone.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </div>

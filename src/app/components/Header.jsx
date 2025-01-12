@@ -2,14 +2,26 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setHasScrolled(scrollPosition > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -45,8 +57,12 @@ export default function Header() {
   };
 
   return (
-    <header>
-      <nav className="container mx-auto px-4 py-4">
+    <header
+      className={`fixed top-0 left-0 right-0 w-full z-50 font-outfit transition-all duration-300 ${
+        hasScrolled ? "bg-white/80 backdrop-blur-md " : "bg-white"
+      }`}
+    >
+      <nav className="container px-4 py-4">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -81,10 +97,10 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`lg:text-[1rem] md:text-[0.6rem] font-semibold ${
+                  className={`lg:text-[1rem] md:text-[0.6rem] font-medium transition-colors duration-200 ${
                     pathname === item.href
                       ? "text-[#AECA1D]"
-                      : "text-black font-semibold"
+                      : "text-slate-700 hover:text-[#AECA1D]/80"
                   }`}
                 >
                   {item.name}
@@ -110,7 +126,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <motion.div
-          className={`fixed top-0 right-0 z-50 h-full w-2/3 bg-[#2b3f56]/90 text-white shadow-lg transform transition-transform duration-300 ${
+          className={`fixed top-0 right-0 z-50 h-full w-2/3 bg-[#2b3f56]/90 backdrop-blur-md text-white border-b transform transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           initial={{ opacity: 0 }}
@@ -143,7 +159,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`block py-2 text-base font-medium ${
+                    className={`block py-2 text-base font-medium transition-colors duration-200 ${
                       pathname === item.href
                         ? "text-[#AECA1D]"
                         : "hover:text-gray-400"

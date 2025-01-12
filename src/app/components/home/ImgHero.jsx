@@ -30,35 +30,110 @@ const ImgHero = () => {
     },
   };
 
+  const textHoverVariants = {
+    hover: {
+      scale: 1.02,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+  };
+
+  const accentTextHoverVariants = {
+    hover: {
+      scale: 1.02,
+      color: "#c5e320",
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+  };
+
   return (
     <motion.section
-      className="relative md:py-20"
+      className="relative flex items-center overflow-x-hidden mt-[96px]"
       initial="hidden"
       animate="visible"
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="container w-[90vw] md:w-[80vw] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-        <motion.div className="space-y-4" variants={leftContentVariants}>
-          <motion.h1
-            className="text-3xl md:text-8xl font-semibold"
-            variants={leftItemVariants}
+      <div className="w-full max-w-[1440px] mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <motion.div
+            className="w-full md:w-1/2 space-y-6"
+            variants={leftContentVariants}
           >
-            A Legacy of <br /> <span className="text-[#AECA1D]">Wellness.</span>
-            <br />
-            Together, <br /> We <span className="text-[#AECA1D]">Heal</span>.
-          </motion.h1>
-          <motion.p className="text-xl md:text-2xl" variants={leftItemVariants}>
-            Dedicated to wellness since 1996
-          </motion.p>
-        </motion.div>
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1]"
+              variants={leftItemVariants}
+            >
+              <div className="flex flex-wrap items-baseline gap-x-3">
+                <motion.span
+                  whileHover="hover"
+                  variants={textHoverVariants}
+                  className="inline-block cursor-default"
+                >
+                  A Legacy of
+                </motion.span>
+                <motion.span
+                  whileHover="hover"
+                  variants={accentTextHoverVariants}
+                  className="text-[#AECA1D] inline-block cursor-default"
+                >
+                  Wellness.
+                </motion.span>
+              </div>
 
-        <motion.div
-          className="md:h-[650px] md:-mt-32 -z-50"
-          variants={rightImageVariants}
-        >
-          <img src="/heroImg.png" alt="pills" className="w-full h-full" />
-        </motion.div>
+              <div className="flex flex-wrap items-baseline gap-x-3 mt-2">
+                <motion.span
+                  whileHover="hover"
+                  variants={textHoverVariants}
+                  className="inline-block cursor-default"
+                >
+                  Together,
+                </motion.span>
+                <div className="inline-flex items-baseline gap-x-2">
+                  <motion.span
+                    whileHover="hover"
+                    variants={textHoverVariants}
+                    className="inline-block cursor-default"
+                  >
+                    We
+                  </motion.span>
+                  <motion.span
+                    whileHover="hover"
+                    variants={accentTextHoverVariants}
+                    className="text-[#AECA1D] inline-block cursor-default"
+                  >
+                    Heal
+                  </motion.span>
+                  <span className="text-[#AECA1D]">.</span>
+                </div>
+              </div>
+            </motion.h1>
+
+            <motion.p
+              className="text-xl md:text-2xl text-gray-700 cursor-default"
+              variants={leftItemVariants}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+            >
+              Dedicated to wellness since 1996
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="w-full md:w-1/2 h-[400px] md:h-[500px]"
+            variants={rightImageVariants}
+          >
+            <div className="relative h-full rounded-[2rem] overflow-hidden">
+              <img
+                src="/heroImg.png"
+                alt="Medical consultation"
+                className="w-full h-full object-cover rounded-[2rem]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );

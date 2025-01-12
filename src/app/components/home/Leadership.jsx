@@ -3,12 +3,25 @@
 import { motion } from "framer-motion";
 
 const Leadership = () => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const lineVariant = {
+    hidden: { width: 0 },
+    visible: {
+      width: "100%",
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
   const cardData = [
     {
       id: 1,
       name: "Mr. J. K. Jain",
       position: "Founder & Promoter Director",
-      desc: "A visionary leader who established Bennet’s foundation in the pharmaceutical industry. His innovative approach continues to guide the company's growth and success.",
+      desc: "A visionary leader who established Bennet's foundation in the pharmaceutical industry. His innovative approach continues to guide the company's growth and success.",
     },
     {
       id: 2,
@@ -26,54 +39,79 @@ const Leadership = () => {
       id: 4,
       name: "Mrs. Vaishali Jain",
       position: "Director",
-      desc: "A financial strategist managing Bennet’s financial and legal affairs. Her expertise is crucial in steering the company's growth within the domestic pharmaceutical market.",
+      desc: "A financial strategist managing Bennet's financial and legal affairs. Her expertise is crucial in steering the company's growth within the domestic pharmaceutical market.",
     },
   ];
 
   return (
-    <section className="relative px-4 md:px-8 py-10">
-      <div className="absolute top-10 md:left-16 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[url('/hero.png')] bg-contain bg-no-repeat"></div>
-      <div className="absolute top-80 md:right-16 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[url('/hero.png')] bg-contain bg-no-repeat"></div>
+    <section className="container mx-auto mt-20 px-4">
+      {/* Header with line */}
+      <div className="flex items-center gap-8 mb-12">
+        <motion.h2
+          className="text-5xl md:text-7xl font-bold text-outline uppercase whitespace-nowrap"
+          style={{
+            WebkitTextStroke: "1px black",
+            WebkitTextFillColor: "white",
+          }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          LEADERSHIP
+        </motion.h2>
+        <motion.div
+          className="h-[2px] bg-[#AECA1D] flex-grow"
+          initial="hidden"
+          whileInView="visible"
+          variants={lineVariant}
+          viewport={{ once: true, amount: 0.2 }}
+        />
+      </div>
 
-      <motion.h2
-        className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black"
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.6 }}
-      >
-        Leadership
-      </motion.h2>
-
-      <motion.h2
-        className="my-8 md:text-3xl font-bold"
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
-      >
-        Innovation Meets Compassion <br />
-        Exceeding Expectations with Our “Exceptional Teams”
-      </motion.h2>
-
+      {/* Subheading */}
       <motion.div
-        className="md:max-w-[55vw] mx-auto grid md:grid-cols-2 gap-4 md:gap-14 relative z-10"
-        whileInView={{ opacity: 1 }}
+        className="mb-16"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+          Innovation Meets Compassion
+          <br />
+          Exceeding Expectations with Our "Exceptional Teams"
+        </h2>
+      </motion.div>
+
+      {/* Background Elements */}
+      <div className="absolute left-0 top-1/4 w-full h-full opacity-10 pointer-events-none">
+        <div className="absolute left-0 w-[600px] h-[600px] bg-[url('/hero.png')] bg-contain bg-no-repeat" />
+        <div className="absolute right-0 top-1/3 w-[600px] h-[600px] bg-[url('/hero.png')] bg-contain bg-no-repeat" />
+      </div>
+
+      {/* Cards Grid */}
+      <motion.div
+        className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-8"
         initial={{ opacity: 0 }}
-        transition={{ duration: 0.6 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
       >
         {cardData.map((card, index) => (
           <motion.div
             key={card.id}
-            className="p-4 md:p-12 bg-black text-white flex flex-col space-y-4 rounded-2xl"
+            className="bg-black text-white p-8 md:p-10 rounded-2xl hover:scale-[1.02] transition-transform duration-300"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.6,
-              delay: index * 0.3,
+              delay: index * 0.2,
             }}
           >
-            <h2 className="text-lg font-bold">{card.name}</h2>
-            <p className="font-bold">{card.position}</p>
-            <p>{card.desc}</p>
+            <h2 className="text-xl md:text-2xl font-bold mb-3">{card.name}</h2>
+            <p className="text-[#AECA1D] font-bold mb-4">{card.position}</p>
+            <p className="text-gray-300 leading-relaxed">{card.desc}</p>
           </motion.div>
         ))}
       </motion.div>

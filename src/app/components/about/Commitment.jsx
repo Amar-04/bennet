@@ -1,72 +1,84 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 
 const Commitment = () => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6 } },
+  };
+
   return (
-    <section className="relative px-4 md:px-8 py-10 bg-[url('/commitment.png')] bg-cover bg-center">
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+    <section className="relative bg-[url('/commitment.png')] bg-cover bg-center bg-fixed py-20">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative flex flex-col space-y-16 text-white">
+      {/* Content Container */}
+      <div className="relative w-full max-w-[1440px] mx-auto px-4">
         <motion.div
-          className="flex flex-col md:flex-row items-center justify-between"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
+          className="flex flex-col space-y-16 text-white"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold md:w-1/4">
-            Our commitment to the nation
-          </h2>
-          <p className="text-xl md:w-1/2">
-            We provide high-quality healthcare solutions, at prices that are
-            accessible to all. <br /> Our team upholds the highest standards of
-            ethical practices, with certifications and strict adherence to
-            regulatory standards, ensuring your well-being in every interaction.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="mx-auto max-w-[80vw] grid md:grid-cols-3 gap-8"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-        >
+          {/* Header Section */}
           <motion.div
-            className="bg-black text-white text-lg rounded-xl px-4 py-10 text-center"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-16"
+            variants={fadeInUp}
+            viewport={{ once: true }}
           >
-            <p>
-              We offer tailored solutions through our three core divisions:
-              Ethical, Critical Care, and the Emiror Division, bringing
-              specialized and innovative care to those who need it most.
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold md:w-1/3">
+              Our commitment to the nation
+            </h2>
+            <p className="text-lg md:text-xl text-gray-100 md:w-1/2">
+              We provide high-quality healthcare solutions, at prices that are
+              accessible to all.
+              <br className="hidden md:block" />
+              Our team upholds the highest standards of ethical practices, with
+              certifications and strict adherence to regulatory standards,
+              ensuring your well-being in every interaction.
             </p>
           </motion.div>
+
+          {/* Cards Grid */}
           <motion.div
-            className="bg-black text-white text-lg rounded-xl px-4 py-10 text-center"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid md:grid-cols-3 gap-6 md:gap-8"
+            variants={fadeInUp}
+            viewport={{ once: true }}
           >
-            <p>
-              We collaborate with over 500 passionate sales personnel and a
-              network of 1,000+ distributors, ensuring consistent access to care
-              across the country with a presence in 15+ states.
-            </p>
-          </motion.div>
-          <motion.div
-            className="bg-black text-white text-lg rounded-xl px-4 py-10 text-center"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <p>
-              With over 100,000 retail outlets nationwide, we bring superior
-              healthcare solutions within easy reach for everyone. We believe in
-              the transformative power of healthcare
-            </p>
+            {[
+              {
+                text: "We offer tailored solutions through our three core divisions: Ethical, Critical Care, and the Emiror Division, bringing specialized and innovative care to those who need it most.",
+                delay: 0.2,
+              },
+              {
+                text: "We collaborate with over 500 passionate sales personnel and a network of 1,000+ distributors, ensuring consistent access to care across the country with a presence in 15+ states.",
+                delay: 0.4,
+              },
+              {
+                text: "With over 100,000 retail outlets nationwide, we bring superior healthcare solutions within easy reach for everyone. We believe in the transformative power of healthcare",
+                delay: 0.6,
+              },
+            ].map((card, index) => (
+              <motion.div
+                key={index}
+                className="bg-black/80 backdrop-blur-sm text-white rounded-2xl p-8 md:p-10 text-center"
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: card.delay }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <p className="text-lg md:text-xl text-gray-100">{card.text}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

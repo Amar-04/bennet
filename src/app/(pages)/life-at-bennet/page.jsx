@@ -35,8 +35,8 @@ export default function LifeAtBennet() {
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeInUp}
       >
-        <div className="container w-[100%] mx-auto md:my-5 px-4 py-6 flex justify-center align-middle bg-[#d6e48d] lg:rounded-2xl">
-          <div className="w-[100%] flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
+        <div className="container md:my-5 px-4 py-6 flex items-center justify-center align-middle bg-[#d6e48d] lg:rounded-2xl">
+          <div className="w-full flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
             <h2 className="text-4xl text-center align-middle lg:text-6xl font-bold mb-4 lg:w-1/3">
               Life At Bennet
             </h2>
