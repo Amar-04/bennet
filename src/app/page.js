@@ -1,6 +1,5 @@
 import React from "react";
 import ImgHero from "./components/home/ImgHero";
-import HeroSection from "./components/home/HomeHero";
 import AboutUs from "./components/home/AboutUs";
 import Stats from "./components/home/Stats";
 import Cards from "./components/home/Cards";

@@ -17,42 +17,59 @@ const Network = () => {
   };
 
   return (
-    <section className="container mx-auto mt-20 px-4">
-      <div className="flex items-center gap-8">
+    <section className="container mx-auto mt-12 md:mt-20 px-4">
+      {/* Header Section */}
+      <motion.div
+        className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, ease: "easeOut" },
+        }}
+        viewport={{ once: true, amount: 0.9 }}
+      >
         <motion.h2
-          className="text-5xl md:text-7xl font-bold text-outline uppercase whitespace-nowrap"
-          style={{
-            WebkitTextStroke: "1px black",
-            WebkitTextFillColor: "white",
+          className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
           }}
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInUp}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
         >
           OUR MANUFACTURING
-          <br />
+          <br className="block" />
           NETWORK
         </motion.h2>
         <motion.div
-          className="h-[2px] bg-[#AECA1D] flex-grow"
-          initial="hidden"
-          whileInView="visible"
-          variants={lineVariant}
-          viewport={{ once: true, amount: 0.2 }}
-        />
-      </div>
+          className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true }}
+        >
+          <hr className="border-t-2 border-[#AECA1D]" />
+        </motion.div>
+      </motion.div>
 
+      {/* Subheading */}
       <motion.h2
-        className="text-4xl md:text-6xl lg:text-7xl font-bold mt-12 leading-tight"
+        className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mt-8 md:mt-12 leading-tight"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
         transition={{ delay: 0.3 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        Experience the <span className="text-[#AECA1D]">BENNET</span> difference
-        in every product.
+        Experience the{" "}
+        <span className="text-[#AECA1D] inline-block">BENNET</span>{" "}
+        <span className="inline-block">difference in</span>{" "}
+        <span className="inline-block">every product.</span>
       </motion.h2>
     </section>
   );

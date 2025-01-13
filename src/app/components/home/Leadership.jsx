@@ -44,55 +44,62 @@ const Leadership = () => {
   ];
 
   return (
-    <section className="container mx-auto mt-20 px-4">
-      {/* Header with line */}
-      <div className="flex items-center gap-8 mb-12">
+    <section className="container mx-auto mt-12 md:mt-20 px-4 relative overflow-hidden">
+      <motion.div
+        className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, ease: "easeOut" },
+        }}
+        viewport={{ once: true, amount: 0.9 }}
+      >
         <motion.h2
-          className="text-5xl md:text-7xl font-bold text-outline uppercase whitespace-nowrap"
-          style={{
-            WebkitTextStroke: "1px black",
-            WebkitTextFillColor: "white",
+          className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
           }}
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInUp}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
         >
           LEADERSHIP
         </motion.h2>
         <motion.div
-          className="h-[2px] bg-[#AECA1D] flex-grow"
-          initial="hidden"
-          whileInView="visible"
-          variants={lineVariant}
-          viewport={{ once: true, amount: 0.2 }}
-        />
-      </div>
+          className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true }}
+        >
+          <hr className="border-t-2 border-[#AECA1D]" />
+        </motion.div>
+      </motion.div>
 
       {/* Subheading */}
       <motion.div
-        className="mb-16"
+        className="mb-10 md:mb-16"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-          Innovation Meets Compassion
-          <br />
-          Exceeding Expectations with Our "Exceptional Teams"
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+          Innovation Meets{" "}
+          <span className="text-[#AECA1D] inline-block">Compassion</span>{" "}
+          <span className="inline-block">Exceeding Expectations with Our</span>{" "}
+          <span className="inline-block">"Exceptional Teams"</span>
         </h2>
       </motion.div>
 
-      {/* Background Elements */}
-      <div className="absolute left-0 top-1/4 w-full h-full opacity-10 pointer-events-none">
-        <div className="absolute left-0 w-[600px] h-[600px] bg-[url('/hero.png')] bg-contain bg-no-repeat" />
-        <div className="absolute right-0 top-1/3 w-[600px] h-[600px] bg-[url('/hero.png')] bg-contain bg-no-repeat" />
-      </div>
-
       {/* Cards Grid */}
       <motion.div
-        className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-8"
+        className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -100,7 +107,7 @@ const Leadership = () => {
         {cardData.map((card, index) => (
           <motion.div
             key={card.id}
-            className="bg-black text-white p-8 md:p-10 rounded-2xl hover:scale-[1.02] transition-transform duration-300"
+            className="bg-black text-white p-6 md:p-10 rounded-xl md:rounded-2xl hover:scale-[1.02] transition-transform duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -109,9 +116,15 @@ const Leadership = () => {
               delay: index * 0.2,
             }}
           >
-            <h2 className="text-xl md:text-2xl font-bold mb-3">{card.name}</h2>
-            <p className="text-[#AECA1D] font-bold mb-4">{card.position}</p>
-            <p className="text-gray-300 leading-relaxed">{card.desc}</p>
+            <h2 className="text-lg md:text-2xl font-bold mb-2 md:mb-3">
+              {card.name}
+            </h2>
+            <p className="text-[#AECA1D] font-bold mb-3 md:mb-4">
+              {card.position}
+            </p>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              {card.desc}
+            </p>
           </motion.div>
         ))}
       </motion.div>

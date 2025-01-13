@@ -21,28 +21,41 @@ const Events = () => {
     <section className="relative overflow-hidden">
       <div className="container mx-auto px-4 py-20">
         {/* Header with line */}
-        <div className="flex items-center gap-8 mb-16">
+        <motion.div
+          className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true, amount: 0.9 }}
+        >
           <motion.h2
-            className="text-5xl md:text-7xl font-bold text-outline uppercase whitespace-nowrap"
-            style={{
-              WebkitTextStroke: "1px black",
-              WebkitTextFillColor: "white",
+            className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
             }}
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true }}
           >
             EVENTS
           </motion.h2>
           <motion.div
-            className="h-[2px] bg-[#AECA1D] flex-grow"
-            initial="hidden"
-            whileInView="visible"
-            variants={lineVariant}
-            viewport={{ once: true, amount: 0.2 }}
-          />
-        </div>
+            className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+            initial={{ opacity: 0, x: 70 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+          >
+            <hr className="border-t-2 border-[#AECA1D]" />
+          </motion.div>
+        </motion.div>
 
         {/* Main Content Card */}
         <div className="relative">
@@ -93,7 +106,6 @@ const Events = () => {
                 </motion.div>
               </motion.div>
             </div>
-
             {/* Decorative Elements */}
             <div className="absolute -top-10 -left-10 w-20 h-20 rounded-full bg-[#AECA1D]/20 -z-10" />
             <div className="absolute -bottom-10 -right-10 w-20 h-20 rounded-full bg-[#AECA1D]/20 -z-10" />

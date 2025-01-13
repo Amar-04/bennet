@@ -17,34 +17,50 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="container mx-auto mt-20 px-4">
-      <div className="flex items-center gap-8">
+    <section className="container mx-auto mt-12 md:mt-20 px-4">
+      {/* Header Section */}
+      <motion.div
+        className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, ease: "easeOut" },
+        }}
+        viewport={{ once: true, amount: 0.9 }}
+      >
         <motion.h2
-          className="text-5xl md:text-7xl font-bold text-outline uppercase whitespace-nowrap"
-          style={{
-            WebkitTextStroke: "1px black",
-            WebkitTextFillColor: "white",
+          className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
           }}
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInUp}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
         >
           ABOUT US
         </motion.h2>
         <motion.div
-          className="h-[2px] bg-[#AECA1D] flex-grow"
-          initial="hidden"
-          whileInView="visible"
-          variants={lineVariant}
-          viewport={{ once: true, amount: 0.2 }}
-        />
-      </div>
+          className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true }}
+        >
+          <hr className="border-t-2 border-[#AECA1D]" />
+        </motion.div>
+      </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-12 mt-12">
+      {/* Content Grid */}
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-8 md:mt-12">
+        {/* Left Column */}
         <div>
           <motion.h1
-            className="text-4xl md:text-6xl font-bold leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
@@ -52,13 +68,16 @@ const AboutUs = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             Transforming{" "}
-            <span className="text-[#2C3D5A] block mt-2">Healthcare</span>{" "}
-            <span className="block mt-2">for a Brighter</span>{" "}
-            <span className="block mt-2">tomorrow</span>
+            <span className="text-[#2C3D5A] block mt-1 md:mt-2">
+              Healthcare
+            </span>{" "}
+            <span className="block mt-1 md:mt-2">for a Brighter</span>{" "}
+            <span className="block mt-1 md:mt-2">tomorrow</span>
           </motion.h1>
         </div>
 
-        <div className="flex flex-col space-y-6 md:space-y-8 text-lg md:text-xl">
+        {/* Right Column */}
+        <div className="flex flex-col space-y-4 md:space-y-8 text-base md:text-lg lg:text-xl">
           <motion.p
             initial="hidden"
             whileInView="visible"
