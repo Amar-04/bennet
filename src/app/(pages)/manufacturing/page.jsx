@@ -36,8 +36,9 @@ export default function Manufacturing() {
         description="Where excellence meets accessibility"
         showKnowMoreButton={true}
       />
+      
       {/* Excellence Section */}
-      <section className="container mx-auto px-4 relative">
+      <section className="container mx-auto px-4 relative mt-12">
         <motion.div
           className="border border-[#2C3D5A] bg-[#D9D9D980] p-6 md:p-8 lg:p-16 rounded-3xl shadow-sm mx-auto relative z-10"
           initial={{ opacity: 0, y: 100 }}
@@ -280,8 +281,9 @@ export default function Manufacturing() {
               </div>
             </motion.div>
           )}
+
           <motion.h3
-            className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:leading-[4.5rem] xl:leading-[5.714rem]"
+            className="text-2xl md:max-w-[60rem]  md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:leading-[4.5rem] xl:leading-[5.714rem]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.7 }}
@@ -422,9 +424,10 @@ export default function Manufacturing() {
           </div>
         </div>
       </motion.section>
+      
       {/* Contact Section */}
       <motion.section
-        className="mx-auto mt-12"
+        className="mx-auto mt-12 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -433,7 +436,7 @@ export default function Manufacturing() {
         <div className="container bg-[#D7E48E] mx-auto px-2 md:px-4 py-6 rounded-2xl">
           <div className="flex flex-col  md:gap-12 md:flex-row items-center md:justify-between">
             <div className="md:w-2/5 xl:w-[42%] w-full text-center md:text-left">
-              <h3 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-2">
+              <h3 className="font-bold text-2xl sm:text-3xl lg:text-3xl xl:text-4xl mb-2">
                 To know more about us Contact at
               </h3>
             </div>

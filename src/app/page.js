@@ -14,6 +14,7 @@ import HomeHero from "./components/home/HomeHero";
 const Home = () => {
   return (
     <>
+    <div className="overflow-x-hidden">
       <ImgHero />
       <HomeHero />
       <AboutUs />
@@ -25,6 +26,7 @@ const Home = () => {
       <Leadership />
       <Products />
       <Events />
+      </div>
     </>
   );
 };

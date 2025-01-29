@@ -24,14 +24,16 @@ export default function CareersPage() {
   };
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-grow">
+      <main className="flex-grow md:-mt-16">
         <HeroSection
           imageLink="/career-img-1.png"
           title='<span>Empowering</span>
                   <br />
-                  <span>People, Shaping</span>
-                  <br />
-                  <span className="text-[#9DC41A]">Healthcare&apos;s</span>
+                  <div >
+                   People ,
+                      <p className="flex md:absolute md:z-50 md:-mt-[4.3rem] md:ml-[16rem] lg:-mt-[6rem]  lg:ml-[22rem]"> Shaping </p>
+                  </div>
+                  <span className="text-[#9DC41A] mt-8 ">Healthcare&apos;s</span>
                   <br />
                   <span>Future</span>'
           description="Empowering Growth, Celebrating Success"
@@ -45,7 +47,7 @@ export default function CareersPage() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <div className="container w-[100%] mx-auto px-4 py-6 flex justify-center align-middle bg-black text-white lg:rounded-2xl">
+          <div className="container w-[100%] mx-auto px-4 mt-12 py-6 flex justify-center align-middle bg-black text-white lg:rounded-2xl">
             <div className="w-[100%] flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
               <h2 className="text-4xl text-center align-middle text-[#9DC41A] lg:text-6xl font-bold mb-4 lg:w-1/3">
                 Careers
@@ -63,7 +65,7 @@ export default function CareersPage() {
           <div className="container w-[100%] mx-auto px-4">
             <div className="my-12">
               <motion.h2
-                className="text-2xl lg:text-5xl font-bold mb-6 flex flex-wrap"
+                className="text-4xl lg:text-7xl font-bold mb-6 flex flex-wrap lg:max-w-[64rem]"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -121,7 +123,7 @@ export default function CareersPage() {
                 src="/career-img-2.png"
                 alt="Team Meeting"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg "
               />
             </motion.div>
             <motion.div
@@ -133,16 +135,16 @@ export default function CareersPage() {
               </h3>
               <motion.div className="space-y-2" variants={fadeInUp}>
                 <p className="flex items-center justify-center gap-2">
-                  <span className="font-medium">Email:</span>
+                  <span className="font-medium  text-lg ">Email:</span>
                   <a
                     href="mailto:jobs.bennet@gmail.com"
-                    className="hover:text-[#9DC41A]"
+                    className="hover:text-[#9DC41A] text-lg"
                   >
-                    jobs.bennet@gmail.com
+                    Jobs.bennet@gmail.com
                   </a>
                 </p>
-                <p>Or connect with us via WhatsApp</p>
-                <p className="font-medium">+919825519537</p>
+                <p className="text-lg ">Or connect with us via WhatsApp</p>
+                <p className="font-medium text-lg"> - (+91)9825519537</p>
               </motion.div>
             </motion.div>
           </div>

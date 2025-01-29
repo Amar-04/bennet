@@ -25,11 +25,11 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold">
-            We're more than just a{" "}
+          <h2 className="text-2xl md:text-4xl font-bold">
+            We're more than just a <br/> {" "}
             <span className="text-[#AECA1D]">healthcare</span> company
           </h2>
-          <p className="md:text-xl text-gray-200 md:w-1/2">
+          <p className="md:text-xl text-gray-200 md:w-1/2 ">
             We're a community of dedicated professionals committed to creating a
             healthier future for everyone.
           </p>
@@ -51,8 +51,9 @@ const Values = () => {
                 <br />
                 VALUES
               </motion.h2>
+
               <motion.div
-                className="h-[2px] bg-black flex-grow"
+                className="h-[2px] ml-60 md:ml-80 overflow-x-hidden  bg-black flex-grow"
                 initial="hidden"
                 whileInView="visible"
                 variants={lineVariant}

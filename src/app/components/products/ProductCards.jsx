@@ -45,7 +45,7 @@ const ProductCards = () => {
   ];
 
   return (
-    <section className="mt-16 px-4 md:px-8">
+    <section className="mt-8 px-4 md:px-8">
       <div className="flex items-center">
         <motion.h2
           className="text-3xl md:text-6xl font-bold text-transparent bg-white text-stroke-black"
@@ -55,8 +55,11 @@ const ProductCards = () => {
         >
           OUR PRODUCTS
         </motion.h2>
-        <hr className="w-9/12 h-1 -mr-4 md:-mr-16 bg-[#AECA1D] border-0" />
+
+        <hr className="w-9/12 h-1  bg-[#AECA1D] border-0" />
+
       </div>
+    
       <div className="flex flex-col space-y-4 my-10">
         {sections.map((section, sectionIndex) => (
           <div
@@ -106,6 +109,7 @@ const ProductCards = () => {
                       {card.name}{" "}
                       <span className="text-[#929FAE]">{card.dosage}</span>
                     </p>
+                    
                   </motion.div>
                 ))}
               </div>
@@ -113,15 +117,20 @@ const ProductCards = () => {
           </div>
         ))}
       </div>
+      
       <div className="flex items-center justify-center mb-4">
         <Link
           href={"#"}
           className="bg-black pl-4 py-3 text-white text-sm md:text-base rounded-full font-bold"
         >
           Know More{" "}
+
           <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
+          
         </Link>
+
       </div>
+
     </section>
   );
 };

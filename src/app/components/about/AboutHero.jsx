@@ -32,37 +32,68 @@ const AboutHero = () => {
   };
 
   return (
+
     <motion.section
-      className="relative flex items-center overflow-x-hidden mt-[96px] min-h-screen"
+      className="relative flex items-center overflow-x-hidden mt-20"
       initial="hidden"
       animate="visible"
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="w-full container px-4">
-        <div className="flex flex-col md:flex-row items-start justify-center gap-12 md:gap-16">
+      <div className="w-full container px-4 overflow-x-hidden scale-95">
+        
+        <div className="flex flex-col md:flex-row ">
           <motion.div
-            className="w-full md:w-1/2 space-y-8"
+            className="w-full mt-8"
             variants={leftContentVariants}
           >
+
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1]"
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] lg:scale-75 lg:-ml-16"
               variants={leftItemVariants}
             >
-              <div className="leading-tight">
-                Your <span className="text-[#AECA1D]">Health</span>,
+            <div className="md:-ml-2 md:mt-2 lg:-mt-24 overflow-x-hidden">
+
+              <div className="flex flex-col sm:flex-row md:flex-col">
+                <div className="leading-tight">
+                  Your <span className="text-[#AECA1D]">Health</span>,
+                </div>
+                <div className="leading-tight">Our Priority!</div>
               </div>
-              <div className="leading-tight">Our Priority!</div>
-              <div className="leading-tight">Building Healthier</div>
-              <div className="text-[#AECA1D] leading-tight">Communities</div>
+
+              <div className="flex md:flex-col">
+
+              <div className="leading-tight">Building 
+                    <div className="md:absolute md:-mt-[5.5rem] flex md:ml-[17.5rem] lg:-mt-[7.5rem] lg:ml-[23rem] z-50">Healt
+                    <p className="md:text-black">hier</p>
+                    </div>
+              </div>
+                     <div className="text-[#AECA1D] leading-tight -ml-4 md:ml-0">Communities</div>
+              </div>
+
+              </div>
             </motion.h1>
 
-            <motion.p
-              className="text-xl md:text-2xl text-gray-700"
-              variants={leftItemVariants}
+            
+            <div className="lg:ml-8 md:ml-0 lg:-mt-[2rem] ">
+
+              <motion.p
+                className="text-xl md:text-2xl text-gray-700 ] "
+                variants={leftItemVariants}
+              >
+                <span className=" ">  Transforming Lives Since 1996.</span>
+              </motion.p>
+          </div>
+
+            <div className="lg:ml-8 md:ml-0 mt-8">
+            <Link
+              href="#"
+              className="bg-black pl-4 py-3  text-white text-sm md:text-base rounded-full font-bold"
             >
-              Transforming Lives Since 1996.
-            </motion.p>
+              Know More{" "}
+              <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
+            </Link>
+            </div>
 
             {/* <motion.div
               variants={leftItemVariants}
@@ -93,10 +124,12 @@ const AboutHero = () => {
           </motion.div>
 
           <motion.div
-            className="w-full md:w-1/2 h-[400px] md:h-[500px]"
+            className="w-full md:w-1/2 "
             variants={rightImageVariants}
           >
-            <div className="relative h-full rounded-[2rem] overflow-hidden">
+
+            {/* Image */}
+            <div className="relative h-full rounded-[2rem] ">
               <img
                 src="/aboutHero.png"
                 alt="Medical consultation"
@@ -104,6 +137,7 @@ const AboutHero = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
             </div>
+
           </motion.div>
         </div>
       </div>
