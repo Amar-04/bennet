@@ -71,6 +71,7 @@ const Values = () => {
               At Bennet, our core values guide our mission and shape our
               culture, ensuring we deliver exceptional healthcare solutions.
             </motion.p>
+
           </div>
 
           <div className="relative min-h-[800px] md:min-h-[600px]">
@@ -106,6 +107,7 @@ const Values = () => {
 
             {/* Value Cards */}
             <div className="relative z-10 grid gap-8">
+             
               {/* Top Card */}
               <motion.div
                 className="bg-white p-6 rounded-2xl shadow-lg max-w-sm mx-auto"
@@ -124,7 +126,7 @@ const Values = () => {
               </motion.div>
 
               {/* Middle Row */}
-              <div className="flex justify-between gap-8">
+              <div className="flex flex-col md:flex-row mx-auto md:justify-between gap-8">
                 <motion.div
                   className="bg-white p-6 rounded-2xl shadow-lg max-w-sm"
                   initial={{ opacity: 0, x: -20 }}
@@ -195,7 +197,9 @@ const Values = () => {
                   healthcare challenges.
                 </p>
               </motion.div>
+
             </div>
+
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function CareersPage() {
   };
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-grow md:-mt-16">
+      <main className="flex-grow md:-mt-10">
         <HeroSection
           imageLink="/career-img-1.png"
           title='<span>Empowering</span>

@@ -59,7 +59,7 @@ export default function Header() {
   return (
 
     <header
-      className={`fixed top-0 m left-0 right-0 z-40 font-outfit transition-all duration-300 ${
+      className={`fixed top-0 m left-0 right-0 z-50 font-outfit transition-all duration-300 ${
         hasScrolled ? "bg-white/80 backdrop-blur-md " : "bg-white"
       }`}
     >
@@ -132,7 +132,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <motion.div
-          className={`fixed top-0 right-0 z-50 h-full w-2/3 bg-[#2b3f56]/90 backdrop-blur-md text-white border-b transform transition-transform duration-300 ${
+          className={`fixed absolute top-0 right-0 z-50 h-full w-2/3 bg-[#2b3f56]/90 text-white border-b transform transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           initial={{ opacity: 0 }}

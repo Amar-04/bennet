@@ -34,17 +34,19 @@ const AboutHero = () => {
   return (
 
     <motion.section
-      className="relative flex items-center overflow-x-hidden mt-20"
+      className="flex overflow-hidden mt-20 mb-10 scale-95 "
       initial="hidden"
       animate="visible"
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="w-full container px-4 overflow-x-hidden scale-95">
+      <div className="w-full h-full px-2 ">
         
         <div className="flex flex-col md:flex-row ">
+
+          {/* Left Side */}
           <motion.div
-            className="w-full mt-8"
+            className="w-full lg:mt-16"
             variants={leftContentVariants}
           >
 
@@ -52,13 +54,22 @@ const AboutHero = () => {
               className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] lg:scale-75 lg:-ml-16"
               variants={leftItemVariants}
             >
-            <div className="md:-ml-2 md:mt-2 lg:-mt-24 overflow-x-hidden">
+
+            <div className="md:ml-2 md:mt-2 lg:-mt-[7.5rem] overflow-hidden">
+
+                {/* Smol Box */}
+                <div>
+                  <img src="./SmolBox.svg" 
+                  className="z-50 ml-0 md:ml-2 mt-[1rem] md:mt-3 md:my-0 lg:ml-2 lg:mt-0 "
+                  alt="Smol Box"
+                  />
+                </div>
 
               <div className="flex flex-col sm:flex-row md:flex-col">
-                <div className="leading-tight">
+                <div className="">
                   Your <span className="text-[#AECA1D]">Health</span>,
                 </div>
-                <div className="leading-tight">Our Priority!</div>
+                <div className="leading-tight ">Our Priority!</div>
               </div>
 
               <div className="flex md:flex-col">
@@ -68,14 +79,15 @@ const AboutHero = () => {
                     <p className="md:text-black">hier</p>
                     </div>
               </div>
-                     <div className="text-[#AECA1D] leading-tight -ml-4 md:ml-0">Communities</div>
+                     <div className="text-[#AECA1D] leading-tight -ml-4 md:ml-0 md:-mt-4">Communities</div>
               </div>
 
-              </div>
+            </div>
+           
             </motion.h1>
 
             
-            <div className="lg:ml-8 md:ml-0 lg:-mt-[2rem] ">
+            <div className="lg:ml-8 md:ml-4 lg:-mt-[2rem] ">
 
               <motion.p
                 className="text-xl md:text-2xl text-gray-700 ] "
@@ -85,10 +97,10 @@ const AboutHero = () => {
               </motion.p>
           </div>
 
-            <div className="lg:ml-8 md:ml-0 mt-8">
+            <div className="lg:ml-8 md:-ml-2 mt-5 lg:mt-8">
             <Link
               href="#"
-              className="bg-black pl-4 py-3  text-white text-sm md:text-base rounded-full font-bold"
+              className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
             >
               Know More{" "}
               <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
@@ -122,26 +134,32 @@ const AboutHero = () => {
               </Link>
             </motion.div> */}
           </motion.div>
-
+            
+          {/* Right Side */}
           <motion.div
-            className="w-full md:w-1/2 "
+            className="w-full max-h-[36rem]"
             variants={rightImageVariants}
           >
 
             {/* Image */}
-            <div className="relative h-full rounded-[2rem] ">
+            <div className="relative h-full mt-6 md:mt-0 rounded-[2rem] ">
               <img
                 src="/aboutHero.png"
                 alt="Medical consultation"
-                className="w-full h-full object-cover rounded-[2rem]"
+                className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
             </div>
 
           </motion.div>
+
         </div>
       </div>
+
+      <div className="mt-4"></div>
+
     </motion.section>
+    
   );
 };
 
