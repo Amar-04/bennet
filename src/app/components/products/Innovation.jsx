@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Innovation = () => {
   return (
-    <section className="px-4 md:px-8 pb-10">
+    <section className="px-4 md:px-8 pb-10 max-w-[1440px] mx-auto px-0">
       <div className="flex flex-col space-y-8 md:space-y-14">
        
         <motion.div

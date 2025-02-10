@@ -53,8 +53,10 @@ const ImgHero = () => {
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="w-full mx-auto mt-12 px-4 ml-0 ">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="w-full mx-auto mt-12 px-4 2xl:ml-10 xl:ml-0 ">
+       
+        <div className="flex flex-col ml-8 md:flex-row items-center justify-between gap-8">
+         
           {/* Left Side Content */}
           <motion.div
             className="w-full md:w-1/2 space-y-6 ml-16 sm:ml-12  md:ml-10 lg:ml-0 "
@@ -68,7 +70,7 @@ const ImgHero = () => {
               <div>
                 <img
                   src="./SmolBox.svg"
-                  className="z-40 -ml-14 md:-ml-16 mt-[3rem] md:mt-10 lg:mt-14 my-6 md:my-0 lg:mb-3"
+                  className="z-40 -ml-14 md:-ml-16  mt-[3rem] md:mt-10 lg:mt-14 my-6 md:my-0 lg:mb-3"
                   alt="Smol Box"
                 />
               </div>
@@ -153,7 +155,8 @@ const ImgHero = () => {
               <div className="">
                 <img
                   src="./Medicine.svg"
-                  className="absolute  z-40 scale-75  ml-[4rem] -mt-[4rem] sm:ml-[14rem]  md:mt-3.5 md:ml-[12rem] lg:mt-[4.5rem]  lg:ml-[22rem]"
+                  className="absolute  z-40 scale-75  ml-[4rem] -mt-[4rem] sm:ml-[14rem] 2xl:ml-[26rem]
+                   md:mt-3.5 md:ml-[12rem] lg:mt-[4.5rem]  lg:ml-[22rem]"
                   alt="Smol Box"
                 />
               </div>
@@ -171,7 +174,7 @@ const ImgHero = () => {
                 <img
                   src="/Homepage1.png"
                   alt="Medical consultation"
-                  className="w-full h-[20rem] md:mt-14 lg:mt-0 -ml-10 md:ml-0 lg:scale-[0.8] lg:h-[30rem] rounded-[2rem] z-40"
+                  className="w-full h-[20rem] md:mt-14 lg:mt-0 -ml-10 xl:ml-0 md:ml-0 lg:scale-[0.8] lg:h-[30rem] rounded-[2rem] z-40"
                 />
 {/* 
                 <img

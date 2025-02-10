@@ -33,13 +33,13 @@ const ProductHero = () => {
 
   return (
     <motion.section
-      className="relative mb-10 md:py-20 mt-24 md:mt-0 max-w-[1440] mx-auto"
+      className="relative mb-10 md:py-10 mt-24 md:mt-12 max-w-[1440px] mx-auto px-0 md:ml-10 lg:ml-0"
       initial="hidden"
       animate="visible"
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="container md:ml-2 lg:ml-10  mx-auto grid md:grid-cols-2 gap-4">
+      <div className="container md:ml-2 lg:ml-10  mx-auto px-0  grid md:grid-cols-2 gap-4">
         <motion.div className="space-y-4" variants={leftContentVariants}>
           
           <motion.h1
@@ -47,18 +47,19 @@ const ProductHero = () => {
             variants={leftItemVariants}
           >
 
-          <div className="">
+          <div className="lg:mt-6">
 
             <div className="text-[#AECA1D] md:z-40  flex" >Empowerin
             <p className=" text-[#AECA1D] md:text-black  lg:text-[#AECA1D] lg:ml-0 md:absolute lg:static md:ml-[23.2rem]" >g</p>
             </div> 
 
-              <div className="flex">
-            <div className="flex lg:flex-col lg:absolute lg:-mt-[4.2rem] lg:ml-[27rem] " >Hea
+              <div className="flex  ">
+           
+            <div className="flex xl:flex-col xl:absolute lg:-mt-[4.2rem] lg:ml-[27rem] " >Hea
              <p className="lg:-mt-[4.4rem] text-black lg:ml-[8.5rem] "> lth</p>
               </div>
 
-            <div className=" flex lg:static lg:mt-0 lg:ml-0 md:absolute md:-mt-[0rem] md:ml-[14.5rem]"> Jour
+            <div className=" flex xl:static lg:mt-0 lg:ml-0 md:absolute md:-mt-[0rem] md:ml-[14.5rem]"> Jour
              <p className="lg:text-black md:text-white md:ml-[0rem] md:mt-[0rem] ">neys &</p> 
              </div>
              </div>
@@ -90,7 +91,7 @@ const ProductHero = () => {
         </motion.div>
 
         <motion.div
-          className="md:h-[500px] md:w-[500px] md:-mt-20"
+          className="lg:h-[440px] lg:w-[540px] md:w-[440px] 2xl:w-[640px]"
           variants={rightImageVariants}
         >
           {/* <img src="/productHero.png" alt="pills" className="w-full h-full" /> */}

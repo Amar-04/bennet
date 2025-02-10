@@ -17,7 +17,7 @@ const Values = () => {
   };
 
   return (
-    <section className="mt-20">
+    <section className="mt-20 max-w-[1440px] mx-auto px-0 ">
       <div className="w-full max-w-[1440px] mx-auto px-4">
         <motion.div
           className="bg-black text-white flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-3xl gap-6 md:gap-12"
@@ -25,7 +25,7 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold">
+          <h2 className=" text-2xl md:text-4xl font-bold">
             We're more than just a <br/> {" "}
             <span className="text-[#AECA1D]">healthcare</span> company
           </h2>
