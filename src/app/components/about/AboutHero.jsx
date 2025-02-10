@@ -144,6 +144,7 @@ const AboutHero = () => {
             <div className="h-full scale-95 mt-6 md:mt-0 rounded-[2rem] z-10">
 
 
+
               {/* <img
                 src="/aboutHero.png"
                 alt="About Us"
@@ -153,6 +154,7 @@ const AboutHero = () => {
               <img
                 src="/AboutUs1.png"
                 alt="Medical consultation"
+
                 className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
               />
 
@@ -163,6 +165,7 @@ const AboutHero = () => {
               /> */}
 
               <div className=" inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+
             </div>
           </motion.div>
         </div>
