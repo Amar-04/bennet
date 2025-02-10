@@ -26,7 +26,7 @@ export default function CareersPage() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow md:-mt-10">
         <HeroSection
-          imageLink="/career-img-1.png"
+          imageLink="/meeting.png"
           title='<span>Empowering</span>
                   <br />
                   <div >
@@ -120,7 +120,7 @@ export default function CareersPage() {
               variants={fadeInUp}
             >
               <Image
-                src="/career-img-2.png"
+                src="/Groupphoto.png"
                 alt="Team Meeting"
                 fill
                 className="object-cover rounded-lg "

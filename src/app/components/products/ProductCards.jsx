@@ -118,7 +118,7 @@ const ProductCards = () => {
         ))}
       </div>
       
-      <div className="flex items-center justify-center mb-4">
+      {/* <div className="flex items-center justify-center mb-4">
         <Link
           href={"#"}
           className="bg-black pl-4 py-3 text-white text-sm md:text-base rounded-full font-bold"
@@ -129,7 +129,7 @@ const ProductCards = () => {
           
         </Link>
 
-      </div>
+      </div> */}
 
     </section>
   );

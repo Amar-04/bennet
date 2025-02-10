@@ -59,7 +59,7 @@ export default function Header() {
   return (
 
     <header
-      className={`fixed top-0 m left-0 right-0 z-50 font-outfit transition-all duration-300 ${
+      className={`fixed top-0 m left-0 right-0 z-30 font-outfit transition-all duration-300 overflow-visible ${
         hasScrolled ? "bg-white/80 backdrop-blur-md " : "bg-white"
       }`}
     >

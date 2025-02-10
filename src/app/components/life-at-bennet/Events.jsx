@@ -185,7 +185,7 @@ export default function Events() {
         transition={{ staggerChildren: 0.3, duration: 1 }}
       >
         <motion.div
-          className="w-24 h-20 sm:w-48 sm:h-32 rounded-lg overflow-hidden shadow-lg relative"
+          className="w-24 h-20 -ml-[10rem] sm:w-48 sm:h-32 rounded-lg overflow-hidden shadow-lg relative"
           initial={{ opacity: 0 }}
           viewport={{ once: true, amount: 0.7 }}
           whileInView={{ opacity: 1 }}
@@ -198,20 +198,9 @@ export default function Events() {
             className="object-contain"
           />
         </motion.div>
-        <motion.div
-          className="w-24 h-20 sm:w-48 sm:h-32 rounded-lg overflow-hidden shadow-lg relative"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.7 }}
-          transition={{ duration: 1 }}
-        >
-          <Image
-            src="/events-bottom-img2.png"
-            alt="Stethoscope on documents"
-            layout="fill"
-            className="object-contain"
-          />
-        </motion.div>
+
+       
+
       </motion.div>
     </div>
   );

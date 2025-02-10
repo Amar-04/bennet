@@ -49,6 +49,16 @@ const HomeHero = () => {
             Our Legacy of Care: A Journey Since 1996
           </motion.h2>
 
+          
+          <div className="absolute "> 
+               <img
+                    src="/Molecule.png"
+                    alt="Medical consultation"
+                    className="-mt-10 relative w-full h-[25rem] lg:h-[30rem] rounded-[2rem] z-0"
+                  />
+
+                  </div>
+
           <motion.div
             className="space-y-8 text-lg md:text-2xl text-gray-700"
             initial={{ opacity: 0, y: 20 }}
@@ -65,6 +75,7 @@ const HomeHero = () => {
               Since 1996, we've been dedicated to enriching the lives of our
               citizens with the power of good health.
             </motion.p>
+
 
             <motion.p
               whileHover={{

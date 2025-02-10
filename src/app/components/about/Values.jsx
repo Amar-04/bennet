@@ -74,16 +74,16 @@ const Values = () => {
 
           </div>
 
-          <div className="relative min-h-[800px] md:min-h-[600px]">
+          <div className="relative  z-0 min-h-[800px] md:min-h-[600px]">
             {/* Circle Background Pattern */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-30">
               <svg className="w-full h-full" viewBox="0 0 800 800">
                 <circle
                   cx="400"
                   cy="400"
                   r="300"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000"
                   strokeWidth="1"
                 />
                 <circle
@@ -91,7 +91,7 @@ const Values = () => {
                   cy="400"
                   r="300"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000"
                   strokeWidth="1"
                 />
                 <circle
@@ -99,14 +99,14 @@ const Values = () => {
                   cy="400"
                   r="300"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000"
                   strokeWidth="1"
                 />
               </svg>
             </div>
 
             {/* Value Cards */}
-            <div className="relative z-10 grid gap-8">
+            <div className="relative z-10 grid gap-8 z-40 ">
              
               {/* Top Card */}
               <motion.div
@@ -201,6 +201,7 @@ const Values = () => {
             </div>
 
           </div>
+
         </div>
       </div>
     </section>

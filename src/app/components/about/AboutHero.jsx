@@ -32,79 +32,78 @@ const AboutHero = () => {
   };
 
   return (
-
     <motion.section
-      className="flex overflow-hidden mt-20 mb-10 scale-95 "
+      className="flex overflow-visible mt-20 mb-10 scale-95 "
       initial="hidden"
       animate="visible"
       exit="hidden"
       viewport={{ once: true }}
     >
       <div className="w-full h-full px-2 ">
-        
         <div className="flex flex-col md:flex-row ">
-
           {/* Left Side */}
           <motion.div
-            className="w-full lg:mt-16"
+            className="w-full  ml-2 md:ml-0 lg:mt-12 z-30"
             variants={leftContentVariants}
           >
-
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] lg:scale-75 lg:-ml-16"
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] lg:scale-90 lg:-ml-6"
               variants={leftItemVariants}
             >
-
-            <div className="md:ml-2 md:mt-2 lg:-mt-[7.5rem] overflow-hidden">
-
+              <div className="md:ml-2 md:mt-2 lg:-mt-[3.5rem]  scale-105 overflow-visible">
                 {/* Smol Box */}
                 <div>
-                  <img src="./SmolBox.svg" 
-                  className="z-50 ml-0 md:ml-2 mt-[1rem] md:mt-3 md:my-0 lg:ml-2 lg:mt-0 "
-                  alt="Smol Box"
+                  <img
+                    src="./SmolBox.svg"
+                    className="z-50 ml-0 md:ml-2 mt-[1rem] md:mt-3 md:my-0 lg:ml-2 lg:mt-0 "
+                    alt="Smol Box"
                   />
                 </div>
 
-              <div className="flex flex-col sm:flex-row md:flex-col">
-                <div className="">
-                  Your <span className="text-[#AECA1D]">Health</span>,
+                <div className="flex flex-col  sm:flex-row md:flex-col">
+                  <div className="">
+                    Your <span className="text-[#AECA1D]">Health</span>,
+                  </div>
+                  <div className="leading-tight ">Our Priority!</div>
                 </div>
-                <div className="leading-tight ">Our Priority!</div>
-              </div>
 
-              <div className="flex md:flex-col">
-
-              <div className="leading-tight">Building 
-                    <div className="md:absolute md:-mt-[5.5rem] flex md:ml-[17.5rem] lg:-mt-[7.5rem] lg:ml-[23rem] z-50">Healt
-                    <p className="md:text-black">hier</p>
+                <div className="relative z-30">
+                 
+                  <div className="flex md:flex-col">
+                    <div className="leading-tight md:relative">
+                      Building
+                      <div className="md:absolute md:-mt-[5.5rem] flex md:ml-[17.5rem] lg:-mt-[7.5rem] lg:ml-[23rem] ">
+                        Health <span className="text-black md:text-[#AECA1D] ">ier</span>
+                       
+                      </div>
                     </div>
-              </div>
-                     <div className="text-[#AECA1D] leading-tight -ml-4 md:ml-0 md:-mt-4">Communities</div>
-              </div>
 
-            </div>
-           
+                    <div className="text-[#AECA1D] leading-tight -ml-[1rem] md:ml-0 md:-mt-4">
+                      Communities
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </motion.h1>
 
-            
-            <div className="lg:ml-8 md:ml-4 lg:-mt-[2rem] ">
-
+            <div className="lg:ml-1 md:ml-1 lg:-mt-[1rem] ">
               <motion.p
                 className="text-xl md:text-2xl text-gray-700 ] "
                 variants={leftItemVariants}
               >
-                <span className=" ">  Transforming Lives Since 1996.</span>
+                <span className=" "> Transforming Lives Since 1996.</span>
               </motion.p>
-          </div>
+            </div>
 
-            <div className="lg:ml-8 md:-ml-2 mt-5 lg:mt-8">
-            <Link
-              href="#"
-              className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
-            >
-              Know More{" "}
-              <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
-            </Link>
+            <div className="lg-:ml-1 md:-ml-2 mt-2 lg:mt-2">
+              <Link
+                href="#"
+                className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
+              >
+                Know More{" "}
+                <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
+              </Link>
             </div>
 
             {/* <motion.div
@@ -134,32 +133,43 @@ const AboutHero = () => {
               </Link>
             </motion.div> */}
           </motion.div>
-            
+
           {/* Right Side */}
           <motion.div
-            className="w-full max-h-[36rem]"
+            className="w-full max-h-[32rem] z-10 scale-90"
             variants={rightImageVariants}
           >
-
             {/* Image */}
-            <div className="relative h-full mt-6 md:mt-0 rounded-[2rem] ">
-              <img
+
+            <div className="h-full scale-95 mt-6 md:mt-0 rounded-[2rem] z-10">
+
+
+              {/* <img
                 src="/aboutHero.png"
+                alt="About Us"
+                className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
+              /> */}
+
+              <img
+                src="/AboutUs1.png"
                 alt="Medical consultation"
                 className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+
+              {/* <img
+                src="/AboutUs2.png"
+                alt="About us"
+                className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
+              /> */}
+
+              <div className=" inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
             </div>
-
           </motion.div>
-
         </div>
       </div>
 
       <div className="mt-4"></div>
-
     </motion.section>
-    
   );
 };
 
