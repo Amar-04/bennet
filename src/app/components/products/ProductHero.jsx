@@ -33,7 +33,7 @@ const ProductHero = () => {
 
   return (
     <motion.section
-      className="relative mb-10 md:py-10 mt-24 md:mt-12 max-w-[1440px] mx-auto px-0 md:ml-10 lg:ml-0"
+      className="relative mb-10 md:py-10 mt-24 md:mt-12 max-w-[1440px] mx-auto px-0 "
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -47,7 +47,7 @@ const ProductHero = () => {
             variants={leftItemVariants}
           >
 
-          <div className="lg:mt-6">
+          <div className="lg:mt-6 md:ml-8 lg:ml-0">
 
             <div className="text-[#AECA1D] md:z-40  flex" >Empowerin
             <p className=" text-[#AECA1D] md:text-black  lg:text-[#AECA1D] lg:ml-0 md:absolute lg:static md:ml-[23.2rem]" >g</p>
@@ -72,7 +72,7 @@ const ProductHero = () => {
 
 
           <motion.p
-            className="md:text-2xl my-4 md:my-8"
+            className="md:text-2xl my-4 md:my-8 md:ml-8 lg:ml-0"
             variants={leftItemVariants}
           >
             Transforming lives since 1996
@@ -81,7 +81,7 @@ const ProductHero = () => {
           <div>
             <Link
               href="#"
-              className="bg-black pl-4 py-3 text-white text-sm md:text-base rounded-full font-bold"
+              className="bg-black pl-4 py-3 md:ml-8 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
             >
               Know More{" "}
               <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>

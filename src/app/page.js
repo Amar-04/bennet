@@ -28,7 +28,9 @@ const Home = () => {
       <Stats />
       <Cards />
       <Network />
+      <div className="max-w-[1440px] mx-auto px-0">
       <DynamicWorldMap />
+      </div>
       <Priorities />
       <Leadership />
       <Products />
