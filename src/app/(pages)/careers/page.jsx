@@ -120,7 +120,7 @@ export default function CareersPage() {
               variants={fadeInUp}
             >
               <Image
-                src="/Groupphoto.png"
+                src="/GroupPhoto.png"
                 alt="Team Meeting"
                 fill
                 className="object-cover rounded-lg "

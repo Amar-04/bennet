@@ -47,7 +47,7 @@ const ImgHero = () => {
 
   return (
     <motion.section
-      className="relative scale-95 md:px-8 scale-105 ml-16 flex items-center max-h-[760] max-w-screen-xl justify-center  max-w-[1440] mx-auto mt-[12px]"
+    className="relative scale-95 xl:scale-100 md:px-8 scale-105 ml-10 sm:ml-16  2xl:ml-auto flex items-center justify-center max-w-[1440px] mx-auto mt-[12px]"
       initial="hidden"
       animate="visible"
       exit="hidden"

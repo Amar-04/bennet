@@ -33,7 +33,7 @@ const ProductHero = () => {
 
   return (
     <motion.section
-      className="relative mb-10 md:py-20 mt-24 md:mt-0"
+      className="relative mb-10 md:py-20 mt-24 md:mt-0 max-w-[1440] mx-auto"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -55,7 +55,7 @@ const ProductHero = () => {
 
               <div className="flex">
             <div className="flex lg:flex-col lg:absolute lg:-mt-[4.2rem] lg:ml-[27rem] " >Hea
-             <p className="lg:-mt-[4.4rem] lg:text-white lg:ml-[8.8rem] "> lth</p>
+             <p className="lg:-mt-[4.4rem] text-black lg:ml-[8.5rem] "> lth</p>
               </div>
 
             <div className=" flex lg:static lg:mt-0 lg:ml-0 md:absolute md:-mt-[0rem] md:ml-[14.5rem]"> Jour

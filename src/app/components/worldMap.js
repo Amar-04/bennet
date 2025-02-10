@@ -39,7 +39,7 @@ const MapComponent = () => {
       doubleClickZoom={false} 
       touchZoom={false} 
       zoomControl={false} 
-      className="h-[500px] mx-8 mt-6 w-full"
+      className="h-[500px] mx-8 mt-6 w-full max-w-[1440px] mx-auto px-0 "
     >
       <TileLayer 
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

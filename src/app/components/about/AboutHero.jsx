@@ -33,7 +33,7 @@ const AboutHero = () => {
 
   return (
     <motion.section
-      className="flex overflow-visible mt-20 mb-10 scale-95 "
+      className="flex overflow-visible mt-20 mb-10 scale-95 max-w-[1440] mx-auto"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -55,7 +55,7 @@ const AboutHero = () => {
                 <div>
                   <img
                     src="./SmolBox.svg"
-                    className="z-50 ml-0 md:ml-2 mt-[1rem] md:mt-3 md:my-0 lg:ml-2 lg:mt-0 "
+                    className="z-40 ml-0 md:ml-2 mt-[1rem] md:mt-3 md:my-0 lg:ml-2 lg:mt-0 "
                     alt="Smol Box"
                   />
                 </div>

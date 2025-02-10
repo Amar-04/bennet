@@ -69,7 +69,7 @@ export default function Manufacturing() {
                <img
                     src="/Molecule.png"
                     alt="Medical consultation"
-                    className="sm:-mt-10 sm:ml-20  h-60 w-60 md:-mt-16 md:h-80 md:w-80  md:ml-60 lg:ml-80 relative rounded-[2rem] z-0"
+                    className="sm:-mt-10 sm:ml-20  h-60 w-60 md:-mt-16 md:h-80 md:w-80 xl:w-48 xl:h-60 md:ml-60 lg:ml-80 relative rounded-[2rem] z-0"
                   />
 
                   </div>
