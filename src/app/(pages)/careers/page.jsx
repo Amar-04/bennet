@@ -48,6 +48,7 @@ export default function CareersPage() {
           <div className="container w-[100%] mx-auto px-4 py-6 flex justify-center align-middle bg-black text-white lg:rounded-2xl">
             <div className="w-[100%] flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
               <h2 className="text-4xl text-center align-middle text-[#9DC41A] lg:text-6xl font-bold mb-4 lg:w-1/3">
+              <p></p>
                 Careers
               </h2>
               <p className="text-white text-lg lg:text-2xl lg:w-2/3 ">
