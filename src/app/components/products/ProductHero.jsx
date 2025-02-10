@@ -39,7 +39,7 @@ const ProductHero = () => {
       exit="hidden"
       viewport={{ once: true }}
     >
-      <div className="container md:ml-2 lg:ml-10  md:w-[90vw] mx-auto grid md:grid-cols-2 gap-4">
+      <div className="container md:ml-2 lg:ml-10  mx-auto grid md:grid-cols-2 gap-4">
         <motion.div className="space-y-4" variants={leftContentVariants}>
           
           <motion.h1
@@ -49,7 +49,7 @@ const ProductHero = () => {
 
           <div className="">
 
-            <div className="text-[#AECA1D] md:z-50  flex" >Empowerin
+            <div className="text-[#AECA1D] md:z-40  flex" >Empowerin
             <p className=" text-[#AECA1D] md:text-black  lg:text-[#AECA1D] lg:ml-0 md:absolute lg:static md:ml-[23.2rem]" >g</p>
             </div> 
 

@@ -68,12 +68,12 @@ const ImgHero = () => {
               <div>
                 <img
                   src="./SmolBox.svg"
-                  className="z-50 -ml-10 md:-ml-16 mt-[3rem] md:mt-6 my-6 md:my-0 lg:mb-3"
+                  className="z-40 -ml-14 md:-ml-16 mt-[3rem] md:mt-10 lg:mt-14 my-6 md:my-0 lg:mb-3"
                   alt="Smol Box"
                 />
               </div>
 
-              <div className="flex flex-col mt-1 md:-mt-4 ">
+              <div className="flex flex-col mt-1 md:-mt-2 ">
                 <div className="flex flex-wrap mt-2 sm:mt-0 -ml-16 items-baseline gap-x-3 ">
                   <motion.span
                     whileHover="hover"
@@ -144,7 +144,7 @@ const ImgHero = () => {
               <div>
                 <img
                   src="./Box.svg"
-                  className="absolute  z-50 scale-75  ml-[10rem] mt-[15.5rem] sm:ml-32 md:mt-[16rem]  lg:mt-[22.5rem] md:ml-12"
+                  className="absolute  z-40 scale-75  ml-[10rem] mt-[15.5rem] sm:ml-32 md:mt-[16rem]  lg:mt-[22.5rem] md:ml-12"
                   alt="Smol Box"
                 />
               </div>
@@ -153,7 +153,7 @@ const ImgHero = () => {
               <div className="">
                 <img
                   src="./Medicine.svg"
-                  className="absolute  z-50 scale-75  ml-[4rem] -mt-[4rem] sm:ml-[14rem]  md:mt-3.5 md:ml-[12rem] lg:mt-[4.5rem]  lg:ml-[22rem]"
+                  className="absolute  z-40 scale-75  ml-[4rem] -mt-[4rem] sm:ml-[14rem]  md:mt-3.5 md:ml-[12rem] lg:mt-[4.5rem]  lg:ml-[22rem]"
                   alt="Smol Box"
                 />
               </div>
@@ -171,7 +171,7 @@ const ImgHero = () => {
                 <img
                   src="/Homepage1.png"
                   alt="Medical consultation"
-                  className="w-full h-[20rem] lg:scale-[0.8] lg:h-[30rem] rounded-[2rem] z-40"
+                  className="w-full h-[20rem] md:mt-14 lg:mt-0 -ml-10 md:ml-0 lg:scale-[0.8] lg:h-[30rem] rounded-[2rem] z-40"
                 />
 {/* 
                 <img

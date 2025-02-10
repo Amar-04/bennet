@@ -33,7 +33,7 @@ const AboutHero = () => {
 
   return (
     <motion.section
-      className="flex overflow-visible mt-20 mb-10 scale-95 max-w-[1440] mx-auto"
+      className="flex overflow-visible mt-20  lg:mt-14 mb-10 scale-95 max-w-[1440] mx-auto"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -87,7 +87,7 @@ const AboutHero = () => {
               </div>
             </motion.h1>
 
-            <div className="lg:ml-1 md:ml-1 lg:-mt-[1rem] ">
+            <div className="lg:ml-1 md:ml-1 lg:-mt-[1.3rem] ">
               <motion.p
                 className="text-xl md:text-2xl text-gray-700 ] "
                 variants={leftItemVariants}
