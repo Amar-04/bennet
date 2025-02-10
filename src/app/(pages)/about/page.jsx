@@ -8,11 +8,13 @@ import React from "react";
 const page = () => {
   return (
     <>
+      <div className="">
       <AboutHero />
       <Values />
       <Commitment />
       <Leaders />
       <Events />
+      </div>
     </>
   );
 };

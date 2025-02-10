@@ -8,17 +8,14 @@ const Cards = () => {
     {
       id: 1,
       title: "Ethical",
-      desc: "We offer tailored solutions through our three core divisions: Ethical, Critical Care, and the Emiror Division, bringing specialized and innovative care to those who need it most.",
     },
     {
       id: 2,
       title: "Critical Care",
-      desc: "We collaborate with over 500 passionate sales personnel and a network of 1,000+ distributors, ensuring consistent access to care across the country with a presence in 15+ states.",
     },
     {
       id: 3,
       title: "Emiror Division",
-      desc: "With over 100,000 retail outlets nationwide, we bring superior healthcare solutions within easy reach for everyone. We believe in the transformative power of healthcare.",
     },
   ];
 
@@ -97,18 +94,15 @@ const Cards = () => {
                 y: -5,
                 transition: { duration: 0.3 },
               }}
-              className="bg-black text-white rounded-2xl px-6 md:px-12 py-8 md:py-10 transition-all duration-300 shadow-lg hover:shadow-2xl"
+              className="bg-black text-white rounded-2xl px-2 md:px-8 py-4 md:py-4 transition-all duration-300 shadow-lg hover:shadow-2xl"
             >
               <motion.h2
-                className="text-2xl md:text-3xl font-bold mb-6"
+                className="text-2xl md:text-3xl font-bold "
                 whileHover={{ scale: 1.05, x: 10 }}
                 transition={{ duration: 0.2 }}
               >
                 {card.title}
               </motion.h2>
-              <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                {card.desc}
-              </p>
             </motion.div>
           ))}
         </div>

@@ -70,7 +70,7 @@ const Leaders = () => {
       {/* Header with line */}
       <div className="flex items-center gap-8 mb-12">
         <motion.h2
-          className="text-5xl md:text-7xl font-bold text-outline uppercase whitespace-nowrap"
+          className="text-5xl md:text-7xl font-bold text-outline  uppercase whitespace-nowrap"
           style={{
             WebkitTextStroke: "1px black",
             WebkitTextFillColor: "white",

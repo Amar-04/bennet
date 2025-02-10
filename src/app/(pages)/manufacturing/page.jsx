@@ -3,6 +3,14 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import HeroSection from "@/app/components/HeroSection";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const DynamicWorldMap = dynamic(()=>import('../../components/worldMap'),
+ {  
+  ssr:false,
+  }
+)
+
 
 export default function Manufacturing() {
   const fadeInUp = {
@@ -32,18 +40,21 @@ export default function Manufacturing() {
     <main className="min-h-screen">
       <HeroSection
 
+
         // imageLink="/manufacturing.png"
 
-        // imageLink="/Manufacturing1.png"
+        imageLink="/Manufacturing1.png"
 
-        imageLink="/Manufacturing2.png"
+        // imageLink="/Manufacturing2.png"
 
         title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
         description="Where excellence meets accessibility"
         showKnowMoreButton={true}
       />
+      
       {/* Excellence Section */}
-      <section className="container mx-auto px-4 relative">
+      <section className="container mx-auto px-4 relative mt-12">
+       
         <motion.div
           className="border border-[#2C3D5A] bg-[#D9D9D980] p-6 md:p-8 lg:p-16 rounded-3xl shadow-sm mx-auto relative z-10"
           initial={{ opacity: 0, y: 100 }}
@@ -52,6 +63,17 @@ export default function Manufacturing() {
           transition={{ duration: 1 }}
         >
           <div className="text-black">
+
+              {/* Background */}
+        <div className="absolute "> 
+               <img
+                    src="/Molecule.png"
+                    alt="Medical consultation"
+                    className="sm:-mt-10 sm:ml-20  h-60 w-60 md:-mt-16 md:h-80 md:w-80 xl:w-48 xl:h-60 md:ml-60 lg:ml-80 relative rounded-[2rem] z-0"
+                  />
+
+                  </div>
+           
             {/* Title */}
             <motion.h2
               className="text-2xl md:text-4xl font-bold mb-4 text-center"
@@ -90,19 +112,16 @@ export default function Manufacturing() {
           </div>
         </motion.div>
 
-        {/* Background */}
-        <motion.div
-          className="absolute inset-0 excellence-bg z-0"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1 }}
-        ></motion.div>
+    
+
+        
       </section>
 
       {/* Manufacturing Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+
+        
           {/* Title */}
           {isLargeScreen ? (
             <motion.div
@@ -286,8 +305,9 @@ export default function Manufacturing() {
               </div>
             </motion.div>
           )}
+
           <motion.h3
-            className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:leading-[4.5rem] xl:leading-[5.714rem]"
+            className="text-2xl md:max-w-[60rem]  md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:leading-[4.5rem] xl:leading-[5.714rem]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.7 }}
@@ -317,7 +337,7 @@ export default function Manufacturing() {
           </motion.h3>
 
           {/* Image */}
-          <motion.div
+          {/* <motion.div
             className="relative w-full h-[200px] md:h-[400px] bg-gradient-to-br from-[#AECA1D]/10 to-[#2C3D5A]/10 shadow-sm flex justify-center items-center"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +351,13 @@ export default function Manufacturing() {
               objectFit="contain"
               className="align-middle"
             />
-          </motion.div>
+          </motion.div> */}
+
+          {/* Map */}
+          <div className="-ml-10 ">
+          <DynamicWorldMap />
+          </div>
+
         </div>
       </section>
 
@@ -428,9 +454,10 @@ export default function Manufacturing() {
           </div>
         </div>
       </motion.section>
+      
       {/* Contact Section */}
       <motion.section
-        className="mx-auto mt-12"
+        className="mx-auto mt-12 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -439,7 +466,7 @@ export default function Manufacturing() {
         <div className="container bg-[#D7E48E] mx-auto px-2 md:px-4 py-6 rounded-2xl">
           <div className="flex flex-col  md:gap-12 md:flex-row items-center md:justify-between">
             <div className="md:w-2/5 xl:w-[42%] w-full text-center md:text-left">
-              <h3 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-2">
+              <h3 className="font-bold text-2xl sm:text-3xl lg:text-3xl xl:text-4xl mb-2">
                 To know more about us Contact at
               </h3>
             </div>

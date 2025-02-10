@@ -5,7 +5,7 @@ import { Box } from "lucide-react";
 
 const HomeHero = () => {
   return (
-    <section className="container mx-auto my-20 px-4">
+    <section className="container mx-auto my-20 px-4 ">
       <motion.div
         className="relative rounded-[2rem] bg-gray-100 p-16 md:p-20 border border-[#2C3D5A]/20"
         initial={{ opacity: 0, y: 20 }}
@@ -49,6 +49,16 @@ const HomeHero = () => {
             Our Legacy of Care: A Journey Since 1996
           </motion.h2>
 
+          
+          <div className="absolute "> 
+               <img
+                    src="/Molecule.png"
+                    alt="Medical consultation"
+                    className="-mt-10 relative w-full h-[25rem] lg:h-[30rem] rounded-[2rem] z-0"
+                  />
+
+                  </div>
+
           <motion.div
             className="space-y-8 text-lg md:text-2xl text-gray-700"
             initial={{ opacity: 0, y: 20 }}
@@ -65,6 +75,7 @@ const HomeHero = () => {
               Since 1996, we've been dedicated to enriching the lives of our
               citizens with the power of good health.
             </motion.p>
+
 
             <motion.p
               whileHover={{

@@ -57,16 +57,18 @@ export default function Header() {
   };
 
   return (
+
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 font-outfit transition-all duration-300 ${
+      className={`fixed z-50 top-0 m left-0 right-0 z-30 font-outfit transition-all duration-300 overflow-visible ${
         hasScrolled ? "bg-white/80 backdrop-blur-md " : "bg-white"
       }`}
     >
-      <nav className="container px-4 py-4">
+
+      <nav className=" px-2 pt-4 lg:flex lg:mx-auto lg:justify-center  ">
         <motion.div
           initial="hidden"
           animate="visible"
-          className="flex items-center justify-between"
+          className="flex items-center justify-between lg:justify-start"
         >
           {/* Logo Section */}
           <motion.div
@@ -74,19 +76,20 @@ export default function Header() {
             className="flex-shrink-0"
             transition={{ duration: 0.2 }}
           >
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex scale-110 items-center ml-3 sm:ml-4  md:ml-12 lg:ml-4">
               <Image
-                src="/bennet.png"
+                src="/bennet.svg"
                 alt="Bennet Pharmaceuticals Ltd."
                 width={150}
                 height={40}
                 className="h-10 w-auto"
               />
             </Link>
+
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:max-w-[1440] md:text-[1rem] md:space-x-4  md:-ml-8 md:mx-2 lg:space-x-10 lg:ml-40">
             {navigation.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -97,17 +100,20 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`lg:text-[1rem] md:text-[0.6rem] font-medium transition-colors duration-200 ${
+                  className={` md:text-[0.9rem] md:z-50 lg:text-[1.2rem]  font-medium transition-colors duration-200 ${
                     pathname === item.href
                       ? "text-[#AECA1D]"
-                      : "text-slate-700 hover:text-[#AECA1D]/80"
+                      : "text-black hover:text-[#AECA1D]/80"
                   }`}
                 >
                   {item.name}
                 </Link>
+                
+                
               </motion.div>
             ))}
           </div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -126,7 +132,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <motion.div
-          className={`fixed top-0 right-0 z-50 h-full w-2/3 bg-[#2b3f56]/90 backdrop-blur-md text-white border-b transform transition-transform duration-300 ${
+          className={`fixed absolute top-0 right-0 z-50 h-full w-2/3 bg-[#2b3f56]/90 text-white border-b transform transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           initial={{ opacity: 0 }}
@@ -174,6 +180,8 @@ export default function Header() {
           )}
         </motion.div>
       </nav>
+
+
     </header>
   );
 }

@@ -25,11 +25,11 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold">
-            We're more than just a{" "}
+          <h2 className="text-2xl md:text-4xl font-bold">
+            We're more than just a <br/> {" "}
             <span className="text-[#AECA1D]">healthcare</span> company
           </h2>
-          <p className="md:text-xl text-gray-200 md:w-1/2">
+          <p className="md:text-xl text-gray-200 md:w-1/2 ">
             We're a community of dedicated professionals committed to creating a
             healthier future for everyone.
           </p>
@@ -51,8 +51,9 @@ const Values = () => {
                 <br />
                 VALUES
               </motion.h2>
+
               <motion.div
-                className="h-[2px] bg-black flex-grow"
+                className="h-[2px] ml-60 md:ml-80 overflow-x-hidden  bg-black flex-grow"
                 initial="hidden"
                 whileInView="visible"
                 variants={lineVariant}
@@ -70,18 +71,19 @@ const Values = () => {
               At Bennet, our core values guide our mission and shape our
               culture, ensuring we deliver exceptional healthcare solutions.
             </motion.p>
+
           </div>
 
-          <div className="relative min-h-[800px] md:min-h-[600px]">
+          <div className="relative  z-0 min-h-[800px] md:min-h-[600px]">
             {/* Circle Background Pattern */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-30">
               <svg className="w-full h-full" viewBox="0 0 800 800">
                 <circle
                   cx="400"
                   cy="400"
                   r="300"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000"
                   strokeWidth="1"
                 />
                 <circle
@@ -89,7 +91,7 @@ const Values = () => {
                   cy="400"
                   r="300"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000"
                   strokeWidth="1"
                 />
                 <circle
@@ -97,14 +99,15 @@ const Values = () => {
                   cy="400"
                   r="300"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke="#000000"
                   strokeWidth="1"
                 />
               </svg>
             </div>
 
             {/* Value Cards */}
-            <div className="relative z-10 grid gap-8">
+            <div className="relative z-10 grid gap-8 z-40 ">
+             
               {/* Top Card */}
               <motion.div
                 className="bg-white p-6 rounded-2xl shadow-lg max-w-sm mx-auto"
@@ -123,7 +126,7 @@ const Values = () => {
               </motion.div>
 
               {/* Middle Row */}
-              <div className="flex justify-between gap-8">
+              <div className="flex flex-col md:flex-row mx-auto md:justify-between gap-8">
                 <motion.div
                   className="bg-white p-6 rounded-2xl shadow-lg max-w-sm"
                   initial={{ opacity: 0, x: -20 }}
@@ -194,8 +197,11 @@ const Values = () => {
                   healthcare challenges.
                 </p>
               </motion.div>
+
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
