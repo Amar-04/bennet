@@ -31,7 +31,13 @@ export default function Manufacturing() {
   return (
     <main className="min-h-screen">
       <HeroSection
-        imageLink="/manufacturing.png"
+
+        // imageLink="/manufacturing.png"
+
+        // imageLink="/Manufacturing1.png"
+
+        imageLink="/Manufacturing2.png"
+
         title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
         description="Where excellence meets accessibility"
         showKnowMoreButton={true}

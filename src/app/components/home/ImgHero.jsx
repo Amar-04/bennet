@@ -125,11 +125,24 @@ const ImgHero = () => {
             variants={rightImageVariants}
           >
             <div className="relative h-full rounded-[2rem] overflow-hidden">
-              <img
+              {/* <img
                 src="/heroImg.png"
                 alt="Medical consultation"
                 className="w-full h-full object-cover rounded-[2rem]"
+              /> */}
+
+               {/* <img
+                src="/Homepage1.png"
+                alt="Medical consultation"
+                className="w-full h-full object-cover rounded-[2rem]"
+              /> */}
+
+               <img
+                src="/Homepage2.png"
+                alt="Medical consultation"
+                className="w-full h-full object-cover rounded-[2rem]"
               />
+              
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
             </div>
           </motion.div>

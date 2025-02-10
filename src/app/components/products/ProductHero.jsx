@@ -70,7 +70,15 @@ const ProductHero = () => {
           className="md:h-[500px] md:w-[500px] md:-mt-20"
           variants={rightImageVariants}
         >
-          <img src="/productHero.png" alt="pills" className="w-full h-full" />
+
+          {/* <img src="/productHero.png" alt="pills" className="w-full h-full" /> */}
+
+
+          {/* <img src="/Products1.png" alt="pills" className="w-full h-full" /> */}
+
+          <img src="/Products2.png" alt="pills" className="w-full h-full" />
+
+
         </motion.div>
       </div>
     </motion.section>
