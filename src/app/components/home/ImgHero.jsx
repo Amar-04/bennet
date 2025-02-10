@@ -48,7 +48,7 @@ const ImgHero = () => {
   return (
     
     <motion.section
-      className="relative md:px-8 scale-95 flex items-center max-h-[760] max-w-screen-xl justify-center  max-w-[1440] mx-auto mt-[12px]"
+      className="relative md:px-8 scale-105 ml-16 flex items-center max-h-[760] max-w-screen-xl justify-center  max-w-[1440] mx-auto mt-[12px]"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -67,21 +67,21 @@ const ImgHero = () => {
 
 
             <motion.h1
-              className="text-4xl -mt-10 sm:text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1]"
+              className="text-5xl -mt-10 sm:text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1]"
               variants={leftItemVariants}
             >
 
                 {/* Smol Box */}
                 <div>
                   <img src="./SmolBox.svg" 
-                  className="z-50 -ml-10 md:-ml-12 mt-[3rem] md:mt-6 my-6 md:my-0"
+                  className="z-50 -ml-10 md:-ml-16 mt-[3rem] md:mt-6 my-6 md:my-0 lg:mb-3"
                   alt="Smol Box"
                   />
                 </div>
 
-              <div className="flex flex-col -mt-4 scale-90">
+              <div className="flex flex-col -mt-4 ">
 
-                <div className="flex flex-wrap  -ml-16 items-baseline gap-x-3 scale-95">
+                <div className="flex flex-wrap  -ml-16 items-baseline gap-x-3 ">
                   <motion.span
                     whileHover="hover"
                     variants={textHoverVariants}
@@ -98,7 +98,7 @@ const ImgHero = () => {
                   </motion.span>
                 </div>
 
-                <div className="flex flex-wrap -ml-16  scale-95 items-baseline gap-x-3 mt-2">
+                <div className="flex flex-wrap -ml-16 items-baseline gap-x-3 mt-2">
                   <motion.span
                     whileHover="hover"
                     variants={textHoverVariants}
@@ -129,7 +129,7 @@ const ImgHero = () => {
 
             </motion.h1>
 
-            <div className="flex scale-95">
+            <div className="flex">
 
             <motion.p
               className="text-xl mx-auto -ml-12 px-4  md:-ml-14 lg:-ml-6 sm:-ml-6 -mt-8 md:text-2xl text-gray-700 cursor-default"
@@ -158,7 +158,7 @@ const ImgHero = () => {
                {/*  Box */}
                <div>
                   <img src="./Box.svg" 
-                  className="absolute  z-50 scale-75  ml-20 mt-[22rem] sm:ml-32 md:mt-[20rem]  lg:mt-[24rem] md:-ml-12"
+                  className="absolute  z-50 scale-75  ml-[10rem] mt-[22rem] sm:ml-32 md:mt-[20rem]  lg:mt-[24rem] md:-ml-12"
                   alt="Smol Box"
                   
                   />
