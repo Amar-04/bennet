@@ -31,7 +31,7 @@ export default function CareersPage() {
                   <br />
                   <div >
                    People ,
-                      <p className="flex md:absolute md:z-50 md:-mt-[4.3rem] md:ml-[16rem] lg:-mt-[6rem]  lg:ml-[22rem]"> Shaping </p>
+                      <p className="flex md:absolute md:z-40 md:-mt-[4.3rem] md:ml-[16rem] lg:-mt-[6rem]  lg:ml-[22rem]"> Shaping </p>
                   </div>
                   <span className="text-[#9DC41A] mt-8 ">Healthcare&apos;s</span>
                   <br />

@@ -33,7 +33,7 @@ const AboutHero = () => {
 
   return (
     <motion.section
-      className="flex overflow-visible mt-20 mb-10 scale-95 max-w-[1440] mx-auto"
+      className="flex overflow-visible mt-20  lg:mt-14 mb-10 scale-95 max-w-[1440] mx-auto"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -87,7 +87,7 @@ const AboutHero = () => {
               </div>
             </motion.h1>
 
-            <div className="lg:ml-1 md:ml-1 lg:-mt-[1rem] ">
+            <div className=" -ml-3 lg:ml-2 md:-ml-1 lg:-mt-[1.3rem]  ">
               <motion.p
                 className="text-xl md:text-2xl text-gray-700 ] "
                 variants={leftItemVariants}
@@ -96,7 +96,7 @@ const AboutHero = () => {
               </motion.p>
             </div>
 
-            <div className="lg-:ml-1 md:-ml-2 mt-2 lg:mt-2">
+            <div className="-ml-3  lg:ml-1 md:-ml-6  mt-2 lg:mt-4">
               <Link
                 href="#"
                 className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
@@ -136,7 +136,7 @@ const AboutHero = () => {
 
           {/* Right Side */}
           <motion.div
-            className="w-full max-h-[32rem] z-10 scale-90"
+            className="w-full max-h-[36rem] z-10 scale-90"
             variants={rightImageVariants}
           >
             {/* Image */}

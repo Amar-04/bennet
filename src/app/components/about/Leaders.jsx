@@ -68,20 +68,19 @@ const Leaders = () => {
       </div>
 
       {/* Header with line */}
-      <div className="flex items-center gap-8 mb-12">
-        <motion.h2
-          className="text-5xl md:text-7xl font-bold text-outline  uppercase whitespace-nowrap"
-          style={{
-            WebkitTextStroke: "1px black",
-            WebkitTextFillColor: "white",
-          }}
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInUp}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          LEADERSHIP
-        </motion.h2>
+      <div className="flex items-center gap-2 mb-12">
+      <motion.h2
+            className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+          >
+            LEADERSHIP
+          </motion.h2>
         <motion.div
           className="h-[2px] bg-[#AECA1D] flex-grow"
           initial="hidden"
