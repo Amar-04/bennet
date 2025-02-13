@@ -33,13 +33,13 @@ const MapComponent = () => {
   return (
     <MapContainer 
       center={[26, 78]} 
-      zoom={5.2} 
+      zoom={5.4} 
       scrollWheelZoom={false} 
       dragging={false} 
       doubleClickZoom={false} 
       touchZoom={false} 
       zoomControl={false} 
-      className="h-[500px] mx-8 mt-6 w-full px-4 lg:ml-6 lg:max-w-[1200px] 2xl:max-w-[1440px] mx-auto px-0"
+      className="h-[500px]  mt-6 w-full px-4   max-w-[1420px] mx-auto px-0"
     >
       <TileLayer 
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

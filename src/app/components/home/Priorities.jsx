@@ -68,7 +68,7 @@ const Priorities = () => {
             }}
           >
             <img
-              src="/priorityImg.png"
+              src="/Doctor2.jpg"
               alt="Healthcare Priority"
               className="w-full h-full object-cover transition-transform duration-300"
             />

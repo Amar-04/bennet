@@ -44,7 +44,7 @@ const Leadership = () => {
   ];
 
   return (
-    <section className="container mx-auto mt-12 md:mt-20 px-4 relative overflow-hidden">
+    <section className="container mx-auto px-4 relative overflow-hidden">
       <motion.div
         className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
         initial={{ opacity: 0, x: -70 }}
