@@ -24,6 +24,7 @@ const Priorities = () => {
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="w-full">
+       
         {/* Header Section */}
         <div className="space-y-4 mb-12">
           <motion.h1
@@ -54,7 +55,7 @@ const Priorities = () => {
           </motion.p>
         </div>
 
-        {/* Content Grid */}
+        {/* Content Grid 1*/}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
             className="relative rounded-[2rem] overflow-hidden h-[400px]"
@@ -94,6 +95,460 @@ const Priorities = () => {
             </motion.p>
           </motion.div>
         </div>
+
+           {/* Content Grid 2*/}
+           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority1.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+            {/* Content Grid 3*/}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority2.png"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+
+            {/* Content Grid 4*/}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority3.png"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+   {/* Content Grid 4*/}
+   <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority4.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+    {/* Content Grid 5*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority5.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+         {/* Content Grid 6*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority6.png"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+         {/* Content Grid 7*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority7.png"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+            {/* Content Grid 8*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority8.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+            {/* Content Grid 9*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority9.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+            {/* Content Grid 10*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority10.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+            {/* Content Grid 11*/}
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <motion.div
+            className="relative rounded-[2rem] overflow-hidden h-[400px]"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <img
+              src="/Priority11.jpg"
+              alt="Healthcare Priority"
+              className="w-full h-full object-cover transition-transform duration-300"
+            />
+          </motion.div>
+
+          <motion.div
+            className="flex items-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="text-xl md:text-2xl text-gray-800 leading-relaxed"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            >
+              At Bennet, we're more than just a healthcare company—we're a
+              community of dedicated professionals committed to creating a
+              healthier future for everyone.
+            </motion.p>
+          </motion.div>
+        </div>
+
+
       </div>
     </section>
   );

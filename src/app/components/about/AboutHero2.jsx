@@ -106,32 +106,6 @@ const AboutHero2 = () => {
               </Link>
             </div>
 
-            {/* <motion.div
-              variants={leftItemVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Link
-                href="#"
-                className="inline-flex items-center bg-black text-white rounded-full group"
-              >
-                <span className="px-6 py-3 font-bold">Know More</span>
-                <div className="bg-[#AECA1D] rounded-full p-3 ml-1 group-hover:rotate-90 transition-transform duration-300">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 5v14M5 12l7 7 7-7" />
-                  </svg>
-                </div>
-              </Link>
-            </motion.div> */}
           </motion.div>
 
           {/* Right Side */}
@@ -149,12 +123,6 @@ const AboutHero2 = () => {
                 className="scale-[0.6] absolute -mt-8 ml-[10rem] sm:ml-[30rem] md:ml-60 lg:ml-[24rem] 2xl:ml-[28rem]"
               />
           
-{/* 
-              <img
-                src="/AboutUs1.png"
-                alt="Medical consultation"
-                className="w-full h-full md:h-[30rem] lg:h-[34rem] object-cover rounded-[2rem]"
-              /> */}
 
               <img
                 src="/AboutUs2.png"

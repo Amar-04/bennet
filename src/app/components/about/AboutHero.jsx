@@ -143,26 +143,17 @@ const AboutHero = () => {
 
             <div className="h-full scale-95 mt-6 md:mt-0 rounded-[2rem] z-10">
 
-            <img
-                src="/Box.svg"
-                alt="Medical consultation"
-                className="scale-[0.6] absolute -mt-8 ml-[10rem] sm:ml-[30rem] md:ml-60 lg:ml-[24rem] 2xl:ml-[28rem]"
-              />
-          
 
               <img
                 src="/AboutUs1.png"
                 alt="Medical consultation"
-                className="w-full h-full md:h-[30rem] lg:h-[34rem] object-cover rounded-[2rem]"
+
+                className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
               />
 
-              {/* <img
-                src="/AboutUs2.png"
-                alt="About us"
-                className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
-              /> */}
 
               <div className=" inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+
             </div>
           </motion.div>
         </div>

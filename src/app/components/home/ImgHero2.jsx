@@ -141,14 +141,14 @@ const ImgHero2 = () => {
 
                 <img
                 src="/Box.svg"
-                alt="Medical consultation"
+                alt="Box"
                 className="scale-75 absolute mt-[22rem]  md:mt-[26rem] lg:mt-[23rem] lg:-ml-12 "
               />
 
 <img
                 src="/Homepage2.png"
                 alt="Home Page"
-                className="w-full h-full object-cover rounded-[2rem] "
+                className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem]  h-full object-cover rounded-[2rem] "
               />
 
               
