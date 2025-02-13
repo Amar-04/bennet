@@ -30,8 +30,9 @@ export default function ContactForm() {
   };
 
   return (
+    
     <motion.div
-      className="bg-[#D7E48E] py-16 px-4 sm:px-6 lg:px-8 rounded-3xl"
+      className="bg-[#D7E48E] py-16 mt-4 px-4 sm:px-6 lg:px-8 rounded-3xl"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

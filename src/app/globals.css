@@ -222,3 +222,7 @@ body {
 *::-ms-scrollbar-thumb:hover {
   background: #aeca1d;
 }
+
+html, body {
+  overflow-x: hidden;
+}

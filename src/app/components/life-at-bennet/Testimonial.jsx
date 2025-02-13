@@ -72,7 +72,7 @@ const Testimonial = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <hr className="border-t-2 border-[#AECA1D]" />
+                <hr className="border-t-2 border-[#AECA1D] ml-10" />
               </motion.div>
             </motion.div>
           ) : (
@@ -155,7 +155,7 @@ const Testimonial = () => {
                   <ChevronLeft className="w-8 h-8 md:w-20 md:h-20" />
                 </button>
 
-                <div className="border-4 border-[#AECA1D] bg-black/70 rounded-[40px] w-full md:w-[65vw] 2xl:w-[50vw] h-[400px] md:h-[400px] p-8 md:p-12 flex flex-col items-center justify-center transition-all duration-500 ease-in-out relative overflow-y-auto">
+                <div className="border-4 border-[#AECA1D] bg-black max-w-[1440] rounded-[40px] w-full md:w-[65vw] 2xl:w-[50vw] h-[400px] md:h-[400px] p-8 md:p-12 flex flex-col items-center justify-center transition-all duration-500 ease-in-out relative overflow-y-auto">
                   <motion.div
                     className="relative w-20 h-20 mb-6 flex-shrink-0"
                     initial={{ opacity: 0 }}
