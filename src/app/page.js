@@ -2,6 +2,7 @@
 
 import React from "react";
 import ImgHero from "./components/home/ImgHero";
+import ImgHero2 from "./components/home/ImgHero2";
 import AboutUs from "./components/home/AboutUs";
 import Stats from "./components/home/Stats";
 import Cards from "./components/home/Cards";
@@ -23,6 +24,7 @@ const Home = () => {
     <>
     <div className="overflow-x-hidden">
       <ImgHero />
+      <ImgHero2 />
       <HomeHero />
       <AboutUs />
       <Stats />

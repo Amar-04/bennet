@@ -40,18 +40,11 @@ const Innovation = () => {
 
         <div className="relative py-10">
          
-          {/* <div className="absolute inset-0 flex justify-center items-center">
-            <Image
-              src="/hero.png"
-              alt="Worm background"
-              width={500}
-              height={500}
-            />
-          </div> */}
+  
 
-          <div className="absolute inset-0 flex justify-center items-center">
+          <div className="absolute inset-0 flex justify-center items-center scale-75">
             <Image
-              src="/Molecule.png"
+              src="/GreenMolecule.png"
               alt="Molecule background"
               width={500}
               height={500}

@@ -52,7 +52,7 @@ const HomeHero = () => {
           
           <div className="absolute "> 
                <img
-                    src="/Molecule.png"
+                    src="/GreenMolecule.png"
                     alt="Medical consultation"
                     className="-mt-10 relative w-full h-[25rem] lg:h-[30rem] rounded-[2rem] z-0"
                   />

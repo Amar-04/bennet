@@ -38,6 +38,8 @@ export default function Manufacturing() {
 
   return (
     <main className="min-h-screen">
+
+      {/* HeroSection1 */}
       <HeroSection
 
 
@@ -51,6 +53,22 @@ export default function Manufacturing() {
         description="Where excellence meets accessibility"
         showKnowMoreButton={true}
       />
+
+
+        {/* HeroSection2 */}
+        <HeroSection
+
+
+        // imageLink="/manufacturing.png"
+
+        imageLink="/Manufacturing2.png"
+
+        // imageLink="/Manufacturing2.png"
+
+        title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
+        description="Where excellence meets accessibility"
+        showKnowMoreButton={true}
+        />
       
       {/* Excellence Section */}
       <section className="container mx-auto px-4 relative mt-12">
@@ -67,9 +85,9 @@ export default function Manufacturing() {
               {/* Background */}
         <div className="absolute "> 
                <img
-                    src="/Molecule.png"
-                    alt="Medical consultation"
-                    className="sm:-mt-10 sm:ml-20  h-60 w-60 md:-mt-16 md:h-80 md:w-80 xl:w-48 xl:h-60 md:ml-60 lg:ml-80 relative rounded-[2rem] z-0"
+                    src="/GreenMolecule.png"
+                    alt="Green Molecule"
+                    className="sm:-mt-10 sm:ml-20  h-60 w-60 md:-mt-16 md:h-80 md:w-80 xl:w-48 xl:h-60  md:ml-60 lg:ml-80 scale-75 lg:scale-90 relative rounded-[2rem] z-0"
                   />
 
                   </div>

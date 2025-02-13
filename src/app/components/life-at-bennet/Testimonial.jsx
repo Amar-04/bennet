@@ -72,7 +72,7 @@ const Testimonial = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <hr className="border-t-2 border-[#AECA1D]" />
+                <hr className="border-t-2 border-[#AECA1D] ml-10" />
               </motion.div>
             </motion.div>
           ) : (

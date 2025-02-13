@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const ImgHero = () => {
+const ImgHero2 = () => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -136,7 +136,8 @@ const ImgHero = () => {
           >
 
             <div className="relative h-full rounded-[2rem] ">
-
+              
+          
 
                 <img
                 src="/Box.svg"
@@ -144,9 +145,9 @@ const ImgHero = () => {
                 className="scale-75 absolute mt-[22rem]  md:mt-[26rem] lg:mt-[23rem] lg:-ml-12 "
               />
 
-              <img
-                src="/Homepage1.png"
-                alt="Home Page Image"
+<img
+                src="/Homepage2.png"
+                alt="Home Page"
                 className="w-full h-full object-cover rounded-[2rem] "
               />
 
@@ -160,4 +161,4 @@ const ImgHero = () => {
   );
 };
 
-export default ImgHero;
+export default ImgHero2;

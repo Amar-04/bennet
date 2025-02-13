@@ -23,7 +23,7 @@ export default function CareersPage() {
     },
   };
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col max-w-[1440px mx-auto px-0 ]">
       <main className="flex-grow md:-mt-10">
         <HeroSection
           imageLink="/meeting.png"
@@ -114,7 +114,7 @@ export default function CareersPage() {
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
         >
-          <div className="container flex flex-col justify-center items-center mx-auto px-4">
+          <div className="container flex flex-col justify-center items-center max-w-[1440px] mx-auto px-4">
             <motion.div
               className="relative h-[400px] lg:h-[500px] w-full"
               variants={fadeInUp}
@@ -123,11 +123,11 @@ export default function CareersPage() {
                 src="/GroupPhoto.png"
                 alt="Team Meeting"
                 fill
-                className="object-cover rounded-lg "
+                className="object-cover rounded-lg max-w-[1480px]"
               />
             </motion.div>
             <motion.div
-              className="relative bottom-[5vh] p-5 w-[85vw] md:w-[85vw] lg:w-[75vw] xl:w-[80vw] 2xl:w-[55vw] bg-[#D7E48E] mx-auto text-center rounded-3xl space-y-6"
+              className="relative bottom-[5vh] p-5 w-[85vw] md:w-[85vw] lg:w-[75vw] xl:w-[80vw] 2xl:w-[55vw] max-w-[1410px] bg-[#D7E48E] mx-auto text-center rounded-3xl space-y-6"
               variants={fadeInUp}
             >
               <h3 className="text-xl lg:text-2xl font-bold">

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const AboutHero = () => {
+const AboutHero2 = () => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -149,18 +149,18 @@ const AboutHero = () => {
                 className="scale-[0.6] absolute -mt-8 ml-[10rem] sm:ml-[30rem] md:ml-60 lg:ml-[24rem] 2xl:ml-[28rem]"
               />
           
-
+{/* 
               <img
                 src="/AboutUs1.png"
                 alt="Medical consultation"
                 className="w-full h-full md:h-[30rem] lg:h-[34rem] object-cover rounded-[2rem]"
-              />
+              /> */}
 
-              {/* <img
+              <img
                 src="/AboutUs2.png"
                 alt="About us"
                 className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
-              /> */}
+              />
 
               <div className=" inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
             </div>
@@ -173,4 +173,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default AboutHero2;
