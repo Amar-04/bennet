@@ -281,8 +281,9 @@ export default function Manufacturing() {
               >
                 Our Manufacturing Network
               </motion.h2>
+             
               <motion.div
-                className="w-0 text-left md:w-[40%] lg:w-[45%] 2xl:w-[55%] mt-2"
+                className="w-0 text-left md:w-[20%] lg:w-[25%] 2xl:w-[55%] mt-2"
                 initial={{ opacity: 0, x: 70 }}
                 whileInView={{
                   opacity: 1,
@@ -318,10 +319,12 @@ export default function Manufacturing() {
               >
                 Our Manufacturing Network
               </motion.h2>
-              <div className="w-full md:w-[40%] lg:w-[45%] 2xl:w-[55%] mt-2">
+
+              <div className="w-full md:w-[20%] lg:w-[25%] 2xl:w-[55%] mt-2">
                 <hr className="border-t-2 border-[#AECA1D]" />
               </div>
             </motion.div>
+
           )}
 
           <motion.h3

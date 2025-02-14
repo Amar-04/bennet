@@ -72,11 +72,11 @@ const Products = () => {
             <div className="absolute -bottom-6 md:-bottom-10 -right-6 xl:-bottom-6 xl:-right-2 2xl:-bottom-10 2xl:-right-8  md:-right-10 w-20 md:w-32 h-20 md:h-32 rounded-full bg-[#2C3D5A]/10 -z-10" />
             {/* Image container */}
             <div className="relative w-full aspect-square">
-              <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden">
+              <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] ">
                 <img
                   src="/OurProducts1.png"
                   alt="Medical products"
-                  className="md:w-[40vw] object-cover hover:scale-105 transition-transform duration-300"
+                  className="md:w-[40vw]  hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
