@@ -501,15 +501,16 @@ export default function Manufacturing() {
 
       {/* Exports Section */}
       <section className="my-12">
-        <motion.div
+        {/* <motion.div
           className="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1 }}
-        >
+          transition={{ duration: 1 }} */}
+        {/* > */}
           {/* Left Side Content */}
-          <motion.div
+
+          {/* <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.7 }}
@@ -530,10 +531,11 @@ export default function Manufacturing() {
               Africa, and Latin America, contributing to global health
               advancements and ensuring accessibility worldwide.
             </motion.p>
-          </motion.div>
+          </motion.div> */}
 
           {/* Right Side Image */}
-          <motion.div
+
+          {/* <motion.div
             className="relative h-[300px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -547,7 +549,10 @@ export default function Manufacturing() {
               className="object-cover"
             />
           </motion.div>
-        </motion.div>
+
+        </motion.div> */}
+
+        {/* Collaborative Card */}
         <div className="container mx-auto">
           <motion.div
             className="bg-black text-white text-center py-6 px-4 lg:p-12 lg:px-32 lg:rounded-2xl"
@@ -567,7 +572,9 @@ export default function Manufacturing() {
             </div>
           </motion.div>
         </div>
+
       </section>
+
     </main>
   );
 }
