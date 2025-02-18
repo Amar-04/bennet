@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import HeroSection from "@/app/components/HeroSection";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -135,124 +134,122 @@ export default function Manufacturing() {
         
       </section>
 
-      {/* Manufacturing Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+       {/* Manufacturing Section */}
+  <section className="py-16 bg-white">
+    <div className="container mx-auto px-4">
 
-        
-          {/* Title */}
-          {isLargeScreen ? (
-            <motion.div
-              className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-10 mb-14 overflow-hidden"
-              initial={{ opacity: 0, x: -70 }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-                transition: { duration: 1, ease: "easeOut" },
-              }}
-              viewport={{ once: true, amount: 0.9 }}
-            >
-              <motion.h2
-                className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 1, ease: "easeOut" },
-                }}
-                viewport={{ once: true }}
-              >
-                State-of-the-Art Manufacturing at Baddi
-              </motion.h2>
-              <motion.div
-                className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
-                initial={{ opacity: 0, x: 70 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 1, ease: "easeOut" },
-                }}
-                viewport={{ once: true }}
-              >
-                <hr className="border-t-2 border-[#AECA1D]" />
-              </motion.div>
-            </motion.div>
-          ) : (
-            //Smaller screen sizes
-            <motion.div
-              className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-10 mb-14"
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
+      {/* Title */}
+      {isLargeScreen ? (
+        <motion.div
+          className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-10 mb-14 overflow-hidden"
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true, amount: 0.9 }}
+        >
+          <motion.h2
+            className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+          >
+            State-of-the-Art Manufacturing at Baddi
+          </motion.h2>
+          <motion.div
+            className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+            initial={{ opacity: 0, x: 70 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+          >
+            <hr className="border-t-2 border-[#AECA1D]" />
+          </motion.div>
+        </motion.div>
+      ) : (
+        <motion.div
+          className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-10 mb-14"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true, amount: 0.9 }}
+        >
+          <motion.h2
+            className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+          >
+            State-of-the-Art Manufacturing at Baddi
+          </motion.h2>
+          <motion.div
+            className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+            initial={{ opacity: 0, x: 70 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+          >
+            <hr className="border-t-2 border-[#AECA1D]" />
+          </motion.div>
+        </motion.div>
+      )}
+      <div className="grid md:grid-cols-3 gap-6">
+        {[
+          {
+            title: "Global Standards Compliance",
+            description:
+              "Our Baddi facility operates in line with WHO GMP, ensuring top-tier manufacturing excellence.",
+          },
+          {
+            title: "Uncompromising Quality Control",
+            description:
+              "We maintain a rigorous quality assurance system, adhering to strict regulatory guidelines for every product.",
+          },
+          {
+            title: "Advanced Technologies",
+            description:
+              "Equipped with cutting-edge machinery and precise instrumentation, we deliver healthcare solutions of exceptional Innovation.",
+          },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="bg-black/90 text-white p-6 rounded-lg text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.2,
+            }}
+          >
+            <h3 className="text-xl max-w-[16rem] mx-auto px-0 lg:text-3xl font-semibold mb-3 text-[#B5CE32]">
+              {item.title}
+            </h3>
+            <p className="text-gray-200">{item.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-                transition: { duration: 1, ease: "easeOut" },
-              }}
-              viewport={{ once: true, amount: 0.9 }}
-            >
-              <motion.h2
-                className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 1, ease: "easeOut" },
-                }}
-                viewport={{ once: true }}
-              >
-                State-of-the-Art Manufacturing at Baddi
-              </motion.h2>
-              <motion.div
-                className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
-                initial={{ opacity: 0, x: 70 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 1, ease: "easeOut" },
-                }}
-                viewport={{ once: true }}
-              >
-                <hr className="border-t-2 border-[#AECA1D]" />
-              </motion.div>
-            </motion.div>
-          )}
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Global Standards Compliance",
-                description:
-                  "Our Baddi facility adheres to the highest global manufacturing standards.",
-              },
-              {
-                title: "Uncompromising Quality Control",
-                description:
-                  "We maintain a rigorous quality control process throughout manufacturing.",
-              },
-              {
-                title: "Advanced Technology",
-                description:
-                  "Utilizing cutting-edge technology for precise manufacturing.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-black/90 text-white p-6 rounded-lg text-center"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.2,
-                }}
-              >
-                <h3 className="text-xl lg:text-3xl font-semibold mb-3 text-[#B5CE32]">
-                  {item.title}
-                </h3>
-                <p className="text-gray-200">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Manufacturing Network */}
       <section className="py-8">
@@ -308,7 +305,7 @@ export default function Manufacturing() {
               viewport={{ once: true, amount: 0.9 }}
             >
               <motion.h2
-                className="w-full md:w-[60%] lg:w-[55%] 2xl:w-[45%] text-white text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+                className="w-full md:w-[20%] lg:w-[25%] 2xl:w-[45%] text-white text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{
                   opacity: 1,
@@ -356,23 +353,6 @@ export default function Manufacturing() {
               </motion.span>
             ))}
           </motion.h3>
-
-          {/* Image */}
-          {/* <motion.div
-            className="relative w-full h-[200px] md:h-[400px] bg-gradient-to-br from-[#AECA1D]/10 to-[#2C3D5A]/10 shadow-sm flex justify-center items-center"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1 }}
-          >
-            <Image
-              src="/manufacturing-network.png"
-              alt="manufacturing network"
-              layout="fill"
-              objectFit="contain"
-              className="align-middle"
-            />
-          </motion.div> */}
 
           {/* Map */}
           <div className="-ml-10 ">

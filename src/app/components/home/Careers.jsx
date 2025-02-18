@@ -41,7 +41,7 @@ const Events = () => {
             }}
             viewport={{ once: true }}
           >
-            EVENTS
+            CAREERS
           </motion.h2>
           <motion.div
             className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"

@@ -3,6 +3,11 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
+// Utility function for Indian number formatting
+const formatNumber = (num) => {
+  return num.toLocaleString("en-IN");
+};
+
 const CountUpAnimation = ({ end, duration = 2, className }) => {
   const [count, setCount] = useState(0);
 
@@ -31,7 +36,7 @@ const CountUpAnimation = ({ end, duration = 2, className }) => {
     };
   }, [end, duration]);
 
-  return <span className={className}>{count}+</span>;
+  return <span className={className}>{formatNumber(count)}+</span>;
 };
 
 const Stats = () => {
@@ -113,7 +118,7 @@ const Stats = () => {
 
           <motion.div variants={itemVariants} className="text-center">
             <h2 className="text-5xl md:text-7xl font-bold mb-4">
-              <CountUpAnimation end={10000} className="font-bold" />
+              <CountUpAnimation end={1000} className="font-bold" />
             </h2>
             <p className="text-xl md:text-2xl">
               Distributors
@@ -124,7 +129,7 @@ const Stats = () => {
 
           <motion.div variants={itemVariants} className="text-center">
             <h2 className="text-5xl md:text-7xl font-bold mb-4">
-              <CountUpAnimation end={15500} className="font-bold" />
+              <CountUpAnimation end={100000} className="font-bold" />
             </h2>
             <p className="text-xl md:text-2xl">
               Retail

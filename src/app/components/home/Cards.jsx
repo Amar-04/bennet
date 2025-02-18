@@ -55,7 +55,7 @@ const Cards = () => {
   };
 
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-10">
       <motion.div
         className="flex flex-col space-y-12 md:text-center"
         variants={containerVariants}
@@ -73,14 +73,37 @@ const Cards = () => {
         </motion.h2>
 
         <motion.p
-          className="text-xl md:text-2xl max-w-4xl mx-auto"
+          className="text-xl md:text-2xl max-w-4xl mx-auto text-start"
           variants={itemVariants}
         >
           We provide high-quality healthcare solutions, at prices that are
           accessible to all. <br />
+
+          <span className="h-1 w-1"></span><br/>
+
           Our team upholds the highest standards of ethical practices, with
           certifications and strict adherence to regulatory standards, ensuring
-          your well-being in every interaction.
+          your well-being in every interaction.<br/>
+
+          <span className="h-1 w-1"></span><br/>
+
+          We offer tailored solutions through our three core divisions: Ethical, Critical
+          Care, and the Emiror Division, bringing specialized and innovative
+          care to those who need it most.<br />
+
+          <span className="h-1 w-1"></span><br/>
+
+           We collaborate with over 500 passionate sales personnel and a network of 1,000+ distributors,
+          ensuring consistent access to care across the country with a presence in 15+ states.<br />
+
+          <span className="h-1 w-1"></span><br/>
+
+          With over 1,00,000 retail outlets nationwide , we bring superior healthcare solutions within easy reach for everyone.<br/>
+
+          <span className="h-1 w-1 "></span><br/>
+
+          <span className="text-black font-semibold text-4xl"> Join us on our mission to empower individuals and communities through trusted healthcare. </span>
+          
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">

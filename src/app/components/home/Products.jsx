@@ -57,8 +57,8 @@ const Products = () => {
 
       {/* Main Content */}
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-      
-       {/* Image Section */}
+       
+        {/* Image Section */}
         <motion.div
           className="relative order-2 md:order-1"
           initial="hidden"
@@ -69,14 +69,14 @@ const Products = () => {
           <div className="relative mx-4 md:mx-0">
             {/* Decorative Shapes - Responsive sizes */}
             <div className="absolute -top-6 md:-top-10 -left-6 md:-left-10 w-24 md:w-40 h-24 md:h-40 rounded-full bg-[#AECA1D]/10 -z-10" />
-            <div className="absolute -bottom-6 md:-bottom-10 -right-6 xl:-bottom-6 xl:-right-2 2xl:-bottom-10 2xl:-right-8  md:-right-10 w-20 md:w-32 h-20 md:h-32 rounded-full bg-[#2C3D5A]/10 -z-10" />
+            <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 w-20 md:w-32 h-20 md:h-32 rounded-full bg-[#2C3D5A]/10 -z-10" />
             {/* Image container */}
             <div className="relative w-full aspect-square">
-              <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] ">
+              <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden">
                 <img
                   src="/OurProducts1.png"
-                  alt="Medical products"
-                  className="md:w-[40vw]  hover:scale-105 transition-transform duration-300"
+                  alt="Our products"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

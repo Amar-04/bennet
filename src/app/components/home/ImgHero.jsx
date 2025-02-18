@@ -145,7 +145,7 @@ const ImgHero = () => {
               />
 
               <img
-                src="/Homepage1.png"
+                src="/Homepage2.png"
                 alt="Home Page Image"
                 className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem] h-full object-cover rounded-[2rem] "
               />

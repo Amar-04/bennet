@@ -96,6 +96,38 @@ const HomeHero = () => {
               At Bennet, we're more than just a pharmaceutical company, we're a
               catalyst for positive change.
             </motion.p>
+
+            <motion.p
+              whileHover={{
+                scale: 1.01,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+            >
+              We're passionate about empowering caregivers, ensuring that vital care reaches every corner of India, and making a lasting impact 
+              on the well-being of our people.
+            </motion.p>
+
+            <motion.p
+              whileHover={{
+                scale: 1.01,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+            >
+              From our manufacturing facilities to our extensive distribution network, we're commited to delivering excellence in pharmaceuticals.
+            </motion.p>
+
+            <motion.p
+              whileHover={{
+                scale: 1.01,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+            >
+              We believe in the transformative power of healthcare and are determined to create a brighter, healthier futture for all. 
+              Join us on this journey as we strive to build a 
+              <span className="text-3xl text-black font-semibold" > Stronger, Healthier India together! </span>
+            </motion.p>
+
+
           </motion.div>
         </div>
       </motion.div>

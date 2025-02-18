@@ -4,26 +4,25 @@ import { motion } from 'framer-motion';
 
 const Innovation = () => {
   return (
-    <section className="px-4 md:px-8 pb-10 max-w-[1440px] mx-auto px-0">
+    <section className="px-2 md:px-6 pb-10 max-w-[1440px] mx-auto px-0">
       <div className="flex flex-col space-y-8 md:space-y-14">
        
-        <motion.div
-          className="p-2 md:p-8 flex flex-col md:flex-row items-center justify-between bg-[#AECA1D] rounded-xl"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="font-bold text-lg md:text-xl md:w-1/2">
-            At Bennet Pharmaceuticals, we are dedicated to delivering
-            high-quality, innovative pharmaceutical solutions across various
-            therapeutic areas.
-          </h2>
-          <p className="text-lg md:w-1/2  mt-4 md:mt-0">
-            Our broad product portfolio meets the diverse needs of healthcare
-            professionals and patients alike, ensuring accessibility and
-            reliability in every product we offer.
-          </p>
-        </motion.div>
+      <motion.div
+  className="p-2 md:p-8 flex flex-col md:flex-row items-center justify-between bg-[#AECA1D] rounded-xl max-w-screen-xl mx-auto gap-6 md:gap-12"
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+>
+  <h2 className="font-bold text-lg md:text-xl w-full md:w-1/2">
+    At Bennet Pharmaceuticals, we are dedicated to delivering high-quality, 
+    innovative pharmaceutical solutions across various therapeutic areas.
+  </h2>
+  <p className="text-lg w-full md:w-1/2 mt-4 md:mt-0">
+    Our broad product portfolio meets the diverse needs of healthcare professionals 
+    and patients alike, ensuring accessibility and reliability in every product we offer.
+  </p>
+</motion.div>
+
         
         <div className="flex items-center justify-between">
           <motion.h2
@@ -58,7 +57,7 @@ const Innovation = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              We are proud to announce that Actoferrin (Lactoferrin 100mg
+              We are proud to announce that <span className=""> Actoferrin  </span> (Lactoferrin 100mg
               tablets) has been granted a patent, powered by SALT technology for
               enhanced bioavailability, setting a new standard in healthcare
               solutions.

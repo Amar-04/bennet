@@ -17,26 +17,8 @@ const Values = () => {
   };
 
   return (
-    <section className="mt-20 max-w-[1440px] mx-auto px-0 ">
-      <div className="w-full max-w-[1440px] mx-auto px-4">
-        <motion.div
-          className="bg-black text-white flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-3xl gap-6 md:gap-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className=" text-2xl md:text-4xl font-bold">
-            We're more than just a <br/> {" "}
-            <span className="text-[#AECA1D]">healthcare</span> company
-          </h2>
-          <p className="md:text-xl text-gray-200 md:w-1/2 ">
-            We're a community of dedicated professionals committed to creating a
-            healthier future for everyone.
-          </p>
-        </motion.div>
-      </div>
-
-      <div className="bg-[#DFEAA580] mt-20 py-16">
+    <section className="max-w-[1440px] mx-auto px-0 ">
+      <div className="bg-[#DFEAA580] py-16">
         <div className="w-full max-w-[1440px] mx-auto px-4">
           <div className="flex flex-col gap-8 mb-16">
             <div className="flex items-center gap-8">
