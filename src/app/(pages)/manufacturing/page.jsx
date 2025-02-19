@@ -4,6 +4,7 @@ import HeroSection from "@/app/components/HeroSection";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const DynamicWorldMap = dynamic(() => import("../../components/worldMap"), {
   ssr: false,
@@ -445,72 +446,103 @@ export default function Manufacturing() {
           </div>
         </div>
       </motion.section>
+      
+ {/* Global HealthCare */}
+<div className="w-full mt-12  ">
 
-      <div className="w-full sm:px-8 md:px-12 lg:px-4 xl:px-0 ">
-       
-        {/* Global HealthCare 1 */}
-        <div className="relative  min-h-[300px] w-full xl:max-w-[1240px] 2xl:max-w-[1440px] mx-auto px-0 my-10  ">
-          {/* Content Container */}
-          <div className="relative container mx-auto  py-16 grid md:grid-cols-2 gap-8 items-center  rounded-2xl bg-[#2FB344] ">
-            {/* Left Column */}
-            <div className="space-y-6">
-              <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight">
+{/* Global HealthCare 1 */}
+<div className="bg-white my-10">
+  {/* Hero Section */}
+  <section className="relative  overflow-hidden  container mx-auto rounded-2xl ">
+    <div className="absolute inset-0 ">
+      <img
+        src="https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?q=80&w=2070&auto=format&fit=crop"
+        alt="Pharmaceutical Export"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[#32CD32]/80" style={{ mixBlendMode: 'multiply' }} />
+    </div>
+
+    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
+    <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 rounded-2xl">
+      <div className="h-full flex items-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-7xl font-bold text-white leading-tight">
                 Advancing Global Healthcare
               </h1>
-              <p className="text-white text-xl md:text-2xl">
+              <div className="w-24 h-2 bg-white rounded-full" />
+              <p className="text-3xl font-light text-white/90">
                 Delivering excellence across continents
-              </p>
-              <button className="bg-white text-[#2FB344] hover:bg-white/90 hover:text-[#2FB344] group px-4 py-2 rounded-md font-medium flex items-center">
-                Discover More
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
-
-            {/* Right Column - Glass Card */}
-            <div className="backdrop-blur-sm bg-white/10 rounded-2xl p-6 text-white shadow-lg">
-              <p className="text-lg leading-relaxed">
-                Our commitment to global healthcare extends beyond borders.
-                Bennet Pharmaceuticals exports top-tier pharmaceutical products
-                to Asia, Africa, and Latin America, contributing to global
-                health advancements and ensuring accessibility worldwide.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Global HealthCare 2 */}
-        <div className="relative  min-h-[300px] w-full  lg:max-w-[1240px] 2xl:max-w-[1440px] mx-auto px-0 mb-10 ">
-          <div className="container mx-auto  bg-[#d3de9a] py-20 rounded-2xl ">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left Column */}
-              <div className="space-y-6">
-                <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight">
-                  Advancing
-                  <br />
-                  Global
-                  <br />
-                  Healthcare
-                </h1>
-                <div className="w-12 h-1 bg-white"></div>
-                <p className="text-white text-xl md:text-2xl font-light">
-                  Delivering excellence across continents
-                </p>
-              </div>
-
-              {/* Right Column */}
-              <div className="backdrop-blur-sm bg-white/10 rounded-2xl p-8 text-white">
-                <p className="text-lg text-black leading-relaxed">
-                  Our commitment to global healthcare extends beyond borders.
-                  Bennet Pharmaceuticals exports top-tier pharmaceutical
-                  products to Asia, Africa, and Latin America, contributing to
-                  global health advancements and ensuring accessibility
-                  worldwide.
-                </p>
-              </div>
-            </div>
+          <div className="transform md:-translate-x-2">
+            <p className="text-gray-800 text-xl leading-relaxed">
+              Our commitment to global healthcare extends beyond borders. Bennet Pharmaceuticals exports
+              top-tier pharmaceutical products to Asia, Africa, and Latin America, contributing to global
+              health advancements and ensuring accessibility worldwide.
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+</div>
+
+{/* Global HealthCare 2 */}
+<div className="bg-white my-10">
+  {/* Hero Section */}
+  <section className="relative  overflow-hidden  container mx-auto rounded-2xl ">
+    <div className="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?q=80&w=2070&auto=format&fit=crop"
+        alt="Pharmaceutical Export"
+        className="w-full h-full object-cover"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(45deg, rgba(215, 228, 142, 0.95) 10%, rgba(215, 228, 142, 0.8) 10%)',
+        }}
+      />
+    </div>
+
+    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
+    <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 rounded-2xl">
+      <div className="h-full flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-7xl font-bold text-white leading-tight">
+                Advancing Global Healthcare
+              </h1>
+              <div className="w-24 h-2 bg-white rounded-full" />
+              <p className="text-3xl font-light text-white/90">
+                Delivering excellence across continents
+              </p>
+            </div>
+          </div>
+
+          <div className="transform md:-translate-x-2">
+            <p className="text-gray-800 text-xl leading-relaxed">
+              Our commitment to global healthcare extends beyond borders. Bennet Pharmaceuticals exports
+              top-tier pharmaceutical products to Asia, Africa, and Latin America, contributing to global
+              health advancements and ensuring accessibility worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+
+
     </main>
   );
 }

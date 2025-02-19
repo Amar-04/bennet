@@ -73,7 +73,7 @@ const Products = () => {
             <div className="relative w-full aspect-square">
               <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden">
                 <img
-                  src="/pills.png"
+                  src="/Orange.png"
                   alt="Our products"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

@@ -43,11 +43,11 @@ export default function LifeAtBennet() {
             <h2 className="text-4xl text-center align-middle  md:-ml-[2rem] lg:text-5xl font-bold mb-4 lg:w-1/3">
               Life At <br/>Bennet
             </h2>
-            <p className=" text-lg lg:text-2xl lg:w-2/3 md:ml-12 ">
+            <p className=" text-md lg:text-xl lg:w-2/3 md:ml-12 mt-1">
               Since its inception, Bennet Pharmaceuticals has been more than
               just a pharmaceutical company - it's been a beacon of hope for
               millions. Through innovation, dedication, and a passion for
-              excellence,
+              excellence.
             </p>
           </div>
         </div>
@@ -72,10 +72,6 @@ export default function LifeAtBennet() {
         </div>
         <ImageGallery />
       </section>
-
-
-  
-
 
       <Testimonial />
     </div>
