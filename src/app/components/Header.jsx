@@ -58,8 +58,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 font-outfit transition-all duration-300 ${
-        hasScrolled ? "bg-white/80 backdrop-blur-md " : "bg-white"
+      className={`fixed top-0 left-0 right-0 w-full  z-50 font-outfit transition-all duration-300 ${
+        hasScrolled ? "bg-white " : "bg-white"
       }`}
     >
       <nav className="container px-4 py-4">

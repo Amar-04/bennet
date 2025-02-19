@@ -143,7 +143,7 @@ const ProductCards = () => {
               {/* Expanded Content for Small Screens */}
               {isSmallScreen && activeSection === sectionIndex && (
                 <motion.div
-                  className="col-span-full bg-[#F9F9F9] rounded-xl p-4 mt-4 overflow-hidden"
+                  className="col-span-full bg-[#ECECECB2] rounded-xl mt-4 overflow-hidden"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   transition={{ duration: 0.3 }}
@@ -185,7 +185,7 @@ const ProductCards = () => {
       {/* Expanded Content for Large Screens (Row 1) */}
       {!isSmallScreen && activeSection !== null && activeSection < 3 && (
         <motion.div
-          className="col-span-full bg-[#F9F9F9] rounded-xl p-4 mt-4 overflow-hidden"
+          className="col-span-full bg-[#ECECECB2] rounded-xl p-4 my-4 overflow-hidden"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           transition={{ duration: 0.3 }}
@@ -248,7 +248,7 @@ const ProductCards = () => {
               {/* Expanded Content for Small Screens */}
               {isSmallScreen && activeSection === sectionIndex + 3 && (
                 <motion.div
-                  className="col-span-full bg-[#F9F9F9] rounded-xl p-4 mt-4 overflow-hidden"
+                  className="col-span-full bg-[#ECECECB2] rounded-xl mt-4 overflow-hidden"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   transition={{ duration: 0.3 }}
@@ -293,7 +293,7 @@ const ProductCards = () => {
         activeSection >= 3 &&
         activeSection < 6 && (
           <motion.div
-            className="col-span-full bg-[#F9F9F9] rounded-xl p-4 mt-4 overflow-hidden"
+            className="col-span-full bg-[#ECECECB2] rounded-xl p-4 my-4 overflow-hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             transition={{ duration: 0.3 }}
@@ -358,7 +358,7 @@ const ProductCards = () => {
               {/* Expanded Content for Small Screens */}
               {isSmallScreen && activeSection === sectionIndex + 6 && (
                 <motion.div
-                  className="col-span-full bg-[#F9F9F9] rounded-xl p-4 mt-4 overflow-hidden"
+                  className="col-span-full bg-[#ECECECB2] rounded-xl mt-4 overflow-hidden"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   transition={{ duration: 0.3 }}
@@ -400,7 +400,7 @@ const ProductCards = () => {
       {/* Expanded Content for Large Screens (Row 3) */}
       {!isSmallScreen && activeSection !== null && activeSection >= 6 && (
         <motion.div
-          className="col-span-full bg-[#F9F9F9] rounded-xl p-4 mt-4 overflow-hidden"
+          className="col-span-full bg-[#ECECECB2] rounded-xl p-4 my-4 overflow-hidden"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           transition={{ duration: 0.3 }}

@@ -57,7 +57,6 @@ const Products = () => {
 
       {/* Main Content */}
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-       
         {/* Image Section */}
         <motion.div
           className="relative order-2 md:order-1"
@@ -74,7 +73,7 @@ const Products = () => {
             <div className="relative w-full aspect-square">
               <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden">
                 <img
-                  src="/OurProducts1.png"
+                  src="/pills.png"
                   alt="Our products"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -123,13 +122,15 @@ const Products = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="bg-black text-white rounded-xl md:rounded-2xl p-6 md:p-12 grid md:grid-cols-2 gap-6 md:gap-8 items-center hover:scale-[1.01] transition-transform duration-300">
-          <h3 className="text-xl md:text-3xl font-bold">
-            Our Ethical Division
-          </h3>
-          <p className="text-base md:text-xl text-gray-300">
-            Discover how our innovative solutions are making a difference in
-            lives across India.
+        <div className="bg-black text-white rounded-xl md:rounded-2xl p-6  md:px-12 grid md:grid-cols-2 gap-6 md:gap-8 items-center hover:scale-[1.01] transition-transform duration-300">
+          <h3 className="text-xl md:text-3xl font-bold">Our Innovation</h3>
+          <p className="text-base md:text-xl text-gray-400">
+            Patent granted fro enhancing the bioavailability of highly unstable
+            molecule <span className="text-white text-xl font-semibold">  LACTOFERRIN </span> by salt technology.
+            <br />
+          <span className="h-1 w-1"></span><br/>
+            Innovation research done in collaboration with <span className="text-white text-xl font-semibold"> NIPER-A </span>  for  
+            <span className="text-white text-xl font-semibold"> SILVER NANOMIX PARTICLES </span> .
           </p>
         </div>
       </motion.div>

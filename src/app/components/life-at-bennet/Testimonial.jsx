@@ -36,7 +36,7 @@ const Testimonial = () => {
   }, []);
   return (
     <div>
-      <section className="flex flex-col justify-center items-center my-28 mx-auto">
+      <section className="flex flex-col justify-center items-center mb-28 mx-auto">
         <div className="container mx-auto">
           {/* Title */}
           {isLargeScreen ? (

@@ -54,7 +54,7 @@ const HomeHero = () => {
                <img
                     src="/GreenMolecule.png"
                     alt="Medical consultation"
-                    className="-mt-10 relative w-full h-[25rem] lg:h-[30rem] rounded-[2rem] z-0"
+                    className="-mt-10 relative w-full h-[0rem] lg:h-[38rem] rounded-[2rem] z-0"
                   />
 
                   </div>
@@ -73,27 +73,8 @@ const HomeHero = () => {
               }}
             >
               Since 1996, we've been dedicated to enriching the lives of our
-              citizens with the power of good health.
-            </motion.p>
-
-
-            <motion.p
-              whileHover={{
-                scale: 1.01,
-                transition: { duration: 0.3, ease: "easeInOut" },
-              }}
-            >
-              Our journey has been one of unwavering commitment to providing
-              quality healthcare solutions that inspire trust and confidence.
-            </motion.p>
-
-            <motion.p
-              whileHover={{
-                scale: 1.01,
-                transition: { duration: 0.3, ease: "easeInOut" },
-              }}
-            >
-              At Bennet, we're more than just a pharmaceutical company, we're a
+              citizens with the power of good health. Our journey has been one of unwavering commitment to providing
+              quality healthcare solutions that inspire trust and confidence. At Bennet, we're more than just a pharmaceutical company, we're a
               catalyst for positive change.
             </motion.p>
 
@@ -104,7 +85,9 @@ const HomeHero = () => {
               }}
             >
               We're passionate about empowering caregivers, ensuring that vital care reaches every corner of India, and making a lasting impact 
-              on the well-being of our people.
+              on the well-being of our people. From our manufacturing facilities to our extensive distribution network, we're commited to delivering 
+              excellence in pharmaceuticals. We believe in the transformative power of healthcare and are determined to create a brighter,
+               healthier futture for all. Join us on this journey as we strive to build a 
             </motion.p>
 
             <motion.p
@@ -113,22 +96,12 @@ const HomeHero = () => {
                 transition: { duration: 0.3, ease: "easeInOut" },
               }}
             >
-              From our manufacturing facilities to our extensive distribution network, we're commited to delivering excellence in pharmaceuticals.
-            </motion.p>
-
-            <motion.p
-              whileHover={{
-                scale: 1.01,
-                transition: { duration: 0.3, ease: "easeInOut" },
-              }}
-            >
-              We believe in the transformative power of healthcare and are determined to create a brighter, healthier futture for all. 
-              Join us on this journey as we strive to build a 
               <span className="text-3xl text-black font-semibold" > Stronger, Healthier India together! </span>
             </motion.p>
 
 
           </motion.div>
+
         </div>
       </motion.div>
     </section>

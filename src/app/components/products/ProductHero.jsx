@@ -55,9 +55,9 @@ const ProductHero = () => {
             </div>
           </motion.h1>
 
-          <motion.p className="text-xl sm:text-2xl md:text-2xl" variants={leftItemVariants}>
+          {/* <motion.p className="text-xl sm:text-2xl md:text-2xl" variants={leftItemVariants}>
             Transforming lives since 1996
-          </motion.p>
+          </motion.p> */}
 
           <motion.div variants={leftItemVariants}>
           <div className="md:-ml-4 lg:-ml-0">
@@ -75,7 +75,7 @@ const ProductHero = () => {
         </motion.div>
 
         <motion.div className="w-full max-w-[640px] mx-auto md:ml-auto lg:-mt-10" variants={rightImageVariants}>
-          <img src="/Products1.png" alt="pills" className="w-full h-auto max-h-[34rem]" />
+          <img src="/Manufacturing1.png" alt="pills" className="w-full h-auto max-h-[34rem]" />
         </motion.div>
       </div>
     </motion.section>
