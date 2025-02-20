@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Products = () => {
@@ -16,8 +17,22 @@ const Products = () => {
     },
   };
 
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="container mx-auto mt-12 md:mt-20 px-4">
+      
       {/* Header with line */}
       <motion.div
         className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
@@ -75,7 +90,7 @@ const Products = () => {
                 <img
                   src="/Orange.png"
                   alt="Our products"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-center hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
@@ -91,10 +106,12 @@ const Products = () => {
           viewport={{ once: true }}
         >
           <motion.h3
-            className="text-2xl md:text-4xl font-bold"
+            className="text-2xl md:text-4xl  md:-mt-12 font-bold"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
+          Empowering Health Journeys <br />
+          <span className="h-1 w-1"></span><br/>
             Nurturing Health Through Innovation
           </motion.h3>
 
@@ -110,9 +127,60 @@ const Products = () => {
               professionals and patients alike, ensuring accessibility and
               reliability in every product we offer.
             </motion.p>
+            
           </div>
+
+            {/* Know More */}
+          <motion.div
+          className="flex items-center  gap-4 pt-8"
+          variants={itemVariants}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Link
+              href="#"
+              className="bg-[#83961D] text-white text-xl font-medium px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#96ac22] hover:shadow-lg"
+            >
+              Know More
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{
+              x: 10,
+              scale: 1.1,
+              transition: { duration: 0.2 },
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black text-white text-2xl transition-all duration-300 hover:bg-gray-900 hover:shadow-lg"
+            >
+              <motion.span
+                className="text-xs"
+                whileHover={{
+                  x: 3,
+                  transition: {
+                    duration: 0.2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  },
+                }}
+              >
+                →
+              </motion.span>
+            </Link>
+          </motion.div>
+        </motion.div>
+
         </motion.div>
       </div>
+
+
 
       {/* Call to Action */}
       <motion.div

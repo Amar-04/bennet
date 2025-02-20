@@ -60,7 +60,7 @@ const HomeHero = () => {
                   </div>
 
           <motion.div
-            className="space-y-8 text-lg md:text-2xl text-gray-700"
+            className="space-y-8 text-lg md:text-2xl text-black"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -87,7 +87,7 @@ const HomeHero = () => {
               We're passionate about empowering caregivers, ensuring that vital care reaches every corner of India, and making a lasting impact 
               on the well-being of our people. From our manufacturing facilities to our extensive distribution network, we're commited to delivering 
               excellence in pharmaceuticals. We believe in the transformative power of healthcare and are determined to create a brighter,
-               healthier futture for all. Join us on this journey as we strive to build a 
+               healthier futture for all.
             </motion.p>
 
             <motion.p
@@ -96,6 +96,7 @@ const HomeHero = () => {
                 transition: { duration: 0.3, ease: "easeInOut" },
               }}
             >
+             Join us on this journey as we strive to build a <br/>
               <span className="text-3xl text-black font-semibold" > Stronger, Healthier India together! </span>
             </motion.p>
 

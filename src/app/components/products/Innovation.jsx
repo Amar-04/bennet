@@ -7,39 +7,46 @@ const Innovation = () => {
     <section className="px-2 md:px-6 pb-10 max-w-[1440px] mx-auto px-0">
       <div className="flex flex-col space-y-8 md:space-y-14">
        
-      <motion.div
-  className="p-2 md:p-8 flex flex-col md:flex-row items-center justify-between bg-[#AECA1D] rounded-xl max-w-screen-xl mx-auto gap-6 md:gap-12"
-  initial={{ opacity: 0, scale: 0.8 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1 }}
->
-  <h2 className="font-bold text-lg md:text-xl w-full md:w-1/2">
-    At Bennet Pharmaceuticals, we are dedicated to delivering high-quality, 
-    innovative pharmaceutical solutions across various therapeutic areas.
-  </h2>
-  <p className="text-lg w-full md:w-1/2 mt-4 md:mt-0">
-    Our broad product portfolio meets the diverse needs of healthcare professionals 
-    and patients alike, ensuring accessibility and reliability in every product we offer.
-  </p>
-</motion.div>
-
         
-        <div className="flex items-center justify-between">
-          <motion.h2
-            className="text-3xl md:text-5xl font-bold"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          >
-            Innovation
-          </motion.h2>
+        {/* Header with line */}
+      <motion.div
+        className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, ease: "easeOut" },
+        }}
+        viewport={{ once: true, amount: 0.9 }}
+      >
+        <motion.h2
+          className="w-3/5 md:w-[60%] lg:w-[50%] text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-stroke-black"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true }}
+        >
+          INNOVATION
+        </motion.h2>
+        <motion.div
+          className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          viewport={{ once: true }}
+        >
+          <hr className="border-t-2 border-[#AECA1D]" />
+        </motion.div>
+      </motion.div>
 
-          <hr className="w-9/12 h-1 overflow-x-hidden  max-w-[40rem] bg-black border-0" />
-        </div>
-
-        <div className="relative py-10">
-         
-  
+          {/* Card Content */}
+        <div className="relative rounded-[2rem] bg-gray-100 p-16  md:p-20 border border-[#2C3D5A]/20">
 
           <div className="absolute inset-0 flex justify-center items-center scale-75">
             <Image
@@ -47,10 +54,11 @@ const Innovation = () => {
               alt="Molecule background"
               width={500}
               height={500}
+              className="lg:scale-90"
             />
           </div>
 
-
+          {/* Text */}
           <div className="relative space-y-6 text-lg md:text-2xl">
             <motion.p
               initial={{ opacity: 0, scale: 0.8 }}
@@ -80,6 +88,7 @@ const Innovation = () => {
               journey of innovation.
             </motion.p>
           </div>
+
         </div>
 
         

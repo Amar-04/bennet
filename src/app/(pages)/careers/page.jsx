@@ -26,7 +26,7 @@ export default function CareersPage() {
     <div className="min-h-screen flex flex-col max-w-[1440px mx-auto px-0 ]">
       <main className="flex-grow md:-mt-10">
         <HeroSection
-          imageLink="/Careers.png"
+          imageLink="/Careers.jpg"
           title='<span>Empowering</span>
                   <br />
                   <div >

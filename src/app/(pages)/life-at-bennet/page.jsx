@@ -23,16 +23,16 @@ export default function LifeAtBennet() {
       <HeroSection
         imageLink="/life-at-bennet.png"
 
-        title='Together We <span className="text-[#9DC41A]">Thrive</span>,
+        title='Empowering <span className="text-[#9DC41A]">Growth</span>,
                 <br />
-                Together We <span className="text-[#9DC41A]">Succeed</span>'
+                Celebrating <span className="text-[#9DC41A]">Success</span>'
                 
-        description="Empowering Growth, Celebrating Success"
+        description="Together We Thrive, Together We Succeed"
         showKnowMoreButton={false}
       />
 
       {/* Life At Bennet Banner */}
-      <motion.section
+      {/* <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -40,8 +40,8 @@ export default function LifeAtBennet() {
       >
         <div className="container my-5 px-4 mt-8  py-6 flex items-center justify-center align-middle bg-[#d6e48d] lg:rounded-2xl">
           <div className="w-full flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
-            <h2 className="text-4xl text-center align-middle  md:-ml-[2rem] lg:text-5xl font-bold mb-4 lg:w-1/3">
-              Life At <br/>Bennet
+            <h2 className="text-4xl text-center align-middle  mt-4 md:-ml-[2rem] lg:text-5xl font-bold mb-4 lg:w-1/3">
+              Life At Bennet
             </h2>
             <p className=" text-md lg:text-xl lg:w-2/3 md:ml-12 mt-1">
               Since its inception, Bennet Pharmaceuticals has been more than
@@ -51,7 +51,7 @@ export default function LifeAtBennet() {
             </p>
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Image Gallery */}
       <section>

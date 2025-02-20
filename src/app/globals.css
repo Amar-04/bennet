@@ -227,6 +227,9 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }

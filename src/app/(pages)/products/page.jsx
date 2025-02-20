@@ -7,8 +7,8 @@ const Products = () => {
   return (
     <>
       <ProductHero />
-      <Innovation />
       <ProductCards />
+      <Innovation />
     </>
   );
 };
