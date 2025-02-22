@@ -20,6 +20,7 @@ export default function LifeAtBennet() {
   return (
     <div className="min-h-screen flex flex-col mx-auto ">
       
+      <div className="lg:px-4">
       <HeroSection
         imageLink="/life-at-bennet.png"
 
@@ -30,28 +31,8 @@ export default function LifeAtBennet() {
         description="Together We Thrive, Together We Succeed"
         showKnowMoreButton={false}
       />
+      </div>
 
-      {/* Life At Bennet Banner */}
-      {/* <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={fadeInUp}
-      >
-        <div className="container my-5 px-4 mt-8  py-6 flex items-center justify-center align-middle bg-[#d6e48d] lg:rounded-2xl">
-          <div className="w-full flex flex-col lg:flex-row justify-center items-centerlg:gap-5 ">
-            <h2 className="text-4xl text-center align-middle  mt-4 md:-ml-[2rem] lg:text-5xl font-bold mb-4 lg:w-1/3">
-              Life At Bennet
-            </h2>
-            <p className=" text-md lg:text-xl lg:w-2/3 md:ml-12 mt-1">
-              Since its inception, Bennet Pharmaceuticals has been more than
-              just a pharmaceutical company - it's been a beacon of hope for
-              millions. Through innovation, dedication, and a passion for
-              excellence.
-            </p>
-          </div>
-        </div>
-      </motion.section> */}
 
       {/* Image Gallery */}
       <section>
@@ -74,6 +55,7 @@ export default function LifeAtBennet() {
       </section>
 
       <Testimonial />
+      
     </div>
   );
 }

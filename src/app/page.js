@@ -22,8 +22,8 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <ImgHero />
       <HomeHero />
-      <Stats />
       <Cards />
+      <Stats />
       <Network />
       <div className="max-w-[1440px] mx-auto px-0">
       <DynamicWorldMap />

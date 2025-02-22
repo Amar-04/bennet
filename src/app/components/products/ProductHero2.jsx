@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const ProductHero = () => {
+const ProductHero2 = () => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -83,7 +83,7 @@ const ProductHero = () => {
           variants={rightImageVariants}
         >
           <img
-            src="/pills.png"
+            src="/Manufacturing1.png"
             alt="pills"
             className="w-full h-auto max-h-[34rem]"
           />
@@ -112,4 +112,4 @@ const ProductHero = () => {
   );
 };
 
-export default ProductHero;
+export default ProductHero2;

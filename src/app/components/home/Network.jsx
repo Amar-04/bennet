@@ -20,7 +20,7 @@ const Network = () => {
     <section className="container mx-auto mt-12 md:mt-20 px-4">
       {/* Header Section */}
       <motion.div
-        className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
+        className="flex justify-start lg:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
         initial={{ opacity: 0, x: -70 }}
         whileInView={{
           opacity: 1,
@@ -43,8 +43,9 @@ const Network = () => {
           <br className="block" />
           NETWORK
         </motion.h2>
+
         <motion.div
-          className="w-0 text-left md:w-[40%] lg:w-[50%] mt-2"
+          className="w-0 text-left md:w-[0%] lg:w-[50%] mt-2"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -55,6 +56,7 @@ const Network = () => {
         >
           <hr className="border-t-2 border-[#AECA1D]" />
         </motion.div>
+
       </motion.div>
 
       {/* Subheading */}

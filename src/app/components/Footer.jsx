@@ -22,7 +22,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white pt-16 pb-8 border-t-4 border-[#aeca1d]">
+    <footer className="bg-white pt-16 container pb-8 border-t-4 border-[#aeca1d]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
             {/* Contact Details */}
             <div className="space-y-4 text-start ml-2.5">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 md:mt-3 lg:mt-1 ">
               <div className="scale-[0.8] -ml-1 max-w-[24px]">
                 <MapPinIcon className="w-4 h-4 text-[#9DC41A]" /> 
                 </div>
@@ -68,8 +68,8 @@ export default function Footer() {
 
           {/* Quicklinks */}
           <div className="flex flex-col md:items-center md:text-center space-y-6">
-            <h3 className="text-lg font-bold mb-6 ml-2 md:ml-0">Quicklinks</h3>
-            <ul className="space-y-3 text-start ml-2.5">
+            <h3 className="text-lg font-bold mb-6 lg:mb-2  ml-2 md:ml-0">Quicklinks</h3>
+            <ul className="space-y-3 text-start ml-2.5 ">
               {navigation.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex flex-col md:items-center md:text-center space-y-6">
-            <h3 className="text-lg font-bold mb-6 ml-2 md:ml-0 ">Connect With Us</h3>
+            <h3 className="text-lg font-bold mb-6 lg:mb-2 ml-2 md:ml-0 ">Connect With Us</h3>
             <div className="space-y-4 text-start ml-2.5">
               <div className="flex items-center space-x-3">
                 <FacebookIcon className="w-4 h-4 text-[#9DC41A]" />

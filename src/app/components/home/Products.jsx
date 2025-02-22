@@ -31,7 +31,7 @@ const Products = () => {
   };
 
   return (
-    <section className="container mx-auto mt-12 md:mt-20 px-4">
+    <section className="container mx-auto mt-12 md:mt-20 px-4" >
       
       {/* Header with line */}
       <motion.div
@@ -88,9 +88,9 @@ const Products = () => {
             <div className="relative w-full aspect-square">
               <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden">
                 <img
-                  src="/Orange.png"
+                  src="/pills.png"
                   alt="Our products"
-                  className="w-full h-full object-center hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
@@ -141,7 +141,7 @@ const Products = () => {
             transition={{ duration: 0.2 }}
           >
             <Link
-              href="#"
+              href="/products#Ourproducts"
               className="bg-[#83961D] text-white text-xl font-medium px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#96ac22] hover:shadow-lg"
             >
               Know More
@@ -157,7 +157,7 @@ const Products = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href="#"
+              href="/products#Ourproducts"
               className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black text-white text-2xl transition-all duration-300 hover:bg-gray-900 hover:shadow-lg"
             >
               <motion.span
@@ -182,7 +182,7 @@ const Products = () => {
 
 
 
-      {/* Call to Action */}
+      {/* Our Innovation */}
       <motion.div
         className="mt-10 md:mt-16 space-y-6 md:space-y-8"
         variants={fadeInUp}
@@ -191,9 +191,9 @@ const Products = () => {
         viewport={{ once: true }}
       >
         <div className="bg-black text-white rounded-xl md:rounded-2xl p-6  md:px-12 grid md:grid-cols-2 gap-6 md:gap-8 items-center hover:scale-[1.01] transition-transform duration-300">
-          <h3 className="text-xl md:text-3xl font-bold">Our Innovation</h3>
+          <h3 className="text-3xl font-bold">Our Innovation</h3>
           <p className="text-base md:text-xl text-gray-400">
-            Patent granted fro enhancing the bioavailability of highly unstable
+          <span className="text-white text-xl font-semibold">PATENT </span> granted for enhancing the bioavailability of highly unstable
             molecule <span className="text-white text-xl font-semibold">  LACTOFERRIN </span> by salt technology.
             <br />
           <span className="h-1 w-1"></span><br/>

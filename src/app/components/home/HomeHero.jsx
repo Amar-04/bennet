@@ -97,7 +97,7 @@ const HomeHero = () => {
               }}
             >
              Join us on this journey as we strive to build a <br/>
-              <span className="text-3xl text-black font-semibold" > Stronger, Healthier India together! </span>
+              <span className="text-3xl text-black font-semibold" > Stronger, Healthier India Together! </span>
             </motion.p>
 
 

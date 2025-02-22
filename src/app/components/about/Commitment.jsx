@@ -14,7 +14,7 @@ const Commitment = () => {
   };
 
   return (
-    <section className="relative bg-[url('/commitment.png')] bg-cover bg-center bg-fixed py-20 max-w-[1440px] mx-auto px-0">
+    <section className="relative bg-[url('/commitment.png')] bg-cover  bg-center bg-fixed py-20 max-w-[1440px] mx-auto px-0">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
@@ -34,20 +34,30 @@ const Commitment = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold md:w-1/3">
-              Our commitment to the nation
+              Our Commitment to the Nation
             </h2>
             <p className="text-lg md:text-xl text-gray-100 md:w-1/2">
               We provide high-quality healthcare solutions, at prices that are
-              accessible to all.
-              <br className="hidden md:block" />
-              Our team upholds the highest standards of ethical practices, with
+              accessible to all.  Our team upholds the highest standards of ethical practices, with
               certifications and strict adherence to regulatory standards,
               ensuring your well-being in every interaction.
+              <br className="hidden md:block" />
+
+
+             <br/>
+
+              We offer tailored solutions through our three core divisions: Ethical, Critical Care, and the Emiror Division, bringing specialized and innovative care to those who need it most.
+        <br/>
+              We collaborate with over 500 passionate sales personnel and a network of 1,000+ distributors, ensuring consistent access to care across the country with a presence in 15+ states.
+              <br/><span className="h-1 w-1"></span><br/>
+              With over 100,000 retail outlets nationwide, we bring superior healthcare solutions within easy reach for everyone. We believe in the transformative power of healthcare
+             <br/>
             </p>
+            
           </motion.div>
 
           {/* Cards Grid */}
-          <motion.div
+          {/* <motion.div
             className="grid md:grid-cols-3 gap-6 md:gap-8"
             variants={fadeInUp}
             viewport={{ once: true }}
@@ -79,7 +89,9 @@ const Commitment = () => {
                 <p className="text-lg md:text-xl text-gray-100">{card.text}</p>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
+
+
         </motion.div>
       </div>
     </section>

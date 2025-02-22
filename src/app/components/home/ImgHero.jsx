@@ -47,7 +47,7 @@ const ImgHero = () => {
 
   return (
     <motion.section
-      className="relative flex items-center mt-[96px] "
+      className="relative container flex items-center mt-[96px] "
       initial="hidden"
       animate="visible"
       exit="hidden"

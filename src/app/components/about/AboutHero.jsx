@@ -33,7 +33,7 @@ const AboutHero = () => {
 
   return (
     <motion.section
-      className="flex overflow-visible mt-20  lg:mt-14 mb-10 scale-95 max-w-[1440] mx-auto"
+      className="flex overflow-visible scale-95  mt-20  lg:mt-14 mb-10  max-w-[1440] mx-auto"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -64,7 +64,7 @@ const AboutHero = () => {
                   <div className="">
                     Your <span className="text-[#AECA1D]">Health</span>,
                   </div>
-                  <div className="leading-tight ">Our Priority!</div>
+                  <div className="leading-tight sm:-mt-1.5 md:m-0">Our Priority!</div>
                 </div>
 
                 <div className="relative z-30">
@@ -96,42 +96,18 @@ const AboutHero = () => {
               </motion.p>
             </div>
 
-            <div className="-ml-3  lg:ml-1 md:-ml-6  mt-2 lg:mt-4">
+            <motion.div variants={leftItemVariants}>
+            <div className="-ml-4 md:-ml-2 lg:-ml-0 mt-4">
               <Link
                 href="#"
-                className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
+                className="bg-black pl-4 py-3 md:mb-[20rem]  lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
               >
                 Know More{" "}
                 <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
               </Link>
             </div>
+          </motion.div>
 
-            {/* <motion.div
-              variants={leftItemVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Link
-                href="#"
-                className="inline-flex items-center bg-black text-white rounded-full group"
-              >
-                <span className="px-6 py-3 font-bold">Know More</span>
-                <div className="bg-[#AECA1D] rounded-full p-3 ml-1 group-hover:rotate-90 transition-transform duration-300">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 5v14M5 12l7 7 7-7" />
-                  </svg>
-                </div>
-              </Link>
-            </motion.div> */}
           </motion.div>
 
           {/* Right Side */}
@@ -145,10 +121,10 @@ const AboutHero = () => {
 
 
               <img
-                src="/AboutUs1.png"
+                src="/AboutUs.png"
                 alt="Medical consultation"
 
-                className="w-full h-full md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
+                className="w-full h-full max-h-[36rem] md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
               />
 
 

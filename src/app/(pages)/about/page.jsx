@@ -3,7 +3,6 @@ import AboutHero from "@/app/components/about/AboutHero";
 import Commitment from "@/app/components/about/Commitment";
 import Leaders from "@/app/components/about/Leaders";
 import Values from "@/app/components/about/Values";
-import Careers from "@/app/components/home/Careers";
 import React from "react";
 
 const page = () => {
@@ -14,7 +13,6 @@ const page = () => {
       <Commitment />
      <div id="Values"><Values /></div> 
      <div id="Leaders"><Leaders /></div>
-      <Careers />
       </div>
     </>
   );

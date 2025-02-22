@@ -7,11 +7,11 @@ const Cards = () => {
   const cardsData = [
     {
       id: 1,
-      title: "Ethical",
+      title: "Ethical Division",
     },
     {
       id: 2,
-      title: "Critical Care",
+      title: "Critical Division",
     },
     {
       id: 3,
@@ -91,21 +91,10 @@ const Cards = () => {
           Care, and the Emiror Division, bringing specialized and innovative
           care to those who need it most.<br />
 
-          <span className="h-1 w-1"></span><br/>
-
-           We collaborate with over 500 passionate sales personnel and a network of 1,000+ distributors,
-          ensuring consistent access to care across the country with a presence in 15+ states.<br />
-
-          <span className="h-1 w-1"></span><br/>
-
-          With over 1,00,000 retail outlets nationwide , we bring superior healthcare solutions within easy reach for everyone.<br/>
-
-          <span className="h-1 w-1 "></span><br/>
-
-          <span className="text-black font-semibold text-4xl"> Join us on our mission to empower individuals and communities through trusted healthcare. </span>
-          
+         
         </motion.p>
 
+          {/* 3 Black Cards */}
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {cardsData.map((card, index) => (
             <motion.div
@@ -129,52 +118,6 @@ const Cards = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className="flex items-center justify-center gap-4 pt-8"
-          variants={itemVariants}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link
-              href="#"
-              className="bg-[#83961D] text-white text-xl font-medium px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#96ac22] hover:shadow-lg"
-            >
-              Know More
-            </Link>
-          </motion.div>
-
-          <motion.div
-            whileHover={{
-              x: 10,
-              scale: 1.1,
-              transition: { duration: 0.2 },
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              href="#"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black text-white text-2xl transition-all duration-300 hover:bg-gray-900 hover:shadow-lg"
-            >
-              <motion.span
-                className="text-xs"
-                whileHover={{
-                  x: 3,
-                  transition: {
-                    duration: 0.2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  },
-                }}
-              >
-                →
-              </motion.span>
-            </Link>
-          </motion.div>
-        </motion.div>
         
       </motion.div>
     </section>

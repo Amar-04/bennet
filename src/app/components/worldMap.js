@@ -40,11 +40,11 @@ const MapComponent = () => {
   };
 
   return (
-    <div className="relative border-2 border-x-0 xl:border-x-2 border-gray-300 z-0 flex flex-col md:flex-row h-auto md:h-[618px] lg:h-[540px] xl:h-[508px] 2xl:h-[450px]
+    <div className="relative border-2 border-x-0 xl:border-x-2 border-gray-300 z-0 flex flex-col md:flex-row h-auto md:h-[644px]  lg:h-[540px] xl:h-[508px] 2xl:h-[450px]
      w-full lg:max-w-[1200px] 2xl:max-w-[1400px]  mx-auto mt-8 bg-gray-100 shadow-xl rounded-2xl overflow-hidden">
       
       {/* Left Side */}
-      <div className="w-full md:w-1/2 h-[360px] md:h-full relative p-6">
+      <div className="w-full md:w-1/2 h-[360px]  md:h-full relative p-6">
         <MapContainer
           center={[26, 80.5]}
           zoom={5.2}
@@ -68,7 +68,7 @@ const MapComponent = () => {
       </div>
       
       {/* Right Side */}
-      <div className="space-y-4 w-full md:w-1/2 p-6">
+      <div className="space-y-4 my-auto w-full md:w-1/2 p-6">
         <div className="space-y-4">
           <p className="text-lg leading-relaxed text-black">
             At Bennet Pharmaceuticals, we deliver high-quality healthcare solutions through advanced manufacturing
@@ -80,7 +80,7 @@ const MapComponent = () => {
         {["Baddi", "Vadodara"].map((facility) => (
           <div
             key={facility}
-            className="bg-[#E5ECC9] rounded-lg p-6 cursor-pointer"
+            className="bg-[#E5ECC9] rounded-lg p-6 cursor-pointer  "
             onClick={() => toggleFacility(facility)}
           >
             <h3 className="text-xl font-semibold mb-3">{facility}</h3>

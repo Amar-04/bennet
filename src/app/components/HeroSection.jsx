@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { MoveDown } from "lucide-react";
-import { easeInOut, motion, AnimatePresence } from "framer-motion";
+import {  motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import parse from "html-react-parser";
+import Link from "next/link";
+
 
 export default function HeroSection({
   imageLink,
@@ -78,17 +79,17 @@ export default function HeroSection({
               </motion.p>
 
               {showKnowMoreButton && (
-                <motion.button
-                  className="inline-flex items-center bg-black text-white rounded-full group"
-                  variants={leftItemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <span className="px-6 py-3 font-bold">Know More</span>
-                  <div className="bg-[#AECA1D] rounded-full p-3 ml-1 group-hover:rotate-90 transition-transform duration-300">
-                    <MoveDown className="w-6 h-6" />
-                  </div>
-                </motion.button>
+                <motion.div variants={leftItemVariants}>
+            <div className="md:-ml-4 lg:-ml-0">
+              <Link
+                href="#"
+                className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
+              >
+                Know More{" "}
+                <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
+              </Link>
+            </div>
+          </motion.div>
               )}
             </motion.div>
 

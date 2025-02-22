@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import HeroSection from "@/app/components/HeroSection";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 const DynamicWorldMap = dynamic(() => import("../../components/worldMap"), {
   ssr: false,
@@ -35,16 +34,19 @@ export default function Manufacturing() {
   }, []);
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen ">
+     
       {/* HeroSection*/}
       <div className="px-4">
         <HeroSection
-          imageLink="/Manufacturing2.png"
+          imageLink="/Manufacturing.png"
           title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
           description="Where excellence meets accessibility"
           showKnowMoreButton={true}
         />
       </div>
+
+
 
       {/* Excellence Section */}
       <section className="container mx-auto px-4 relative mt-12">
@@ -350,7 +352,7 @@ export default function Manufacturing() {
           </motion.h2>
           <div>
             <motion.p
-              className="text-[#525354] text-lg lg:text-2xl mb-4"
+              className="text-[#525354] text-xl lg:text-2xl mb-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amout: 0.7 }}
@@ -363,7 +365,7 @@ export default function Manufacturing() {
             <br />
             <br />
             <motion.p
-              className="lg:text-lg mb-4"
+              className="lg:text-xl mb-4 lg:mb-0"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -392,6 +394,7 @@ export default function Manufacturing() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.7 }}
+              className="lg:text-xl "
             >
               All of our products are manufactured at a facility that adheres to
               WHO-GMP compliance, ensuring that we meet the highest
@@ -411,7 +414,7 @@ export default function Manufacturing() {
             <br />
 
             <motion.p
-              className="lg:text-lg"
+              className="lg:text-xl "
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -486,55 +489,7 @@ export default function Manufacturing() {
 
       {/* Global HealthCare */}
       <div className="w-full mt-12  ">
-        {/* Global HealthCare 1 */}
-        <div className="bg-white my-10">
-          {/* Hero Section */}
-          <section className="relative  overflow-hidden  container mx-auto rounded-2xl ">
-            <div className="absolute inset-0 ">
-              <img
-                src="https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?q=80&w=2070&auto=format&fit=crop"
-                alt="Pharmaceutical Export"
-                className="w-full h-full object-cover"
-              />
-              <div
-                className="absolute inset-0 bg-[#32CD32]/80"
-                style={{ mixBlendMode: "multiply" }}
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
-
-            <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 rounded-2xl">
-              <div className="h-full flex items-center ">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full">
-                  <div className="space-y-8">
-                    <div className="space-y-4">
-                      <h1 className="text-7xl font-bold text-white leading-tight">
-                        Advancing Global Healthcare
-                      </h1>
-                      <div className="w-24 h-2 bg-white rounded-full" />
-                      <p className="text-3xl font-light text-white/90">
-                        Delivering excellence across continents
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="transform md:-translate-x-2">
-                    <p className="text-gray-800 text-xl leading-relaxed">
-                      Our commitment to global healthcare extends beyond
-                      borders. Bennet Pharmaceuticals exports top-tier
-                      pharmaceutical products to Asia, Africa, and Latin
-                      America, contributing to global health advancements and
-                      ensuring accessibility worldwide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* Global HealthCare 2 */}
+    
         <div className="bg-white my-10">
           {/* Hero Section */}
           <section className="relative  overflow-hidden  container mx-auto rounded-2xl ">
@@ -584,7 +539,32 @@ export default function Manufacturing() {
             </div>
           </section>
         </div>
+
+
       </div>
+      
+      {/* Black Card */}
+      <div className="container mx-auto mb-10">
+          <motion.div
+            className="bg-black text-white text-center py-6 px-4 lg:p-12 lg:px-32 lg:rounded-2xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={fadeInUp}
+          >
+            <p className="mb-4 text-xl md:text-4xl md:pb-6 font-semibold">
+              We are open to{" "}
+              <span className="text-[#9FB81D]">collaborative</span> association
+              for all kinds of product inquiries.
+            </p>
+            <div className="text-sm md:text-xl">
+              <p>Email: Export@bennetpharmaceuticals.com</p>
+              <p>Call: (+91)9625102437</p>
+            </div>
+          </motion.div>
+        </div>
+
+
     </main>
   );
 }

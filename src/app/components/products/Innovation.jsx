@@ -66,7 +66,7 @@ const Innovation = () => {
               transition={{ duration: 1 }}
             >
               We are proud to announce that <span className="text-2xl text-black font-bold"> Actoferrin  </span> (Lactoferrin 100mg
-              tablets) has been granted a patent, powered by  <span className="text-2xl text-black font-bold"> SALT  </span> technology for
+              tablets) has been granted a <span className="text-2xl text-black font-bold"> Patent  </span>, powered by  <span className="text-2xl text-black font-bold"> SALT  </span> technology for
               enhanced bioavailability, setting a new standard in healthcare
               solutions.
             </motion.p>
@@ -76,7 +76,7 @@ const Innovation = () => {
               transition={{ duration: 1 }}
             >
               As a major breakthrough in wound healing, we have been awarded a
-              patent for  <span className="text-2xl text-black font-bold"> Silver nanoparticles  </span> .
+              <span className="text-2xl text-black font-bold"> Patent  </span> for  <span className="text-2xl text-black font-bold"> Silver nanoparticles  </span> .
             </motion.p>
             <motion.p
               initial={{ opacity: 0, scale: 0.8 }}
