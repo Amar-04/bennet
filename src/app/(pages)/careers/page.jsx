@@ -26,8 +26,9 @@ export default function CareersPage() {
 
   // Array of images for the slider
   const contactImages = [
-    "/GroupPhoto.png",
-    "/GroupPhoto2.png",
+    "/GroupPhoto1.jpg",
+    "/GroupPhoto2.jpg",
+    "/GroupPhoto3.jpg",
   ];
 
   return (

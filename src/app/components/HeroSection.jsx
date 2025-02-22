@@ -57,7 +57,7 @@ export default function HeroSection({
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Left-side content */}
             <motion.div
-              className="w-full md:w-1/2 space-y-6"
+              className="w-full md:w-1/2 space-y-6 z-20 "
               variants={leftContentVariants}
             >
               <motion.h1
@@ -95,7 +95,7 @@ export default function HeroSection({
 
             {/* Right-side image */}
             <motion.div
-              className="w-full md:w-1/2 h-[400px] md:h-[500px]"
+              className="w-full z-10 md:w-1/2 h-[400px] md:h-[500px]"
               variants={rightImageVariants}
             >
               <div className="relative h-full rounded-[2rem] overflow-hidden">
