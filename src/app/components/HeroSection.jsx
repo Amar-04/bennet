@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import {  motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import parse from "html-react-parser";
 import Link from "next/link";
 
-
 export default function HeroSection({
   imageLink,
+  moldLink,
   title,
   description,
   showKnowMoreButton,
@@ -80,16 +80,18 @@ export default function HeroSection({
 
               {showKnowMoreButton && (
                 <motion.div variants={leftItemVariants}>
-            <div className="md:-ml-4 lg:-ml-0">
-              <Link
-                href="#"
-                className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
-              >
-                Know More{" "}
-                <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
-              </Link>
-            </div>
-          </motion.div>
+                  <div className="md:-ml-4 lg:-ml-0">
+                    <Link
+                      href="#"
+                      className="bg-black pl-4 py-3 md:mb-[20rem] md:ml-4 lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
+                    >
+                      Know More{" "}
+                      <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">
+                        ↓
+                      </span>
+                    </Link>
+                  </div>
+                </motion.div>
               )}
             </motion.div>
 
@@ -99,13 +101,28 @@ export default function HeroSection({
               variants={rightImageVariants}
             >
               <div className="relative h-full rounded-[2rem] overflow-hidden">
-                <Image
+                <div
+                  className="w-full h-full max-h-[34rem]"
+                  style={{
+                    maskImage: `url('${moldLink}')`,
+                    WebkitMaskImage: `url('${moldLink}')`,
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                    backgroundImage: `url(${imageLink})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundColor: "black",
+                  }}
+                />
+                {/* <Image
                   src={imageLink}
                   alt="Hero image"
                   fill
                   priority
                   className="object-cover rounded-[2rem]"
-                />
+                /> */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
               </div>
             </motion.div>

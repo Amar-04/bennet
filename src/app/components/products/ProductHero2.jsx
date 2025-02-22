@@ -40,8 +40,7 @@ const ProductHero2 = () => {
       viewport={{ once: true }}
     >
       <div className="grid md:grid-cols-2 gap-8  items-center">
-
-      {/* Left Side */}
+        {/* Left Side */}
         <motion.div className="space-y-6 " variants={leftContentVariants}>
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
@@ -76,7 +75,7 @@ const ProductHero2 = () => {
             </div>
           </motion.div>
         </motion.div>
-        
+
         {/* Right Side */}
         <motion.div
           className="w-full max-w-[640px] mx-auto md:ml-auto lg:-mt-10"

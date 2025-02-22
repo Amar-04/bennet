@@ -59,7 +59,6 @@ const ImgHero = () => {
             className="w-full md:w-1/2 space-y-6"
             variants={leftContentVariants}
           >
-
             <motion.h1
               className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1] overflow-hidden"
               variants={leftItemVariants}
@@ -134,23 +133,33 @@ const ImgHero = () => {
             className="w-full md:w-1/2 h-[400px] md:h-[500px]"
             variants={rightImageVariants}
           >
-
             <div className="relative h-full rounded-[2rem] ">
-
-
-                <img
+              <img
                 src="/Box.svg"
                 alt="Medical consultation"
-                className="scale-75 absolute mt-[22rem]  md:mt-[26rem] lg:mt-[23rem] lg:-ml-12 "
+                className="z-50 scale-75 absolute mt-[22rem]  md:mt-[26rem] lg:mt-[23rem] lg:-ml-12 "
               />
-
-              <img
+              <div
+                className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem] h-full rounded-[2rem]"
+                style={{
+                  maskImage: "url('/homemold.png')",
+                  WebkitMaskImage: "url('/homemold.png')",
+                  maskSize: "contain",
+                  WebkitMaskSize: "contain",
+                  backgroundImage: "url('/HomePage2.png')",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundColor: "black", // Fallback background
+                }}
+              />
+              {/* <img
                 src="/Homepage2.png"
                 alt="Home Page Image"
                 className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem] h-full object-cover rounded-[2rem] "
-              />
+              /> */}
 
-              
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
             </div>
           </motion.div>

@@ -17,7 +17,6 @@ const Products = () => {
     },
   };
 
-  
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -31,8 +30,7 @@ const Products = () => {
   };
 
   return (
-    <section className="container mx-auto mt-12 md:mt-20 px-4" >
-      
+    <section className="container mx-auto mt-12 md:mt-20 px-4">
       {/* Header with line */}
       <motion.div
         className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-8 md:my-10 mb-10 md:mb-14 overflow-hidden"
@@ -87,11 +85,26 @@ const Products = () => {
             {/* Image container */}
             <div className="relative w-full aspect-square">
               <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden">
-                <img
+                <div
+                  className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem] h-full rounded-[2rem] hover:scale-105 transition-transform duration-300"
+                  style={{
+                    maskImage: "url('/homeproductmold.png')",
+                    WebkitMaskImage: "url('/homeproductmold.png')",
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                    backgroundImage: "url('/pills.png')",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundColor: "black",
+                  }}
+                />
+                {/* <img
                   src="/pills.png"
                   alt="Our products"
                   className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -110,8 +123,9 @@ const Products = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-          Empowering Health Journeys <br />
-          <span className="h-1 w-1"></span><br/>
+            Empowering Health Journeys <br />
+            <span className="h-1 w-1"></span>
+            <br />
             Nurturing Health Through Innovation
           </motion.h3>
 
@@ -127,60 +141,56 @@ const Products = () => {
               professionals and patients alike, ensuring accessibility and
               reliability in every product we offer.
             </motion.p>
-            
           </div>
 
-            {/* Know More */}
+          {/* Know More */}
           <motion.div
-          className="flex items-center  gap-4 pt-8"
-          variants={itemVariants}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.2 }}
+            className="flex items-center  gap-4 pt-8"
+            variants={itemVariants}
           >
-            <Link
-              href="/products#Ourproducts"
-              className="bg-[#83961D] text-white text-xl font-medium px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#96ac22] hover:shadow-lg"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
             >
-              Know More
-            </Link>
-          </motion.div>
-
-          <motion.div
-            whileHover={{
-              x: 10,
-              scale: 1.1,
-              transition: { duration: 0.2 },
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              href="/products#Ourproducts"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black text-white text-2xl transition-all duration-300 hover:bg-gray-900 hover:shadow-lg"
-            >
-              <motion.span
-                className="text-xs"
-                whileHover={{
-                  x: 3,
-                  transition: {
-                    duration: 0.2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  },
-                }}
+              <Link
+                href="/products#Ourproducts"
+                className="bg-[#83961D] text-white text-xl font-medium px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#96ac22] hover:shadow-lg"
               >
-                →
-              </motion.span>
-            </Link>
-          </motion.div>
-        </motion.div>
+                Know More
+              </Link>
+            </motion.div>
 
+            <motion.div
+              whileHover={{
+                x: 10,
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                href="/products#Ourproducts"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black text-white text-2xl transition-all duration-300 hover:bg-gray-900 hover:shadow-lg"
+              >
+                <motion.span
+                  className="text-xs"
+                  whileHover={{
+                    x: 3,
+                    transition: {
+                      duration: 0.2,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    },
+                  }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
-
-
 
       {/* Our Innovation */}
       <motion.div
@@ -193,12 +203,28 @@ const Products = () => {
         <div className="bg-black text-white rounded-xl md:rounded-2xl p-6  md:px-12 grid md:grid-cols-2 gap-6 md:gap-8 items-center hover:scale-[1.01] transition-transform duration-300">
           <h3 className="text-3xl font-bold">Our Innovation</h3>
           <p className="text-base md:text-xl text-gray-400">
-          <span className="text-white text-xl font-semibold">PATENT </span> granted for enhancing the bioavailability of highly unstable
-            molecule <span className="text-white text-xl font-semibold">  LACTOFERRIN </span> by salt technology.
+            <span className="text-white text-xl font-semibold">PATENT </span>{" "}
+            granted for enhancing the bioavailability of highly unstable
+            molecule{" "}
+            <span className="text-white text-xl font-semibold">
+              {" "}
+              LACTOFERRIN{" "}
+            </span>{" "}
+            by salt technology.
             <br />
-          <span className="h-1 w-1"></span><br/>
-            Innovation research done in collaboration with <span className="text-white text-xl font-semibold"> NIPER-A </span>  for  
-            <span className="text-white text-xl font-semibold"> SILVER NANOMIX PARTICLES </span> .
+            <span className="h-1 w-1"></span>
+            <br />
+            Innovation research done in collaboration with{" "}
+            <span className="text-white text-xl font-semibold">
+              {" "}
+              NIPER-A{" "}
+            </span>{" "}
+            for
+            <span className="text-white text-xl font-semibold">
+              {" "}
+              SILVER NANOMIX PARTICLES{" "}
+            </span>{" "}
+            .
           </p>
         </div>
       </motion.div>

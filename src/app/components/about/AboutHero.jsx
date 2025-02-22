@@ -64,17 +64,20 @@ const AboutHero = () => {
                   <div className="">
                     Your <span className="text-[#AECA1D]">Health</span>,
                   </div>
-                  <div className="leading-tight sm:-mt-1.5 md:m-0">Our Priority!</div>
+                  <div className="leading-tight sm:-mt-1.5 md:m-0">
+                    Our Priority!
+                  </div>
                 </div>
 
                 <div className="relative z-30">
-                 
                   <div className="flex md:flex-col">
                     <div className="leading-tight md:relative">
                       Building
                       <div className="md:absolute md:-mt-[5.5rem] flex md:ml-[17.5rem] lg:-mt-[7.5rem] lg:ml-[23rem] ">
-                        Health <span className="text-black md:text-[#AECA1D] ">ier</span>
-                       
+                        Health{" "}
+                        <span className="text-black md:text-[#AECA1D] ">
+                          ier
+                        </span>
                       </div>
                     </div>
 
@@ -83,7 +86,6 @@ const AboutHero = () => {
                     </div>
                   </div>
                 </div>
-
               </div>
             </motion.h1>
 
@@ -97,17 +99,18 @@ const AboutHero = () => {
             </div>
 
             <motion.div variants={leftItemVariants}>
-            <div className="-ml-4 md:-ml-2 lg:-ml-0 mt-4">
-              <Link
-                href="#"
-                className="bg-black pl-4 py-3 md:mb-[20rem]  lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
-              >
-                Know More{" "}
-                <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">↓</span>
-              </Link>
-            </div>
-          </motion.div>
-
+              <div className="-ml-4 md:-ml-2 lg:-ml-0 mt-4">
+                <Link
+                  href="#"
+                  className="bg-black pl-4 py-3 md:mb-[20rem]  lg:ml-0 text-white text-sm md:text-base rounded-full font-bold"
+                >
+                  Know More{" "}
+                  <span className="bg-[#AECA1DE5] rounded-full px-4 py-3">
+                    ↓
+                  </span>
+                </Link>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Right Side */}
@@ -117,19 +120,28 @@ const AboutHero = () => {
           >
             {/* Image */}
 
-            <div className="h-full scale-95 mt-6 md:mt-0 rounded-[2rem] z-10">
-
-
-              <img
+            <div
+              className="h-full scale-95 mt-6 md:mt-0 rounded-[2rem] z-10"
+              style={{
+                maskImage: "url('/aboutmold.png')",
+                WebkitMaskImage: "url('/aboutmold.png')",
+                maskSize: "contain",
+                WebkitMaskSize: "contain",
+                backgroundImage: "url('/AboutUs.png')",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundColor: "black",
+              }}
+            >
+              {/* <img
                 src="/AboutUs.png"
                 alt="Medical consultation"
-
                 className="w-full h-full max-h-[36rem] md:h-[30rem] lg:h-full object-cover rounded-[2rem]"
-              />
-
+              /> */}
 
               <div className=" inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
-
             </div>
           </motion.div>
         </div>

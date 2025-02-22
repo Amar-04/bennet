@@ -38,6 +38,7 @@ export default function CareersPage() {
         <div className="lg:px-2">
           <HeroSection
             imageLink="/Careers.jpg"
+            moldLink="/careermold.png"
             title='<span>Empowering</span>
                   <br />
                   <div>
@@ -150,7 +151,7 @@ export default function CareersPage() {
                   </a>
                 </p>
                 <p className="text-lg">Or connect with us via WhatsApp</p>
-                <p className="font-medium text-lg">  (+91) 9825519537</p>
+                <p className="font-medium text-lg"> (+91) 9825519537</p>
               </motion.div>
             </motion.div>
           </div>

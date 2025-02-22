@@ -35,18 +35,16 @@ export default function Manufacturing() {
 
   return (
     <main className="min-h-screen ">
-     
       {/* HeroSection*/}
       <div className="px-4">
         <HeroSection
-          imageLink="/Manufacturing.png"
+          imageLink="/manufacturing.png"
+          moldLink="/manufacturingmold.png"
           title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
           description="Where excellence meets accessibility"
           showKnowMoreButton={true}
         />
       </div>
-
-
 
       {/* Excellence Section */}
       <section className="container mx-auto px-4 relative mt-12">
@@ -489,7 +487,6 @@ export default function Manufacturing() {
 
       {/* Global HealthCare */}
       <div className="w-full mt-12  ">
-    
         <div className="bg-white my-10">
           {/* Hero Section */}
           <section className="relative  overflow-hidden  container mx-auto rounded-2xl ">
@@ -539,32 +536,27 @@ export default function Manufacturing() {
             </div>
           </section>
         </div>
-
-
       </div>
-      
+
       {/* Black Card */}
       <div className="container mx-auto mb-10">
-          <motion.div
-            className="bg-black text-white text-center py-6 px-4 lg:p-12 lg:px-32 lg:rounded-2xl"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={fadeInUp}
-          >
-            <p className="mb-4 text-xl md:text-4xl md:pb-6 font-semibold">
-              We are open to{" "}
-              <span className="text-[#9FB81D]">collaborative</span> association
-              for all kinds of product inquiries.
-            </p>
-            <div className="text-sm md:text-xl">
-              <p>Email: Export@bennetpharmaceuticals.com</p>
-              <p>Call: (+91)9625102437</p>
-            </div>
-          </motion.div>
-        </div>
-
-
+        <motion.div
+          className="bg-black text-white text-center py-6 px-4 lg:p-12 lg:px-32 lg:rounded-2xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={fadeInUp}
+        >
+          <p className="mb-4 text-xl md:text-4xl md:pb-6 font-semibold">
+            We are open to <span className="text-[#9FB81D]">collaborative</span>{" "}
+            association for all kinds of product inquiries.
+          </p>
+          <div className="text-sm md:text-xl">
+            <p>Email: Export@bennetpharmaceuticals.com</p>
+            <p>Call: (+91)9625102437</p>
+          </div>
+        </motion.div>
+      </div>
     </main>
   );
 }

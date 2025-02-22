@@ -19,20 +19,17 @@ export default function LifeAtBennet() {
   };
   return (
     <div className="min-h-screen flex flex-col mx-auto ">
-      
       <div className="lg:px-4">
-      <HeroSection
-        imageLink="/life-at-bennet.png"
-
-        title='Empowering <span className="text-[#9DC41A]">Growth</span>,
+        <HeroSection
+          imageLink="/life-at-bennet.png"
+          moldLink="/lifemold.png"
+          title='Empowering <span className="text-[#9DC41A]">Growth</span>,
                 <br />
                 Celebrating <span className="text-[#9DC41A]">Success</span>'
-                
-        description="Together We Thrive, Together We Succeed"
-        showKnowMoreButton={false}
-      />
+          description="Together We Thrive, Together We Succeed"
+          showKnowMoreButton={false}
+        />
       </div>
-
 
       {/* Image Gallery */}
       <section>
@@ -55,7 +52,6 @@ export default function LifeAtBennet() {
       </section>
 
       <Testimonial />
-      
     </div>
   );
 }
