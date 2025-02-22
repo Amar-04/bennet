@@ -224,7 +224,7 @@ export default function Manufacturing() {
       </section>
 
       {/* Manufacturing Network */}
-      <section className="py-8">
+      <section className="pt-8 pb-0">
         <div className="container mx-auto px-4">
           {/* Title */}
           {isLargeScreen ? (
@@ -252,7 +252,7 @@ export default function Manufacturing() {
               </motion.h2>
 
               <motion.div
-                className="w-0 text-left md:w-[40%] lg:w-[45%] 2xl:w-[55%] mt-2"
+                className="w-0 text-left lg:w-[40%] lg:w-[45%] 2xl:w-[55%] mt-2"
                 initial={{ opacity: 0, x: 70 }}
                 whileInView={{
                   opacity: 1,
@@ -325,12 +325,15 @@ export default function Manufacturing() {
             ))}
           </motion.h3>
 
-          {/* Map */}
-          <div className="-ml-10 ">
-            <DynamicWorldMap />
-          </div>
+      
+          
         </div>
       </section>
+
+          {/* Map */}
+          <div className=" ">
+            <DynamicWorldMap />
+          </div>
 
       {/* Contract Manufacturing */}
       <motion.section
