@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -9,6 +11,7 @@ import {
   XIcon,
   FacebookIcon,
 } from "./SvgIcons";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const navigation = [
@@ -20,6 +23,11 @@ export default function Footer() {
     { name: "Careers", href: "/careers" },
     { name: "Contact Us", href: "/contact" },
   ];
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
 
   return (
     <footer className="bg-white pt-16 container pb-8 border-t-4 border-[#aeca1d]">
@@ -32,7 +40,7 @@ export default function Footer() {
               <Image
                 src="/bennet.png"
                 alt="Bennet Pharmaceuticals Ltd."
-                width={150} 
+                width={150}
                 height={40}
                 className="h-10 w-auto"
               />
@@ -40,8 +48,8 @@ export default function Footer() {
             {/* Contact Details */}
             <div className="space-y-4 text-start ml-2.5">
               <div className="flex items-center space-x-3 md:mt-3 lg:mt-1 ">
-              <div className="scale-[0.8] -ml-1 max-w-[24px]">
-                <MapPinIcon className="w-4 h-4 text-[#9DC41A]" /> 
+                <div className="scale-[0.8] -ml-1 max-w-[24px]">
+                  <MapPinIcon className="w-4 h-4 text-[#9DC41A]" />
                 </div>
                 <p className="text-sm">
                   608 B Wing, 6th Floor
@@ -68,7 +76,9 @@ export default function Footer() {
 
           {/* Quicklinks */}
           <div className="flex flex-col md:items-center md:text-center space-y-6">
-            <h3 className="text-lg font-bold mb-6 lg:mb-2  ml-2 md:ml-0">Quicklinks</h3>
+            <h3 className="text-lg font-bold mb-6 lg:mb-2  ml-2 md:ml-0">
+              Quicklinks
+            </h3>
             <ul className="space-y-3 text-start ml-2.5 ">
               {navigation.map((link) => (
                 <li key={link.name}>
@@ -85,7 +95,9 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex flex-col md:items-center md:text-center space-y-6">
-            <h3 className="text-lg font-bold mb-6 lg:mb-2 ml-2 md:ml-0 ">Connect With Us</h3>
+            <h3 className="text-lg font-bold mb-6 lg:mb-2 ml-2 md:ml-0 ">
+              Connect With Us
+            </h3>
             <div className="space-y-4 text-start ml-2.5">
               <div className="flex items-center space-x-3">
                 <FacebookIcon className="w-4 h-4 text-[#9DC41A]" />

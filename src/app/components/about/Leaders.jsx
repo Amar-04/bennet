@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-const Leadership = () => {
+const Leadership = ({data}) => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -20,28 +20,28 @@ const Leadership = () => {
       name: "Mr. J. K. Jain",
       position: "Founder & Promoter Director",
       desc: "A visionary leader who established Bennet's foundation in the pharmaceutical industry. His innovative approach continues to guide the company's growth and success.",
-      img: "/leader1.png",
+      img: data?.leaders[0]?.image  || null,
     },
     {
       id: 2,
       name: "Mr. Siddharth Jain",
       position: "Technical Director",
       desc: "A versatile expert overseeing supply chain, regulatory affairs, and quality control. His comprehensive management ensures smooth operations across all technical aspects of the business.",
-      img: "/leader2.png",
+      img: data?.leaders[1]?.image || null,
     },
     {
       id: 3,
       name: "Mrs. Vrushti Jain",
       position: "Creative Director",
       desc: "An innovative thinker spearheading new product development and marketing initiatives. Her creative vision drives Bennet's expansion into cutting-edge pharmaceutical solutions.",
-      img: "/leader3.png",
+      img: data?.leaders[2]?.image || null,
     },
     {
       id: 4,
       name: "Mrs. Vaishali Jain",
       position: "Director",
       desc: "A financial strategist managing Bennet's financial and legal affairs. Her expertise is crucial in steering the company's growth within the domestic pharmaceutical market.",
-      img: "/leader4.png",
+      img: data?.leaders[3]?.image || null,
     },
   ];
 

@@ -81,11 +81,23 @@ const ProductHero = () => {
           className="w-full max-w-[640px] mx-auto md:ml-auto lg:-mt-10"
           variants={rightImageVariants}
         >
-          <img
-            src="/pills.png"
-            alt="pills"
-            className="w-full h-auto max-h-[34rem]"
-          />
+          <div
+            className="h-[36rem] scale-95 mt-6 md:mt-0 rounded-[2rem] z-10"
+            style={{
+              maskImage: "url('/productmold.png')",
+              WebkitMaskImage: "url('/productmold.png')",
+              maskSize: "contain",
+              WebkitMaskSize: "contain",
+              backgroundImage: "url('/pills.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <div className=" inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem]" />
+          </div>
         </motion.div>
       </div>
 

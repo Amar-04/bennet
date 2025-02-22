@@ -84,6 +84,10 @@ export default function Header() {
     }),
   };
 
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 w-full z-50 font-outfit transition-all duration-300 ${
@@ -236,7 +240,7 @@ export default function Header() {
                           {item.name}
                         </Link>
                         <button
-                        className="ml-1 mt-1"
+                          className="ml-1 mt-1"
                           onClick={(e) => {
                             e.stopPropagation(); // Prevent click from propagating to the link
                             setIsDropdownOpen(!isDropdownOpen);
