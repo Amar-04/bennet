@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import HeroSection from "@/app/components/HeroSection";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import { getManufacturingPage } from "@/sanity/lib/queries";
 
 const DynamicWorldMap = dynamic(() => import("../../components/worldMap"), {
   ssr: false,
@@ -33,12 +33,22 @@ export default function Manufacturing() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  //^ sanity code for fetching hero section's image
+  const [heroImage, setHeroImage] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getManufacturingPage();
+      setHeroImage(data?.image || "/pills.png"); // Fallback if no image
+    }
+    fetchData();
+  }, []);
+
   return (
     <main className="min-h-screen ">
       {/* HeroSection*/}
       <div className="px-4">
         <HeroSection
-          imageLink="/manufacturing.png"
+          imageLink={heroImage}
           moldLink="/manufacturingmold.png"
           title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
           description="Where excellence meets accessibility"

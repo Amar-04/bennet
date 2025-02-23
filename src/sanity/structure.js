@@ -12,4 +12,13 @@ export const structure = (S) =>
       S.listItem()
         .title("Product Page")
         .child(S.document().schemaType("productpage")),
+      S.listItem()
+        .title("Manufacturing Page")
+        .child(S.document().schemaType("manufacturingpage")),
+      S.listItem()
+        .title("Life At Bennet Page")
+        .child(S.document().schemaType("lifeatbennetpage")),
+      S.listItem()
+        .title("Careers Page")
+        .child(S.document().schemaType("careerspage")),
     ]);

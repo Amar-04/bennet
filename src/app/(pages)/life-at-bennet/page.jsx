@@ -1,9 +1,10 @@
 "use client";
+import { useState, useEffect } from "react";
 import HeroSection from "@/app/components/HeroSection";
 import ImageGallery from "@/app/components/life-at-bennet/ImageGallery";
 import { motion } from "framer-motion";
 import Testimonial from "@/app/components/life-at-bennet/Testimonial";
-
+import { getLifeAtBennetPage } from "@/sanity/lib/queries";
 export default function LifeAtBennet() {
   const text =
     "We're committed to fostering an environment where you can thrive, grow, and reach your full potential.".split(
@@ -17,11 +18,22 @@ export default function LifeAtBennet() {
       transition: { duration: 1, ease: "easeInOut" },
     },
   };
+  //^ sanity
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await getLifeAtBennetPage();
+      setData(result);
+    }
+    fetchData();
+  }, []);
+  if (!data) return <p>Loading...</p>;
   return (
     <div className="min-h-screen flex flex-col mx-auto ">
       <div className="lg:px-4">
         <HeroSection
-          imageLink="/life-at-bennet.png"
+          imageLink={data.herosection.image}
           moldLink="/lifemold.png"
           title='Empowering <span className="text-[#9DC41A]">Growth</span>,
                 <br />
@@ -48,7 +60,9 @@ export default function LifeAtBennet() {
             ))}
           </h2>
         </div>
-        <ImageGallery />
+        <ImageGallery
+        // galleryItems={data.imagegallerysection}
+        />
       </section>
 
       <Testimonial />

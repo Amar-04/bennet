@@ -3,7 +3,7 @@ import HeroSection from "@/app/components/HeroSection";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
+import { getCareersPage } from "@/sanity/lib/queries";
 export default function CareersPage() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 100 },
@@ -23,21 +23,31 @@ export default function CareersPage() {
       },
     },
   };
+  const [heroImage, setHeroImage] = useState("");
+  const [sliderImages, setSliderImages] = useState([]);
 
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getCareersPage();
+      setHeroImage(data?.herosection?.image || "/pills.png");
+      setSliderImages(data?.contactImageSlider || []);
+    }
+    fetchData();
+  }, []);
   // Array of images for the slider
-  const contactImages = [
-    "/GroupPhoto1.jpg",
-    "/GroupPhoto2.jpg",
-    "/GroupPhoto3.jpg",
-  ];
-
+  // const contactImages = [
+  //   "/GroupPhoto1.jpg",
+  //   "/GroupPhoto2.jpg",
+  //   "/GroupPhoto3.jpg",
+  // ];
+  console.log(sliderImages);
   return (
     <div className="min-h-screen flex flex-col max-w-[1440px] mx-auto px-0">
       <main className="flex-grow md:-mt-10">
         {/* Home */}
         <div className="lg:px-2">
           <HeroSection
-            imageLink="/Careers.jpg"
+            imageLink={heroImage}
             moldLink="/careermold.png"
             title='<span>Empowering</span>
                   <br />
@@ -130,7 +140,10 @@ export default function CareersPage() {
         >
           <div className="container flex flex-col justify-center items-center max-w-[1440px] mx-auto px-4">
             {/* Image Slider */}
-            <ContactImageSlider images={contactImages} fadeInUp={fadeInUp} />
+            <ContactImageSlider
+              images={sliderImages.map((img) => img.image)}
+              fadeInUp={fadeInUp}
+            />
 
             {/* Contact Details */}
             <motion.div
