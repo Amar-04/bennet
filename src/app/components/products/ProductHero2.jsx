@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const ProductHero2 = () => {
+const ProductHero2 = ({ data }) => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -81,11 +81,30 @@ const ProductHero2 = () => {
           className="w-full max-w-[640px] mx-auto md:ml-auto lg:-mt-10"
           variants={rightImageVariants}
         >
-          <img
+          <div
+            className="h-[36rem] scale-95 mt-6 md:mt-0 rounded-[2rem] z-10"
+            style={{
+              maskImage: "url('/secondmold.png')",
+              WebkitMaskImage: "url('/secondmold.png')",
+              maskSize: "contain",
+              WebkitMaskSize: "contain",
+              maskSize: "100% 150%",
+              WebkitMaskSize: "100% 100%",
+              maskPosition: "center",
+              WebkitMaskPosition: "center",
+              backgroundImage: `url(${data.image})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: "black",
+            }}
+          ></div>
+          {/* <img
             src="/Manufacturing1.png"
             alt="pills"
             className="w-full h-auto max-h-[34rem]"
-          />
+          /> */}
         </motion.div>
       </div>
 

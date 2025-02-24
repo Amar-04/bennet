@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const ImgHero = () => {
+const ImgHero = ({ data }) => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -137,7 +137,7 @@ const ImgHero = () => {
               <img
                 src="/Box.svg"
                 alt="Medical consultation"
-                className="z-50 scale-75 absolute mt-[22rem]  md:mt-[26rem] lg:mt-[23rem] lg:-ml-12 "
+                className="z-50 scale-75 absolute mt-[22rem]  md:mt-[25rem] md:-ml-12 lg:mt-[23rem] lg:-ml-12 "
               />
               <div
                 className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem] h-full rounded-[2rem]"
@@ -146,12 +146,16 @@ const ImgHero = () => {
                   WebkitMaskImage: "url('/homemold.png')",
                   maskSize: "contain",
                   WebkitMaskSize: "contain",
-                  backgroundImage: "url('/HomePage2.png')",
+                  maskSize: "100% 150%",
+                  WebkitMaskSize: "100% 150%",
+                  maskPosition: "center",
+                  WebkitMaskPosition: "center",
+                  backgroundImage: `url(${data.image})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   maskRepeat: "no-repeat",
                   backgroundPosition: "center",
-                  backgroundColor: "black", // Fallback background
+                  backgroundColor: "gray", // Fallback background
                 }}
               />
               {/* <img

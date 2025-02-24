@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const Products = () => {
+const Products = ({ data }) => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -92,7 +92,11 @@ const Products = () => {
                     WebkitMaskImage: "url('/homeproductmold.png')",
                     maskSize: "contain",
                     WebkitMaskSize: "contain",
-                    backgroundImage: "url('/pills.png')",
+                    maskSize: "100% 150%",
+                    WebkitMaskSize: "120% 100%",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                    backgroundImage: `url(${data.image})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     maskRepeat: "no-repeat",

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const ProductHero = () => {
+const ProductHero = ({ data }) => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -88,7 +88,11 @@ const ProductHero = () => {
               WebkitMaskImage: "url('/productmold.png')",
               maskSize: "contain",
               WebkitMaskSize: "contain",
-              backgroundImage: "url('/pills.png')",
+              maskSize: "100% 150%",
+              WebkitMaskSize: "100% 110%",
+              maskPosition: "center",
+              WebkitMaskPosition: "center",
+              backgroundImage: `url(${data.image})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               maskRepeat: "no-repeat",

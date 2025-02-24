@@ -12,7 +12,7 @@ const page = async () => {
   return (
     <>
       <div className="max-w-[1440px] mx-auto px-0 ">
-        <AboutHero />
+        <AboutHero data={aboutData.herosection}/>
         <Commitment />
         <div id="Values">
           <Values />

@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react";
 import ImgHero from "./components/home/ImgHero";
 import Stats from "./components/home/Stats";
@@ -9,28 +7,25 @@ import Leadership from "./components/home/Leadership";
 import Products from "./components/home/Products";
 import Careers from "./components/home/Careers";
 import HomeHero from "./components/home/HomeHero";
-import dynamic from "next/dynamic";
+import MapWrapper from "./components/MapWrapper.jsx";
+import { getHomePage } from "@/sanity/lib/queries";
 
-const DynamicWorldMap = dynamic(()=>import('./components/worldMap'),
- {  
-  ssr:false,
-  }
-)
-const Home = () => {
+const Home = async () => {
+  const homeData = await getHomePage();
   return (
     <>
-    <div className="overflow-x-hidden">
-      <ImgHero />
-      <HomeHero />
-      <Cards />
-      <Stats />
-      <Network />
-      <div className="max-w-[1440px] mx-auto px-0">
-      <DynamicWorldMap />
-      </div>
-      <Leadership />
-      <Products />
-      <Careers />
+      <div className="overflow-x-hidden">
+        <ImgHero data={homeData.herosection}/>
+        <HomeHero />
+        <Cards />
+        <Stats />
+        <Network />
+        <div className="max-w-[1440px] mx-auto px-0">
+          <MapWrapper />
+        </div>
+        <Leadership />
+        <Products data={homeData.productsection} />
+        <Careers />
       </div>
     </>
   );

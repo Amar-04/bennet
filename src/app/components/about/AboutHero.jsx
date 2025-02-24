@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const AboutHero = () => {
+const AboutHero = ({ data }) => {
   const leftContentVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -127,7 +127,11 @@ const AboutHero = () => {
                 WebkitMaskImage: "url('/aboutmold.png')",
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
-                backgroundImage: "url('/AboutUs.png')",
+                maskSize: "100% 150%",
+                WebkitMaskSize: "115% 100%",
+                maskPosition: "center",
+                WebkitMaskPosition: "center",
+                backgroundImage: `url(${data.image})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 maskRepeat: "no-repeat",
