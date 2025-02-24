@@ -43,7 +43,7 @@ export default function CareersPage() {
   console.log(sliderImages);
   return (
     <div className="min-h-screen flex flex-col max-w-[1440px] mx-auto px-0">
-      <main className="flex-grow md:-mt-10">
+      <main className="flex-grow">
         {/* Home */}
         <div className="lg:px-2">
           <HeroSection

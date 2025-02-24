@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const Testimonial = () => {
+const Testimonial = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTestimonial = testimonials[currentIndex];
 
@@ -183,7 +183,7 @@ const Testimonial = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-white text-center text-sm md:text-xl lg:text-2xl max-w-3xl">
-                      {currentTestimonial.text}
+                      {currentTestimonial.testimonial}
                     </p>
                   </motion.div>
 

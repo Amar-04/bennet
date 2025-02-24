@@ -90,11 +90,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 font-outfit transition-all duration-300 ${
+      className={`2xl:container fixed top-0 left-0 right-0 w-full z-50 font-outfit transition-all duration-300 ${
         hasScrolled ? "bg-white shadow-md" : "bg-white"
       }`}
     >
-      <nav className="container px-4 py-4">
+      <nav className="px-4 py-4">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -158,7 +158,11 @@ export default function Header() {
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            className={`block px-4 py-2 text-sm ${
+                              pathname === subItem.href
+                                ? "text-[#AECA1D]"
+                                : "text-gray-700 hover:bg-gray-100"
+                            }`}
                           >
                             {subItem.name}
                           </Link>
@@ -234,8 +238,12 @@ export default function Header() {
                     <div className="dropdown-container">
                       <div className="flex  items-center">
                         <Link
-                          href={item.href} // Navigate to /about
-                          className="block py-2 text-base font-medium transition-colors duration-200 hover:text-gray-400"
+                          href={item.href}
+                          className={`block py-2 text-base font-medium transition-colors duration-200 ${
+                            pathname === item.href
+                              ? "text-[#AECA1D]"
+                              : "hover:text-gray-400"
+                          }`}
                         >
                           {item.name}
                         </Link>
@@ -255,7 +263,11 @@ export default function Header() {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block py-2 text-base font-medium transition-colors duration-200 hover:text-gray-400"
+                              className={`block py-2 text-base font-medium transition-colors duration-200 ${
+                                pathname === subItem.href
+                                  ? "text-[#AECA1D]"
+                                  : "hover:text-gray-400"
+                              }`}
                               onClick={() => setIsMenuOpen(false)}
                             >
                               {subItem.name}
@@ -267,7 +279,11 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block py-2 text-base font-medium transition-colors duration-200 hover:text-gray-400"
+                      className={`block py-2 text-base font-medium transition-colors duration-200 ${
+                        pathname === item.href
+                          ? "text-[#AECA1D]"
+                          : "hover:text-gray-400"
+                      }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}

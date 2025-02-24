@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export default {
   name: "lifeatbennetpage",
   title: "Life At Bennet Page",
@@ -37,7 +39,35 @@ export default {
               name: "images",
               title: "Images",
               type: "array",
-              of: [{ type: "image" }],
+              of: [
+                {
+                  name: "image",
+                  title: "Image",
+                  type: "image",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "testimonialsection",
+      title: "Testimonial Section",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "image",
+              title: "Image",
+              type: "image",
+            },
+            {
+              name: "testimonial",
+              title: "Testimonial",
+              type: "string",
             },
           ],
         },
