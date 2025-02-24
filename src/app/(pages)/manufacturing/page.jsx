@@ -72,7 +72,7 @@ export default function Manufacturing() {
                 <img
                   src="/GreenMolecule.png"
                   alt="Green Molecule"
-                  className="h-60  w-72  mt-10 sm:mt-0 sm:w-48 sm:h-48 sm:mt-4  md:mt-10 lg:mt-2 md:h-60 md:w-60 xl:h-60 xl:w-60  opacity-80 mix-blend-multiply"
+                  className="h-60  w-72  mt-10 sm:w-48 sm:h-48 sm:mt-4  md:mt-10 lg:mt-2 md:h-60 md:w-60 xl:h-60 xl:w-60  opacity-80 mix-blend-multiply"
                 />
               </div>
 

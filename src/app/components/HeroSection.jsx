@@ -108,6 +108,10 @@ export default function HeroSection({
                     WebkitMaskImage: `url('${moldLink}')`,
                     maskSize: "contain",
                     WebkitMaskSize: "contain",
+                    maskSize: "100% 100%", // Adjust the size of the mask
+                    WebkitMaskSize: "100% 100%", // For cross-browser compatibility
+                    maskPosition: "center", // Adjust the mask position
+                    WebkitMaskPosition: "center",
                     backgroundImage: `url(${imageLink})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",

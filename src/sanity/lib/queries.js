@@ -51,6 +51,10 @@ export async function getLifeAtBennetPage() {
         images[] {
           "image": asset->url
         }
+      },
+      testimonialsection[] {
+        "image": image.asset->url,
+        testimonial
       }
     }`
   );
