@@ -30,7 +30,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-white pt-16 container pb-8 border-t-4 border-[#aeca1d]">
+    <footer className="bg-white pt-16 pb-8 border-t-4 border-[#aeca1d] 2xl:container">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {/* Company Info */}
