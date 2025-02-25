@@ -137,7 +137,7 @@ const ImgHero = ({ data }) => {
               <img
                 src="/Box.svg"
                 alt="Medical consultation"
-                className="z-50 scale-75 absolute mt-[22rem]  md:mt-[25rem] md:-ml-12 lg:mt-[23rem] lg:-ml-12 "
+                className="z-40 scale-75 absolute mt-[22rem]  md:mt-[25rem] md:-ml-12 lg:mt-[23rem] lg:-ml-12 "
               />
               <div
                 className="w-full xl:w-[36rem] 2xl:w-full max-w-[41rem] h-full rounded-[2rem]"

@@ -150,6 +150,10 @@ export default function CareersPage() {
               className="relative bottom-[5vh] p-5 w-[85vw] md:w-[85vw] lg:w-[75vw] xl:w-[80vw] 2xl:w-[55vw] max-w-[1410px] bg-[#D7E48E] mx-auto text-center rounded-3xl space-y-6"
               variants={fadeInUp}
             >
+              <h2 className="text-2xl md:text-3xl font-bold leading-tight">
+                Join our wonderful teams and be part of a community where your
+                growth is our priority!
+              </h2>
               <h3 className="text-xl lg:text-2xl font-bold">
                 To apply, send your resume to
               </h3>
